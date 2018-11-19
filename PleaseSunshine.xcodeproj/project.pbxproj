@@ -12,6 +12,9 @@
 		CB2F0D1921A3045100D36E38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB2F0D1721A3045100D36E38 /* Main.storyboard */; };
 		CB2F0D1B21A3045100D36E38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB2F0D1A21A3045100D36E38 /* Assets.xcassets */; };
 		CB2F0D1E21A3045100D36E38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB2F0D1C21A3045100D36E38 /* LaunchScreen.storyboard */; };
+		CB2F0D3921A32F6100D36E38 /* NanumSquareOTFBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB2F0D3721A32F5E00D36E38 /* NanumSquareOTFBold.otf */; };
+		CB2F0D3A21A32F6400D36E38 /* NanumSquareOTFExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB2F0D3621A32F5E00D36E38 /* NanumSquareOTFExtraBold.otf */; };
+		CB2F0D3B21A32F6700D36E38 /* NanumSquareOTFRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB2F0D3821A32F5E00D36E38 /* NanumSquareOTFRegular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		CB2F0D1A21A3045100D36E38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB2F0D1D21A3045100D36E38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB2F0D1F21A3045100D36E38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB2F0D3621A32F5E00D36E38 /* NanumSquareOTFExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareOTFExtraBold.otf; sourceTree = "<group>"; };
+		CB2F0D3721A32F5E00D36E38 /* NanumSquareOTFBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareOTFBold.otf; sourceTree = "<group>"; };
+		CB2F0D3821A32F5E00D36E38 /* NanumSquareOTFRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareOTFRegular.otf; sourceTree = "<group>"; };
 		D96AD31B17FC60EEDDCE0636 /* Pods-PleaseSunshine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PleaseSunshine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PleaseSunshine/Pods-PleaseSunshine.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +144,9 @@
 		CB2F0D2F21A32EB200D36E38 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				CB2F0D3721A32F5E00D36E38 /* NanumSquareOTFBold.otf */,
+				CB2F0D3621A32F5E00D36E38 /* NanumSquareOTFExtraBold.otf */,
+				CB2F0D3821A32F5E00D36E38 /* NanumSquareOTFRegular.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -213,6 +222,9 @@
 				CB2F0D1E21A3045100D36E38 /* LaunchScreen.storyboard in Resources */,
 				CB2F0D1B21A3045100D36E38 /* Assets.xcassets in Resources */,
 				CB2F0D1921A3045100D36E38 /* Main.storyboard in Resources */,
+				CB2F0D3B21A32F6700D36E38 /* NanumSquareOTFRegular.otf in Resources */,
+				CB2F0D3A21A32F6400D36E38 /* NanumSquareOTFExtraBold.otf in Resources */,
+				CB2F0D3921A32F6100D36E38 /* NanumSquareOTFBold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
