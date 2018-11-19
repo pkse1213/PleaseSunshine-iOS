@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3EF1C1DF1889F0BA86C1D072 /* Pods_PleaseSunshine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B64B625F9749324E200961C0 /* Pods_PleaseSunshine.framework */; };
 		CB2F0D1421A3045100D36E38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2F0D1321A3045100D36E38 /* AppDelegate.swift */; };
 		CB2F0D1621A3045100D36E38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2F0D1521A3045100D36E38 /* ViewController.swift */; };
 		CB2F0D1921A3045100D36E38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB2F0D1721A3045100D36E38 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		010797BB6204E927796E0D3C /* Pods-PleaseSunshine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PleaseSunshine.release.xcconfig"; path = "Pods/Target Support Files/Pods-PleaseSunshine/Pods-PleaseSunshine.release.xcconfig"; sourceTree = "<group>"; };
+		B64B625F9749324E200961C0 /* Pods_PleaseSunshine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PleaseSunshine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB2F0D1021A3045100D36E38 /* PleaseSunshine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PleaseSunshine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB2F0D1321A3045100D36E38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB2F0D1521A3045100D36E38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		CB2F0D1A21A3045100D36E38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB2F0D1D21A3045100D36E38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB2F0D1F21A3045100D36E38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D96AD31B17FC60EEDDCE0636 /* Pods-PleaseSunshine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PleaseSunshine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PleaseSunshine/Pods-PleaseSunshine.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EF1C1DF1889F0BA86C1D072 /* Pods_PleaseSunshine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		925655DB378E2E63008808B6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D96AD31B17FC60EEDDCE0636 /* Pods-PleaseSunshine.debug.xcconfig */,
+				010797BB6204E927796E0D3C /* Pods-PleaseSunshine.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CB2F0D0721A3045100D36E38 = {
 			isa = PBXGroup;
 			children = (
 				CB2F0D1221A3045100D36E38 /* PleaseSunshine */,
 				CB2F0D1121A3045100D36E38 /* Products */,
+				925655DB378E2E63008808B6 /* Pods */,
+				E1E679164FD6BC03D0EA9B8E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = PleaseSunshine;
 			sourceTree = "<group>";
 		};
+		E1E679164FD6BC03D0EA9B8E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B64B625F9749324E200961C0 /* Pods_PleaseSunshine.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB2F0D2221A3045100D36E38 /* Build configuration list for PBXNativeTarget "PleaseSunshine" */;
 			buildPhases = (
+				CFA93627B0AAF1337D29C2D8 /* [CP] Check Pods Manifest.lock */,
 				CB2F0D0C21A3045100D36E38 /* Sources */,
 				CB2F0D0D21A3045100D36E38 /* Frameworks */,
 				CB2F0D0E21A3045100D36E38 /* Resources */,
+				061B2691DDA0364B85D73D77 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		061B2691DDA0364B85D73D77 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PleaseSunshine/Pods-PleaseSunshine-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PleaseSunshine/Pods-PleaseSunshine-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFA93627B0AAF1337D29C2D8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PleaseSunshine-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CB2F0D0C21A3045100D36E38 /* Sources */ = {
@@ -280,6 +357,7 @@
 		};
 		CB2F0D2321A3045100D36E38 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D96AD31B17FC60EEDDCE0636 /* Pods-PleaseSunshine.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +375,7 @@
 		};
 		CB2F0D2421A3045100D36E38 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 010797BB6204E927796E0D3C /* Pods-PleaseSunshine.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
