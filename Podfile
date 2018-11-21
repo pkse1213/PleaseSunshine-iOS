@@ -9,5 +9,6 @@ target 'PleaseSunshine' do
 pod 'Kingfisher'
 pod 'Alamofire'
 pod 'SwiftyJSON'
-
+pod 'GoogleMaps'
+pod 'GooglePlaces'
 end
