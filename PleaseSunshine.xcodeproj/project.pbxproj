@@ -15,6 +15,7 @@
 		CB2F0D3921A32F6100D36E38 /* NanumSquareOTFBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB2F0D3721A32F5E00D36E38 /* NanumSquareOTFBold.otf */; };
 		CB2F0D3A21A32F6400D36E38 /* NanumSquareOTFExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB2F0D3621A32F5E00D36E38 /* NanumSquareOTFExtraBold.otf */; };
 		CB2F0D3B21A32F6700D36E38 /* NanumSquareOTFRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB2F0D3821A32F5E00D36E38 /* NanumSquareOTFRegular.otf */; };
+		CBCF5E0A21A5F2B70043D2A5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCF5E0921A5F2B70043D2A5 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		CB2F0D3621A32F5E00D36E38 /* NanumSquareOTFExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareOTFExtraBold.otf; sourceTree = "<group>"; };
 		CB2F0D3721A32F5E00D36E38 /* NanumSquareOTFBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareOTFBold.otf; sourceTree = "<group>"; };
 		CB2F0D3821A32F5E00D36E38 /* NanumSquareOTFRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareOTFRegular.otf; sourceTree = "<group>"; };
+		CBCF5E0921A5F2B70043D2A5 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		D96AD31B17FC60EEDDCE0636 /* Pods-PleaseSunshine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PleaseSunshine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PleaseSunshine/Pods-PleaseSunshine.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +120,7 @@
 		CB2F0D2C21A32E2900D36E38 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CBCF5E0921A5F2B70043D2A5 /* MapViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB2F0D1421A3045100D36E38 /* AppDelegate.swift in Sources */,
+				CBCF5E0A21A5F2B70043D2A5 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,6 +463,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N6JH7RBUA4;
 				INFOPLIST_FILE = "$(SRCROOT)/PleaseSunshine/etc/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -477,6 +482,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N6JH7RBUA4;
 				INFOPLIST_FILE = "$(SRCROOT)/PleaseSunshine/etc/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
