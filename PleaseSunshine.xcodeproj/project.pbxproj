@@ -128,8 +128,8 @@
 		CB2F0D2D21A32E5D00D36E38 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				CB2F0D1C21A3045100D36E38 /* LaunchScreen.storyboard */,
 				CB2F0D1721A3045100D36E38 /* Main.storyboard */,
+				CB2F0D1C21A3045100D36E38 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
