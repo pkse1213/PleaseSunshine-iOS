@@ -10,7 +10,7 @@ import UIKit
 import GoogleMaps
 import GooglePlaces
 
-class MapViewController: UIViewController {
+class MapVC: UIViewController, UISearchDisplayDelegate {
     var locationManager = CLLocationManager()
     var currentLocation: CLLocation?
     var originCoordinate: CLLocationCoordinate2D!
@@ -18,10 +18,11 @@ class MapViewController: UIViewController {
     
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var searchAddressBtn: UIButton!
-    @IBOutlet weak var addressTxF: UITextField!
     @IBOutlet weak var setAddressBtn: UIButton!
     
-   
+    // 주소검색
+   @IBOutlet weak var addressTxF: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,15 +41,23 @@ class MapViewController: UIViewController {
         
         mapView.isHidden = true
         
+        // 주소 검색
     }
-    
+        
+    @IBAction func searchAddressClicked(_ sender: UIButton) {
+//
+        let autocompleteController = GMSAutocompleteViewController()
+        autocompleteController.delegate = self
+        present(autocompleteController, animated: true, completion: nil)
+
+    }
     private func setupView() {
         searchAddressBtn.applyRadius(radius: searchAddressBtn.frame.size.height/2)
         setAddressBtn.applyRadius(radius: 10)
         
     }
 }
-extension MapViewController: CLLocationManagerDelegate {
+extension MapVC: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
@@ -102,4 +111,35 @@ extension MapViewController: CLLocationManagerDelegate {
         marker.icon = #imageLiteral(resourceName: "pin")
         marker.map = mapView
     }
+}
+
+extension MapVC: GMSAutocompleteViewControllerDelegate {
+
+    // Handle the user's selection.
+    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+        print("Place name: \(place.name)")
+        print("Place address: \(place.formattedAddress)")
+        print("Place attributions: \(place.attributions)")
+        dismiss(animated: true, completion: nil)
+    }
+
+    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+        // TODO: handle the error.
+        print("Error: ", error.localizedDescription)
+    }
+
+    // User canceled the operation.
+    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+        dismiss(animated: true, completion: nil)
+    }
+
+    // Turn the network activity indicator on and off again.
+    func didRequestAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+    }
+
+    func didUpdateAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+    }
+
 }

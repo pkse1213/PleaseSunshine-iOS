@@ -16,7 +16,8 @@
 		CB2F0D3A21A32F6400D36E38 /* NanumSquareOTFExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB2F0D3621A32F5E00D36E38 /* NanumSquareOTFExtraBold.otf */; };
 		CB2F0D3B21A32F6700D36E38 /* NanumSquareOTFRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB2F0D3821A32F5E00D36E38 /* NanumSquareOTFRegular.otf */; };
 		CBB0042A21A7279800DC09B0 /* UIView+applyDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0042921A7279800DC09B0 /* UIView+applyDesign.swift */; };
-		CBCF5E0A21A5F2B70043D2A5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCF5E0921A5F2B70043D2A5 /* MapViewController.swift */; };
+		CBB0042C21A7339700DC09B0 /* SearchAddressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0042B21A7339700DC09B0 /* SearchAddressVC.swift */; };
+		CBCF5E0A21A5F2B70043D2A5 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCF5E0921A5F2B70043D2A5 /* MapVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +33,8 @@
 		CB2F0D3721A32F5E00D36E38 /* NanumSquareOTFBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareOTFBold.otf; sourceTree = "<group>"; };
 		CB2F0D3821A32F5E00D36E38 /* NanumSquareOTFRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareOTFRegular.otf; sourceTree = "<group>"; };
 		CBB0042921A7279800DC09B0 /* UIView+applyDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+applyDesign.swift"; sourceTree = "<group>"; };
-		CBCF5E0921A5F2B70043D2A5 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		CBB0042B21A7339700DC09B0 /* SearchAddressVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAddressVC.swift; sourceTree = "<group>"; };
+		CBCF5E0921A5F2B70043D2A5 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		D96AD31B17FC60EEDDCE0636 /* Pods-PleaseSunshine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PleaseSunshine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PleaseSunshine/Pods-PleaseSunshine.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,7 +125,8 @@
 		CB2F0D2C21A32E2900D36E38 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				CBCF5E0921A5F2B70043D2A5 /* MapViewController.swift */,
+				CBCF5E0921A5F2B70043D2A5 /* MapVC.swift */,
+				CBB0042B21A7339700DC09B0 /* SearchAddressVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -318,8 +321,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBB0042A21A7279800DC09B0 /* UIView+applyDesign.swift in Sources */,
+				CBB0042C21A7339700DC09B0 /* SearchAddressVC.swift in Sources */,
 				CB2F0D1421A3045100D36E38 /* AppDelegate.swift in Sources */,
-				CBCF5E0A21A5F2B70043D2A5 /* MapViewController.swift in Sources */,
+				CBCF5E0A21A5F2B70043D2A5 /* MapVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
