@@ -13,60 +13,32 @@ import GooglePlaces
 class MapViewController: UIViewController {
     var locationManager = CLLocationManager()
     var currentLocation: CLLocation?
-    var mapView: GMSMapView!
+    var originCoordinate: CLLocationCoordinate2D!
+    
+    @IBOutlet weak var mapView: GMSMapView!
+    //    var mapView: GMSMapView!
     var placesClient: GMSPlacesClient!
     var zoomLevel: Float = 15.0
-    let defaultLocation = CLLocation(latitude: -33.869405, longitude: 151.199)
-
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         // Initialize the location manager.
         locationManager = CLLocationManager()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestAlwaysAuthorization()
+//        locationManager.requestAlwaysAuthorization()
         locationManager.distanceFilter = 50
         locationManager.startUpdatingLocation()
+        locationManager.requestWhenInUseAuthorization()
         locationManager.delegate = self
         
         placesClient = GMSPlacesClient.shared()
         
-        // Create a map.
-        let camera = GMSCameraPosition.camera(withLatitude: defaultLocation.coordinate.latitude,
-                                              longitude: defaultLocation.coordinate.longitude,
-                                              zoom: zoomLevel)
-        mapView = GMSMapView.map(withFrame: view.bounds, camera: camera)
-        mapView.settings.myLocationButton = true
-        mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        mapView.isMyLocationEnabled = true
-        
-        // Add the map to the view, hide it until we&#39;ve got a location update.
-        view.addSubview(mapView)
         mapView.isHidden = true
         
     }
 }
 extension MapViewController: CLLocationManagerDelegate {
     
-    // Handle incoming location events.
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let location: CLLocation = locations.last!
-        print("Location: \(location)")
-        
-        let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude,
-                                              longitude: location.coordinate.longitude,
-                                              zoom: zoomLevel)
-        
-        if mapView.isHidden {
-            mapView.isHidden = false
-            mapView.camera = camera
-        } else {
-            mapView.animate(to: camera)
-        }
-        
-//        listLikelyPlaces()
-    }
-    
-    // Handle authorization for the location manager.
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
         case .restricted:
@@ -80,12 +52,42 @@ extension MapViewController: CLLocationManagerDelegate {
         case .authorizedAlways: fallthrough
         case .authorizedWhenInUse:
             print("Location status is OK.")
+            locationManager.startUpdatingLocation()
+            mapView.isMyLocationEnabled = true
+            mapView.settings.myLocationButton = true
         }
     }
     
-    // Handle location manager errors.
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        locationManager.stopUpdatingLocation()
-        print("Error: \(error)")
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        
+        if let location = locations.last {
+            
+            let camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
+            
+//            locationManager.stopUpdatingLocation()
+            originCoordinate = location.coordinate
+            
+            // 처음 뷰가 떴을 때만 현재위치로 핀을 꽂는다
+            if mapView.isHidden {
+                let marker = GMSMarker()
+                marker.position  = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
+                marker.appearAnimation = GMSMarkerAnimation.pop
+                marker.icon = #imageLiteral(resourceName: "pin")
+                marker.map = mapView
+                mapView.isHidden = false
+                mapView.camera = camera
+            } else {
+                mapView.animate(to: camera)
+            }
+        }
+//        if let location = locations.first {  }
+    }
+    
+    
+    func currentLocationMarker(){
+
+        let origin = GMSMarker(position: originCoordinate)
+        origin.map = self.mapView
     }
 }
