@@ -14,14 +14,19 @@ class MapViewController: UIViewController {
     var locationManager = CLLocationManager()
     var currentLocation: CLLocation?
     var originCoordinate: CLLocationCoordinate2D!
+    var placesClient: GMSPlacesClient!
     
     @IBOutlet weak var mapView: GMSMapView!
-    //    var mapView: GMSMapView!
-    var placesClient: GMSPlacesClient!
-    var zoomLevel: Float = 15.0
+    @IBOutlet weak var searchAddressBtn: UIButton!
+    @IBOutlet weak var addressTxF: UITextField!
+    @IBOutlet weak var setAddressBtn: UIButton!
+    
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupView()
+        
         // Initialize the location manager.
         locationManager = CLLocationManager()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -34,6 +39,12 @@ class MapViewController: UIViewController {
         placesClient = GMSPlacesClient.shared()
         
         mapView.isHidden = true
+        
+    }
+    
+    private func setupView() {
+        searchAddressBtn.applyRadius(radius: searchAddressBtn.frame.size.height/2)
+        setAddressBtn.applyRadius(radius: 10)
         
     }
 }
@@ -55,26 +66,25 @@ extension MapViewController: CLLocationManagerDelegate {
             locationManager.startUpdatingLocation()
             mapView.isMyLocationEnabled = true
             mapView.settings.myLocationButton = true
+            mapView.padding = UIEdgeInsets(top: 0, left: 0, bottom: 80, right: 10)
+            
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-        
         if let location = locations.last {
             
             let camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
             
 //            locationManager.stopUpdatingLocation()
-            originCoordinate = location.coordinate
+//            originCoordinate = location.coordinate
             
             // 처음 뷰가 떴을 때만 현재위치로 핀을 꽂는다
             if mapView.isHidden {
-                let marker = GMSMarker()
-                marker.position  = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
-                marker.appearAnimation = GMSMarkerAnimation.pop
-                marker.icon = #imageLiteral(resourceName: "pin")
-                marker.map = mapView
+                
+                let locationCoordinate = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
+                
+                showMarker(locationCoordinate: locationCoordinate)
                 mapView.isHidden = false
                 mapView.camera = camera
             } else {
@@ -85,9 +95,11 @@ extension MapViewController: CLLocationManagerDelegate {
     }
     
     
-    func currentLocationMarker(){
-
-        let origin = GMSMarker(position: originCoordinate)
-        origin.map = self.mapView
+    func showMarker(locationCoordinate: CLLocationCoordinate2D){
+        let marker = GMSMarker()
+        marker.position  = locationCoordinate
+        marker.appearAnimation = GMSMarkerAnimation.pop
+        marker.icon = #imageLiteral(resourceName: "pin")
+        marker.map = mapView
     }
 }
