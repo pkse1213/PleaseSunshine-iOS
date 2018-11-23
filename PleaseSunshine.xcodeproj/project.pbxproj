@@ -13,10 +13,12 @@
 		CB2F0D1B21A3045100D36E38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB2F0D1A21A3045100D36E38 /* Assets.xcassets */; };
 		CB2F0D1E21A3045100D36E38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB2F0D1C21A3045100D36E38 /* LaunchScreen.storyboard */; };
 		CB2F0D3921A32F6100D36E38 /* NanumSquareOTFBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB2F0D3721A32F5E00D36E38 /* NanumSquareOTFBold.otf */; };
-		CB2F0D3A21A32F6400D36E38 /* NanumSquareOTFExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB2F0D3621A32F5E00D36E38 /* NanumSquareOTFExtraBold.otf */; };
-		CB2F0D3B21A32F6700D36E38 /* NanumSquareOTFRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB2F0D3821A32F5E00D36E38 /* NanumSquareOTFRegular.otf */; };
+		CB56CDB521A7E1C200632C68 /* UIViewController+Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB56CDB421A7E1C200632C68 /* UIViewController+Logo.swift */; };
+		CB56CDB721A7E22E00632C68 /* MainChooseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB56CDB621A7E22E00632C68 /* MainChooseVC.swift */; };
 		CBB0042A21A7279800DC09B0 /* UIView+applyDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0042921A7279800DC09B0 /* UIView+applyDesign.swift */; };
-		CBB0042C21A7339700DC09B0 /* SearchAddressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0042B21A7339700DC09B0 /* SearchAddressVC.swift */; };
+		CBB0042C21A7339700DC09B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0042B21A7339700DC09B0 /* ViewController.swift */; };
+		CBB0042F21A7D72A00DC09B0 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBB0042E21A7D72A00DC09B0 /* Tutorial.storyboard */; };
+		CBB0043121A7D78400DC09B0 /* TutorialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0043021A7D78400DC09B0 /* TutorialVC.swift */; };
 		CBCF5E0A21A5F2B70043D2A5 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCF5E0921A5F2B70043D2A5 /* MapVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,11 +31,13 @@
 		CB2F0D1A21A3045100D36E38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB2F0D1D21A3045100D36E38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB2F0D1F21A3045100D36E38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CB2F0D3621A32F5E00D36E38 /* NanumSquareOTFExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareOTFExtraBold.otf; sourceTree = "<group>"; };
 		CB2F0D3721A32F5E00D36E38 /* NanumSquareOTFBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareOTFBold.otf; sourceTree = "<group>"; };
-		CB2F0D3821A32F5E00D36E38 /* NanumSquareOTFRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareOTFRegular.otf; sourceTree = "<group>"; };
+		CB56CDB421A7E1C200632C68 /* UIViewController+Logo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Logo.swift"; sourceTree = "<group>"; };
+		CB56CDB621A7E22E00632C68 /* MainChooseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChooseVC.swift; sourceTree = "<group>"; };
 		CBB0042921A7279800DC09B0 /* UIView+applyDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+applyDesign.swift"; sourceTree = "<group>"; };
-		CBB0042B21A7339700DC09B0 /* SearchAddressVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAddressVC.swift; sourceTree = "<group>"; };
+		CBB0042B21A7339700DC09B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CBB0042E21A7D72A00DC09B0 /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
+		CBB0043021A7D78400DC09B0 /* TutorialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialVC.swift; sourceTree = "<group>"; };
 		CBCF5E0921A5F2B70043D2A5 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		D96AD31B17FC60EEDDCE0636 /* Pods-PleaseSunshine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PleaseSunshine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PleaseSunshine/Pods-PleaseSunshine.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				CBB0042921A7279800DC09B0 /* UIView+applyDesign.swift */,
+				CB56CDB421A7E1C200632C68 /* UIViewController+Logo.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -126,7 +131,9 @@
 			isa = PBXGroup;
 			children = (
 				CBCF5E0921A5F2B70043D2A5 /* MapVC.swift */,
-				CBB0042B21A7339700DC09B0 /* SearchAddressVC.swift */,
+				CBB0042B21A7339700DC09B0 /* ViewController.swift */,
+				CBB0043021A7D78400DC09B0 /* TutorialVC.swift */,
+				CB56CDB621A7E22E00632C68 /* MainChooseVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -136,6 +143,7 @@
 			children = (
 				CB2F0D1721A3045100D36E38 /* Main.storyboard */,
 				CB2F0D1C21A3045100D36E38 /* LaunchScreen.storyboard */,
+				CBB0042E21A7D72A00DC09B0 /* Tutorial.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -154,8 +162,6 @@
 			isa = PBXGroup;
 			children = (
 				CB2F0D3721A32F5E00D36E38 /* NanumSquareOTFBold.otf */,
-				CB2F0D3621A32F5E00D36E38 /* NanumSquareOTFExtraBold.otf */,
-				CB2F0D3821A32F5E00D36E38 /* NanumSquareOTFRegular.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -229,11 +235,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBB0042F21A7D72A00DC09B0 /* Tutorial.storyboard in Resources */,
 				CB2F0D1E21A3045100D36E38 /* LaunchScreen.storyboard in Resources */,
 				CB2F0D1B21A3045100D36E38 /* Assets.xcassets in Resources */,
 				CB2F0D1921A3045100D36E38 /* Main.storyboard in Resources */,
-				CB2F0D3B21A32F6700D36E38 /* NanumSquareOTFRegular.otf in Resources */,
-				CB2F0D3A21A32F6400D36E38 /* NanumSquareOTFExtraBold.otf in Resources */,
 				CB2F0D3921A32F6100D36E38 /* NanumSquareOTFBold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,8 +326,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBB0042A21A7279800DC09B0 /* UIView+applyDesign.swift in Sources */,
-				CBB0042C21A7339700DC09B0 /* SearchAddressVC.swift in Sources */,
+				CBB0042C21A7339700DC09B0 /* ViewController.swift in Sources */,
 				CB2F0D1421A3045100D36E38 /* AppDelegate.swift in Sources */,
+				CB56CDB521A7E1C200632C68 /* UIViewController+Logo.swift in Sources */,
+				CBB0043121A7D78400DC09B0 /* TutorialVC.swift in Sources */,
+				CB56CDB721A7E22E00632C68 /* MainChooseVC.swift in Sources */,
 				CBCF5E0A21A5F2B70043D2A5 /* MapVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
