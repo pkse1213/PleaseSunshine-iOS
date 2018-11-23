@@ -12,6 +12,10 @@ class SimulationVC: UIViewController {
     // 카테고리 탭 outlet
     @IBOutlet var tabBtns: [UIButton]!
     @IBOutlet var tabUnderVars: [UIView]!
+    @IBOutlet var parentVs: [UIView]!
+    
+    // 에너지 outlet
+    @IBOutlet weak var simulationBtn: UIButton!
     
     // 비용 outlet
     @IBOutlet weak var lookBtn: UIButton!
@@ -39,11 +43,12 @@ class SimulationVC: UIViewController {
         tabUnderVars[2].isHidden = true
         
         // 에너지
+        simulationBtn.applyRadius(radius: 10)
+        // 비용
         yearLbl.font = yearLbl.font.withSize(adjustFontSize(size: 13))
         costLbl.font = costLbl.font.withSize(adjustFontSize(size: 27))
         infoLbl.font = infoLbl.font.withSize(adjustFontSize(size: 13))
-        
-        // 비용
+        parentVs[1].isHidden = true
         lookBtn.applyRadius(radius: lookBtn.frame.size.height/2)
         costSquareV1.applyRadius(radius: 10)
         costSquareV2.applyRadius(radius: 10)
@@ -52,6 +57,9 @@ class SimulationVC: UIViewController {
         
         // 비용-한눈에 알아보기
         lookV.applyRadius(radius: 10)
+        lookParentV.isHidden = true
+        // 환경
+        parentVs[2].isHidden = true
         
     }
     
@@ -67,9 +75,11 @@ class SimulationVC: UIViewController {
             if i == sender.tag {
                 tabBtns[i].setTitleColor(#colorLiteral(red: 1, green: 0.6965169907, blue: 0, alpha: 1), for: .normal)
                 tabUnderVars[i].isHidden = false
+                parentVs[i].isHidden = false
             } else {
                 tabBtns[i].setTitleColor(#colorLiteral(red: 0.7685508132, green: 0.768681109, blue: 0.7685337067, alpha: 1), for: .normal)
                 tabUnderVars[i].isHidden = true
+                parentVs[i].isHidden = true
             }
         }
     }
