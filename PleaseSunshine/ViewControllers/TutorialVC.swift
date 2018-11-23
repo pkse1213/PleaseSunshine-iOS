@@ -27,6 +27,11 @@ class TutorialVC: UIViewController {
     
     private func setImg() {
         self.tutorialImgV.image = UIImage(named: "tutorial\(page)Image")
+        if page == 3{
+            skipBtn.setTitle("햇님아 부탁해 시작하기", for: .normal)
+        } else {
+            skipBtn.setTitle("건너뛰기", for: .normal)
+        }
     }
     
     private func setView() {
