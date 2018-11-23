@@ -15,6 +15,12 @@ class MainChooseVC: UIViewController {
         setLogoInNaviBar()
         self.navigationItem.hidesBackButton = true
     }
-   
+    @IBAction func clickedGo(_ sender: UIButton) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarCV") as! UITabBarController
+        vc.selectedIndex = sender.tag
+        self.present(vc, animated: false)
+        
+    }
+    
 
 }
