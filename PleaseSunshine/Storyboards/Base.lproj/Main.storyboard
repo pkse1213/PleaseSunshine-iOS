@@ -167,6 +167,203 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8iC-oZ-YlM" userLabel="PriceView">
+                                <rect key="frame" x="0.0" y="108" width="375" height="510"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TdG-nC-dHm">
+                                        <rect key="frame" x="16" y="16" width="343" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="TdG-nC-dHm" secondAttribute="height" multiplier="49:4" id="eFU-nG-blZ"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="250W"/>
+                                            <segment title="260W"/>
+                                            <segment title="270W"/>
+                                            <segment title="300W"/>
+                                        </segments>
+                                        <color key="tintColor" red="1" green="0.63921568630000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </segmentedControl>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QjJ-0F-pmo">
+                                        <rect key="frame" x="0.0" y="56" width="375" height="454"/>
+                                        <subviews>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="costBg" translatesAutoresizingMaskIntoConstraints="NO" id="Wer-1U-TbN">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="454"/>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pDe-Kg-8SR">
+                                                <rect key="frame" x="26.5" y="45" width="322.5" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="연간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="Yhr-SD-d7t">
+                                                        <rect key="frame" x="0.0" y="7.5" width="24" height="14.5"/>
+                                                        <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="13"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="86,000원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="Hf4-Pb-gf5">
+                                                        <rect key="frame" x="32" y="0.0" width="115" height="30"/>
+                                                        <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="27"/>
+                                                        <color key="textColor" red="1" green="0.63921568630000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="의 전기료 절감효과가 있습니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="Mp5-o9-XSa">
+                                                        <rect key="frame" x="155" y="7.5" width="167.5" height="14.5"/>
+                                                        <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="13"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="miniCircle" translatesAutoresizingMaskIntoConstraints="NO" id="QMb-90-o8v">
+                                                <rect key="frame" x="16" y="16" width="6" height="6"/>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="anJ-a1-P6c">
+                                                <rect key="frame" x="28" y="12.5" width="154.5" height="13.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="월 평균 전기료" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Psr-ar-Qnr">
+                                                        <rect key="frame" x="0.0" y="0.0" width="72" height="13.5"/>
+                                                        <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="12"/>
+                                                        <color key="textColor" red="0.46274509803921571" green="0.46274509803921571" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100,000원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oth-IG-2CS">
+                                                        <rect key="frame" x="96" y="0.0" width="58.5" height="13.5"/>
+                                                        <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="12"/>
+                                                        <color key="textColor" red="0.46274509803921571" green="0.46274509803921571" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9wp-k1-I87">
+                                                <rect key="frame" x="249" y="10" width="110" height="27"/>
+                                                <color key="backgroundColor" red="1" green="0.63921568630000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="9wp-k1-I87" secondAttribute="height" multiplier="110:27" id="cFE-xS-WJB"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="12"/>
+                                                <state key="normal" title="한 눈에 알아보기">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Udy-do-cba">
+                                                <rect key="frame" x="8" y="97" width="359" height="334"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="zbQ-HV-58b">
+                                                        <rect key="frame" x="0.0" y="0.0" width="359" height="162"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QWO-tf-Myg">
+                                                                <rect key="frame" x="0.0" y="0.0" width="174" height="162"/>
+                                                                <subviews>
+                                                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="costSetting" translatesAutoresizingMaskIntoConstraints="NO" id="WYY-Vj-R0G">
+                                                                        <rect key="frame" x="58.5" y="30.5" width="57" height="55"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="WYY-Vj-R0G" secondAttribute="height" multiplier="57:55" id="Olg-Dd-eGY"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="설치비용" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="1Gq-9n-Zt3">
+                                                                        <rect key="frame" x="63.5" y="11" width="47.5" height="14.5"/>
+                                                                        <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="13"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="하루 끼니를 책임질 수 있다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="Aeq-ed-roE">
+                                                                        <rect key="frame" x="15.5" y="132.5" width="143.5" height="14.5"/>
+                                                                        <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="13"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="164,000원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="4Jj-ed-IqW">
+                                                                        <rect key="frame" x="50.5" y="99.5" width="73" height="17"/>
+                                                                        <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="15"/>
+                                                                        <color key="textColor" red="0.086274509803921567" green="0.69803921568627447" blue="0.49411764705882355" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="Aeq-ed-roE" firstAttribute="centerY" secondItem="QWO-tf-Myg" secondAttribute="centerY" multiplier="1:0.58" id="EPk-NM-9AF"/>
+                                                                    <constraint firstItem="1Gq-9n-Zt3" firstAttribute="centerX" secondItem="QWO-tf-Myg" secondAttribute="centerX" id="L2J-Di-Zsx"/>
+                                                                    <constraint firstItem="4Jj-ed-IqW" firstAttribute="centerX" secondItem="QWO-tf-Myg" secondAttribute="centerX" id="Lrh-Gw-lUT"/>
+                                                                    <constraint firstItem="1Gq-9n-Zt3" firstAttribute="centerY" secondItem="QWO-tf-Myg" secondAttribute="centerY" multiplier="1:4.5" id="Qbo-1Y-0at"/>
+                                                                    <constraint firstItem="WYY-Vj-R0G" firstAttribute="centerX" secondItem="QWO-tf-Myg" secondAttribute="centerX" id="bzs-dF-kCv"/>
+                                                                    <constraint firstItem="WYY-Vj-R0G" firstAttribute="width" secondItem="QWO-tf-Myg" secondAttribute="width" multiplier="57:174" id="hpD-cq-OY2"/>
+                                                                    <constraint firstItem="Aeq-ed-roE" firstAttribute="centerX" secondItem="QWO-tf-Myg" secondAttribute="centerX" id="jJT-fF-I0P"/>
+                                                                    <constraint firstItem="4Jj-ed-IqW" firstAttribute="centerY" secondItem="QWO-tf-Myg" secondAttribute="centerY" multiplier="1:0.75" id="spb-lm-dae"/>
+                                                                    <constraint firstItem="WYY-Vj-R0G" firstAttribute="centerY" secondItem="QWO-tf-Myg" secondAttribute="centerY" multiplier="1:1.4" id="why-ch-rZW"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dSD-5v-Hmu">
+                                                                <rect key="frame" x="185" y="0.0" width="174" height="162"/>
+                                                                <subviews>
+                                                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="costClock" translatesAutoresizingMaskIntoConstraints="NO" id="3TV-h2-Lkt">
+                                                                        <rect key="frame" x="63" y="62" width="48" height="54"/>
+                                                                        <autoresizingMask key="autoresizingMask"/>
+                                                                    </imageView>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="Vlf-eZ-DHe">
+                                                        <rect key="frame" x="0.0" y="172" width="359" height="162"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FJW-Uf-IkH">
+                                                                <rect key="frame" x="0.0" y="0.0" width="174" height="162"/>
+                                                                <subviews>
+                                                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="costBaby" translatesAutoresizingMaskIntoConstraints="NO" id="S24-OF-3Re">
+                                                                        <rect key="frame" x="50" y="40" width="57" height="52"/>
+                                                                        <autoresizingMask key="autoresizingMask"/>
+                                                                    </imageView>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V8c-hO-jGh">
+                                                                <rect key="frame" x="185" y="0.0" width="174" height="162"/>
+                                                                <subviews>
+                                                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="costCoffee" translatesAutoresizingMaskIntoConstraints="NO" id="yMz-3W-DlC">
+                                                                        <rect key="frame" x="58" y="55" width="59" height="52"/>
+                                                                        <autoresizingMask key="autoresizingMask"/>
+                                                                    </imageView>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="pDe-Kg-8SR" firstAttribute="top" secondItem="Psr-ar-Qnr" secondAttribute="bottom" constant="19" id="2Lk-AG-jWK"/>
+                                            <constraint firstAttribute="trailing" secondItem="9wp-k1-I87" secondAttribute="trailing" constant="16" id="8t7-GJ-maH"/>
+                                            <constraint firstItem="pDe-Kg-8SR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QjJ-0F-pmo" secondAttribute="leading" constant="23" id="B9C-Je-unR"/>
+                                            <constraint firstItem="9wp-k1-I87" firstAttribute="top" secondItem="QjJ-0F-pmo" secondAttribute="top" constant="10" id="BhA-6X-Nqs"/>
+                                            <constraint firstItem="Udy-do-cba" firstAttribute="top" secondItem="pDe-Kg-8SR" secondAttribute="bottom" constant="22" id="Fce-Ut-80u"/>
+                                            <constraint firstItem="QMb-90-o8v" firstAttribute="leading" secondItem="QjJ-0F-pmo" secondAttribute="leading" constant="16" id="G4q-3b-0PJ"/>
+                                            <constraint firstItem="anJ-a1-P6c" firstAttribute="centerY" secondItem="QMb-90-o8v" secondAttribute="centerY" id="Ieu-df-Q0R"/>
+                                            <constraint firstItem="anJ-a1-P6c" firstAttribute="leading" secondItem="QMb-90-o8v" secondAttribute="trailing" constant="6" id="Jho-RW-KVl"/>
+                                            <constraint firstItem="pDe-Kg-8SR" firstAttribute="centerX" secondItem="QjJ-0F-pmo" secondAttribute="centerX" id="K0z-qj-EzW"/>
+                                            <constraint firstAttribute="bottom" secondItem="Udy-do-cba" secondAttribute="bottom" constant="23" id="Kt0-KV-wTz"/>
+                                            <constraint firstItem="QMb-90-o8v" firstAttribute="top" secondItem="QjJ-0F-pmo" secondAttribute="top" constant="16" id="L9w-o8-9bT"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pDe-Kg-8SR" secondAttribute="trailing" constant="23" id="PqZ-vA-Dkx"/>
+                                            <constraint firstItem="Wer-1U-TbN" firstAttribute="leading" secondItem="QjJ-0F-pmo" secondAttribute="leading" id="Q3a-ch-aAR"/>
+                                            <constraint firstAttribute="trailing" secondItem="Udy-do-cba" secondAttribute="trailing" constant="8" id="Tp1-yo-Rnx"/>
+                                            <constraint firstAttribute="trailing" secondItem="Wer-1U-TbN" secondAttribute="trailing" id="VRA-C2-Qhq"/>
+                                            <constraint firstAttribute="bottom" secondItem="Wer-1U-TbN" secondAttribute="bottom" id="Y8F-UL-etQ"/>
+                                            <constraint firstItem="9wp-k1-I87" firstAttribute="width" secondItem="Wer-1U-TbN" secondAttribute="width" multiplier="110:375" id="beq-a3-RaL"/>
+                                            <constraint firstItem="Udy-do-cba" firstAttribute="leading" secondItem="QjJ-0F-pmo" secondAttribute="leading" constant="8" id="gMI-Of-Z5C"/>
+                                            <constraint firstItem="Wer-1U-TbN" firstAttribute="top" secondItem="QjJ-0F-pmo" secondAttribute="top" id="pja-Pg-tCT"/>
+                                            <constraint firstItem="Hf4-Pb-gf5" firstAttribute="width" secondItem="Wer-1U-TbN" secondAttribute="width" multiplier="115:375" id="sMg-bI-H1u"/>
+                                            <constraint firstItem="Mp5-o9-XSa" firstAttribute="width" secondItem="Wer-1U-TbN" secondAttribute="width" multiplier="167.5:375" id="t9s-Gv-87Y"/>
+                                            <constraint firstItem="Yhr-SD-d7t" firstAttribute="width" secondItem="Wer-1U-TbN" secondAttribute="width" multiplier="24:375" id="wci-tT-KPa"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="QjJ-0F-pmo" firstAttribute="top" secondItem="TdG-nC-dHm" secondAttribute="bottom" constant="12" id="4n0-HU-3BK"/>
+                                    <constraint firstAttribute="trailing" secondItem="TdG-nC-dHm" secondAttribute="trailing" constant="16" id="8P4-bz-guY"/>
+                                    <constraint firstItem="TdG-nC-dHm" firstAttribute="leading" secondItem="8iC-oZ-YlM" secondAttribute="leading" constant="16" id="9hr-JA-dIK"/>
+                                    <constraint firstItem="QjJ-0F-pmo" firstAttribute="leading" secondItem="8iC-oZ-YlM" secondAttribute="leading" id="n1x-4l-rwe"/>
+                                    <constraint firstItem="TdG-nC-dHm" firstAttribute="top" secondItem="8iC-oZ-YlM" secondAttribute="top" constant="16" id="p68-kp-xWR"/>
+                                    <constraint firstAttribute="trailing" secondItem="QjJ-0F-pmo" secondAttribute="trailing" id="rln-Jf-hjR"/>
+                                    <constraint firstAttribute="bottom" secondItem="QjJ-0F-pmo" secondAttribute="bottom" id="xOO-Bc-72L"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4OJ-0S-LQz" userLabel="EnergyView">
                                 <rect key="frame" x="0.0" y="108" width="375" height="510"/>
                                 <subviews>
@@ -220,19 +417,33 @@
                             <constraint firstItem="fTq-Fc-cmK" firstAttribute="bottom" secondItem="4OJ-0S-LQz" secondAttribute="bottom" id="3lh-Ec-kKb"/>
                             <constraint firstItem="4OJ-0S-LQz" firstAttribute="top" secondItem="IOz-F4-5vl" secondAttribute="bottom" id="6OP-VE-hXY"/>
                             <constraint firstItem="fTq-Fc-cmK" firstAttribute="trailing" secondItem="4OJ-0S-LQz" secondAttribute="trailing" id="Aeb-mm-Quv"/>
+                            <constraint firstItem="8iC-oZ-YlM" firstAttribute="top" secondItem="IOz-F4-5vl" secondAttribute="bottom" id="FGJ-vy-3lz"/>
+                            <constraint firstItem="fTq-Fc-cmK" firstAttribute="bottom" secondItem="8iC-oZ-YlM" secondAttribute="bottom" id="J3q-HU-9Ap"/>
+                            <constraint firstItem="8iC-oZ-YlM" firstAttribute="leading" secondItem="fTq-Fc-cmK" secondAttribute="leading" id="PFN-O9-3R1"/>
                             <constraint firstItem="D3R-W9-wVT" firstAttribute="top" secondItem="fTq-Fc-cmK" secondAttribute="top" id="TLA-t6-Kuf"/>
                             <constraint firstItem="IOz-F4-5vl" firstAttribute="leading" secondItem="nFO-1Y-u6W" secondAttribute="leading" id="YqK-jq-maV"/>
                             <constraint firstAttribute="trailing" secondItem="IOz-F4-5vl" secondAttribute="trailing" id="bIa-rc-vZV"/>
+                            <constraint firstItem="fTq-Fc-cmK" firstAttribute="trailing" secondItem="8iC-oZ-YlM" secondAttribute="trailing" id="k3r-tW-VF1"/>
                             <constraint firstItem="fTq-Fc-cmK" firstAttribute="trailing" secondItem="D3R-W9-wVT" secondAttribute="trailing" id="pE7-C5-IaS"/>
                             <constraint firstItem="4OJ-0S-LQz" firstAttribute="leading" secondItem="fTq-Fc-cmK" secondAttribute="leading" id="yC8-4p-SQH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fTq-Fc-cmK"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="4OJ-0S-LQz"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="NL7-C4-7DL"/>
+                    <connections>
+                        <outlet property="infoLbl" destination="Mp5-o9-XSa" id="055-MV-BUl"/>
+                        <outlet property="priceLbl" destination="Hf4-Pb-gf5" id="iRn-0q-0Ab"/>
+                        <outlet property="yearLbl" destination="Yhr-SD-d7t" id="IOB-9R-BJB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hZu-Js-C7i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1860" y="-197"/>
+            <point key="canvasLocation" x="1860" y="-197.45127436281859"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="9Zq-Dr-5JQ">
@@ -274,11 +485,17 @@
         </scene>
     </scenes>
     <resources>
+        <image name="costBaby" width="57" height="52"/>
+        <image name="costBg" width="375" height="451"/>
+        <image name="costClock" width="48" height="54"/>
+        <image name="costCoffee" width="59" height="52"/>
+        <image name="costSetting" width="57" height="55"/>
         <image name="energyGoodImage" width="375" height="508"/>
         <image name="mainLeftButton" width="132" height="28"/>
         <image name="mainListBg" width="188" height="601"/>
         <image name="mainRightButton" width="132" height="28"/>
         <image name="mainSimulationBg" width="188" height="601"/>
+        <image name="miniCircle" width="6" height="6"/>
         <image name="naviBarSimulation" width="30" height="30"/>
     </resources>
 </document>
