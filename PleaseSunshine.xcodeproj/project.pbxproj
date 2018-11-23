@@ -88,9 +88,6 @@
 		CB2F0D1221A3045100D36E38 /* PleaseSunshine */ = {
 			isa = PBXGroup;
 			children = (
-				CB2F0D2921A32E0C00D36E38 /* Services */,
-				CB2F0D2821A32E0500D36E38 /* Models */,
-				CB2F0D2721A32E0000D36E38 /* Views */,
 				CB2F0D2C21A32E2900D36E38 /* ViewControllers */,
 				CB2F0D2B21A32E2500D36E38 /* Utils */,
 				CB2F0D2D21A32E5D00D36E38 /* Storyboards */,
@@ -98,28 +95,6 @@
 				CB2F0D2E21A32E7E00D36E38 /* etc */,
 			);
 			path = PleaseSunshine;
-			sourceTree = "<group>";
-		};
-		CB2F0D2721A32E0000D36E38 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		CB2F0D2821A32E0500D36E38 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		CB2F0D2921A32E0C00D36E38 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Services;
-			path = "New Group1/Services";
 			sourceTree = "<group>";
 		};
 		CB2F0D2B21A32E2500D36E38 /* Utils */ = {
