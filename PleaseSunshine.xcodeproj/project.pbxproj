@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3EF1C1DF1889F0BA86C1D072 /* Pods_PleaseSunshine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B64B625F9749324E200961C0 /* Pods_PleaseSunshine.framework */; };
+		CB084A4621A863FA00F5DF88 /* Assets.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = CB084A4521A863FA00F5DF88 /* Assets.scnassets */; };
+		CB084A4821A8647E00F5DF88 /* ARSimulator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB084A4721A8647E00F5DF88 /* ARSimulator.storyboard */; };
+		CB084A4A21A864B000F5DF88 /* ARSimulatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB084A4921A864B000F5DF88 /* ARSimulatorVC.swift */; };
 		CB2F0D1421A3045100D36E38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2F0D1321A3045100D36E38 /* AppDelegate.swift */; };
 		CB2F0D1921A3045100D36E38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB2F0D1721A3045100D36E38 /* Main.storyboard */; };
 		CB2F0D1B21A3045100D36E38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB2F0D1A21A3045100D36E38 /* Assets.xcassets */; };
@@ -27,6 +30,9 @@
 /* Begin PBXFileReference section */
 		010797BB6204E927796E0D3C /* Pods-PleaseSunshine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PleaseSunshine.release.xcconfig"; path = "Pods/Target Support Files/Pods-PleaseSunshine/Pods-PleaseSunshine.release.xcconfig"; sourceTree = "<group>"; };
 		B64B625F9749324E200961C0 /* Pods_PleaseSunshine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PleaseSunshine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB084A4521A863FA00F5DF88 /* Assets.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Assets.scnassets; sourceTree = "<group>"; };
+		CB084A4721A8647E00F5DF88 /* ARSimulator.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARSimulator.storyboard; sourceTree = "<group>"; };
+		CB084A4921A864B000F5DF88 /* ARSimulatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSimulatorVC.swift; sourceTree = "<group>"; };
 		CB2F0D1021A3045100D36E38 /* PleaseSunshine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PleaseSunshine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB2F0D1321A3045100D36E38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB2F0D1821A3045100D36E38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -114,6 +120,7 @@
 				CBB0043021A7D78400DC09B0 /* TutorialVC.swift */,
 				CB56CDB621A7E22E00632C68 /* MainChooseVC.swift */,
 				CB56CDBA21A7E87800632C68 /* SimulationVC.swift */,
+				CB084A4921A864B000F5DF88 /* ARSimulatorVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -125,6 +132,7 @@
 				CBB0042E21A7D72A00DC09B0 /* Tutorial.storyboard */,
 				CB2F0D1721A3045100D36E38 /* Main.storyboard */,
 				CB56CDB821A7E77900632C68 /* Address.storyboard */,
+				CB084A4721A8647E00F5DF88 /* ARSimulator.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -135,6 +143,7 @@
 				CB2F0D1321A3045100D36E38 /* AppDelegate.swift */,
 				CB2F0D1A21A3045100D36E38 /* Assets.xcassets */,
 				CB2F0D1F21A3045100D36E38 /* Info.plist */,
+				CB084A4521A863FA00F5DF88 /* Assets.scnassets */,
 			);
 			path = etc;
 			sourceTree = "<group>";
@@ -216,8 +225,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB084A4821A8647E00F5DF88 /* ARSimulator.storyboard in Resources */,
 				CBB0042F21A7D72A00DC09B0 /* Tutorial.storyboard in Resources */,
 				CB56CDB921A7E77900632C68 /* Address.storyboard in Resources */,
+				CB084A4621A863FA00F5DF88 /* Assets.scnassets in Resources */,
 				CB2F0D1E21A3045100D36E38 /* LaunchScreen.storyboard in Resources */,
 				CB2F0D1B21A3045100D36E38 /* Assets.xcassets in Resources */,
 				CB2F0D1921A3045100D36E38 /* Main.storyboard in Resources */,
@@ -312,6 +323,7 @@
 				CB2F0D1421A3045100D36E38 /* AppDelegate.swift in Sources */,
 				CB56CDBB21A7E87800632C68 /* SimulationVC.swift in Sources */,
 				CB56CDB521A7E1C200632C68 /* UIViewController+Logo.swift in Sources */,
+				CB084A4A21A864B000F5DF88 /* ARSimulatorVC.swift in Sources */,
 				CBB0043121A7D78400DC09B0 /* TutorialVC.swift in Sources */,
 				CB56CDB721A7E22E00632C68 /* MainChooseVC.swift in Sources */,
 				CBCF5E0A21A5F2B70043D2A5 /* MapVC.swift in Sources */,

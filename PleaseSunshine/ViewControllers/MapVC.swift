@@ -11,6 +11,8 @@ import GoogleMaps
 import GooglePlaces
 
 class MapVC: UIViewController, UISearchDisplayDelegate {
+    let ud = UserDefaults.standard
+    
     var locationManager = CLLocationManager()
     var currentLocation: CLLocation?
     var originCoordinate: CLLocationCoordinate2D!
@@ -25,7 +27,6 @@ class MapVC: UIViewController, UISearchDisplayDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupView()
         
         // Initialize the location manager.
@@ -52,6 +53,14 @@ class MapVC: UIViewController, UISearchDisplayDelegate {
         present(autocompleteController, animated: true, completion: nil)
 
     }
+    
+    @IBAction func setAddressAction(_ sender: UIButton) {
+        NotificationCenter.default.post(name: NSNotification.Name("setAddress"), object: [1.0,2.0])
+        ud.set(1.0, forKey: "latitude")
+        ud.set(1.0, forKey: "longitude")
+        self.dismiss(animated: true)
+    }
+    
     private func setupView() {
         searchAddressBtn.applyRadius(radius: searchAddressBtn.frame.size.height/2)
         setAddressBtn.applyRadius(radius: 10)

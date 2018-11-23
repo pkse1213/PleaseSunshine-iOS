@@ -9,6 +9,10 @@
 import UIKit
 
 class SimulationVC: UIViewController {
+    let userdefault = UserDefaults.standard
+    
+    var longitude = 0.0
+    var latitude = 0.0
     // 카테고리 탭 outlet
     @IBOutlet var tabBtns: [UIButton]!
     @IBOutlet var tabUnderVars: [UIView]!
@@ -35,7 +39,33 @@ class SimulationVC: UIViewController {
         super.viewDidLoad()
         setLogoInNaviBar()
         setView()
+        checkSetAddress()
+        
+        let center = NotificationCenter.default
+        center.addObserver(self, selector: #selector(addressGetter), name: NSNotification.Name("setAddress") , object: nil)
     }
+    
+    private func checkSetAddress() {
+        guard let lat = userdefault.string(forKey: "latitude"), let long = userdefault.string(forKey: "longitude") else {
+            let vc = UIStoryboard(name: "Address", bundle: nil).instantiateViewController(withIdentifier: "MapVC") as! MapVC
+            self.present(vc, animated: true, completion: nil)
+            return
+        }
+        self.latitude = Double(lat)!
+        self.longitude = Double(long)!
+        print(self.latitude)
+        print(self.longitude)
+        
+    }
+    
+    
+    @objc func addressGetter(notification:Notification) {
+        if let address = notification.object as? [Double]{
+            self.latitude = address[0]
+            self.longitude = address[1]
+        }
+    }
+
     
     private func setView() {
         // 카테고리 탭

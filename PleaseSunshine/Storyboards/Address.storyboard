@@ -43,6 +43,51 @@
                                     <action selector="searchAddressClicked:" destination="LKk-dh-3Yo" eventType="touchUpInside" id="1si-Ux-bcC"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="주소로 검색" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y1b-bu-JaT">
+                                <rect key="frame" x="72" y="40" width="257" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2AQ-Hg-6eH">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="mapDirectionSun" translatesAutoresizingMaskIntoConstraints="NO" id="7PO-vI-169">
+                                        <rect key="frame" x="105.5" y="113" width="164" height="272"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="7PO-vI-169" secondAttribute="height" multiplier="41:68" id="zpo-Gh-G7v"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rB7-mu-bCY">
+                                        <rect key="frame" x="0.0" y="439" width="375" height="46"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="원하는 방향으로 기기를 움직여주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOi-Tc-agv">
+                                                <rect key="frame" x="65" y="14" width="245" height="18"/>
+                                                <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.28933005136986301" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="kOi-Tc-agv" firstAttribute="centerY" secondItem="rB7-mu-bCY" secondAttribute="centerY" id="TY4-Du-zMi"/>
+                                            <constraint firstItem="kOi-Tc-agv" firstAttribute="centerX" secondItem="rB7-mu-bCY" secondAttribute="centerX" id="VUY-fg-Nsa"/>
+                                            <constraint firstAttribute="width" secondItem="rB7-mu-bCY" secondAttribute="height" multiplier="375:46" id="pdM-Us-rcD"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.49459546232876711" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="rB7-mu-bCY" firstAttribute="centerY" secondItem="2AQ-Hg-6eH" secondAttribute="centerY" multiplier="1:0.7" id="5Mj-au-Y1V"/>
+                                    <constraint firstItem="rB7-mu-bCY" firstAttribute="leading" secondItem="2AQ-Hg-6eH" secondAttribute="leading" id="5wo-SO-pSC"/>
+                                    <constraint firstItem="rB7-mu-bCY" firstAttribute="centerX" secondItem="2AQ-Hg-6eH" secondAttribute="centerX" id="6YU-Fj-kGn"/>
+                                    <constraint firstItem="7PO-vI-169" firstAttribute="centerY" secondItem="2AQ-Hg-6eH" secondAttribute="centerY" multiplier="1:1.3" id="Grc-4l-N6j"/>
+                                    <constraint firstItem="7PO-vI-169" firstAttribute="centerX" secondItem="2AQ-Hg-6eH" secondAttribute="centerX" id="K5k-yc-55k"/>
+                                    <constraint firstAttribute="trailing" secondItem="rB7-mu-bCY" secondAttribute="trailing" id="cRh-qC-ELA"/>
+                                    <constraint firstItem="7PO-vI-169" firstAttribute="width" secondItem="2AQ-Hg-6eH" secondAttribute="width" multiplier="164:375" id="xBK-QH-nNe"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eeD-CJ-8st">
                                 <rect key="frame" x="8" y="597" width="359" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.63921568630000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -53,22 +98,22 @@
                                 <state key="normal" title="이 위치로 주소설정">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="setAddressAction:" destination="LKk-dh-3Yo" eventType="touchUpInside" id="6kz-VS-HHr"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="주소로 검색" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y1b-bu-JaT">
-                                <rect key="frame" x="72" y="40" width="257" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="vV7-4g-zjQ" firstAttribute="trailing" secondItem="Xhh-YJ-LZB" secondAttribute="trailing" id="1WJ-c5-0kQ"/>
                             <constraint firstAttribute="trailing" secondItem="eua-X7-oKb" secondAttribute="trailing" constant="8" id="2FV-E9-hXz"/>
                             <constraint firstItem="eeD-CJ-8st" firstAttribute="leading" secondItem="Xhh-YJ-LZB" secondAttribute="leading" constant="8" id="37x-4g-ujE"/>
+                            <constraint firstItem="2AQ-Hg-6eH" firstAttribute="trailing" secondItem="Xhh-YJ-LZB" secondAttribute="trailing" id="Oo7-SU-fwF"/>
                             <constraint firstItem="eua-X7-oKb" firstAttribute="top" secondItem="Xhh-YJ-LZB" secondAttribute="top" constant="10" id="RPd-NS-UV9"/>
+                            <constraint firstItem="2AQ-Hg-6eH" firstAttribute="top" secondItem="Xhh-YJ-LZB" secondAttribute="top" id="Sn5-gs-wLI"/>
                             <constraint firstItem="Xhh-YJ-LZB" firstAttribute="bottom" secondItem="eeD-CJ-8st" secondAttribute="bottom" constant="20" id="cdQ-G0-zzM"/>
+                            <constraint firstItem="2AQ-Hg-6eH" firstAttribute="leading" secondItem="Xhh-YJ-LZB" secondAttribute="leading" id="eUX-zx-9Im"/>
+                            <constraint firstItem="2AQ-Hg-6eH" firstAttribute="bottom" secondItem="Xhh-YJ-LZB" secondAttribute="bottom" id="gjN-E5-i0G"/>
                             <constraint firstItem="eua-X7-oKb" firstAttribute="leading" secondItem="Xhh-YJ-LZB" secondAttribute="leading" constant="8" id="k6U-2N-uN4"/>
                             <constraint firstItem="vV7-4g-zjQ" firstAttribute="top" secondItem="Xhh-YJ-LZB" secondAttribute="top" id="lUr-Kf-fl5"/>
                             <constraint firstAttribute="trailing" secondItem="eeD-CJ-8st" secondAttribute="trailing" constant="8" id="s8x-nb-fY0"/>
@@ -76,6 +121,11 @@
                             <constraint firstItem="vV7-4g-zjQ" firstAttribute="leading" secondItem="Xhh-YJ-LZB" secondAttribute="leading" id="uV3-pT-ogF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xhh-YJ-LZB"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="2AQ-Hg-6eH"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="addressTxF" destination="y1b-bu-JaT" id="8Rg-cO-xdE"/>
@@ -86,7 +136,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0EO-xo-3NL" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="281" y="206"/>
+            <point key="canvasLocation" x="280.80000000000001" y="205.54722638680661"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="mapDirectionSun" width="164" height="272"/>
+    </resources>
 </document>
