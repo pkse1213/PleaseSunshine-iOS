@@ -11,6 +11,13 @@
 		CB084A4621A863FA00F5DF88 /* Assets.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = CB084A4521A863FA00F5DF88 /* Assets.scnassets */; };
 		CB084A4821A8647E00F5DF88 /* ARSimulator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB084A4721A8647E00F5DF88 /* ARSimulator.storyboard */; };
 		CB084A4A21A864B000F5DF88 /* ARSimulatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB084A4921A864B000F5DF88 /* ARSimulatorVC.swift */; };
+		CB19C94C21A924F3002DFEE5 /* EnvironmentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19C94B21A924F3002DFEE5 /* EnvironmentData.swift */; };
+		CB19C94E21A9313E002DFEE5 /* EnergyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19C94D21A9313E002DFEE5 /* EnergyData.swift */; };
+		CB19C95021A93191002DFEE5 /* CostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19C94F21A93191002DFEE5 /* CostData.swift */; };
+		CB19C95321A939BA002DFEE5 /* EnergyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19C95221A939BA002DFEE5 /* EnergyService.swift */; };
+		CB19C95521A93AC6002DFEE5 /* CostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19C95421A93AC6002DFEE5 /* CostService.swift */; };
+		CB19C95721A93D85002DFEE5 /* EnvironmentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19C95621A93D85002DFEE5 /* EnvironmentService.swift */; };
+		CB19C95A21A9C0E7002DFEE5 /* CostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19C95921A9C0E7002DFEE5 /* CostCell.swift */; };
 		CB2F0D1421A3045100D36E38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2F0D1321A3045100D36E38 /* AppDelegate.swift */; };
 		CB2F0D1921A3045100D36E38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB2F0D1721A3045100D36E38 /* Main.storyboard */; };
 		CB2F0D1B21A3045100D36E38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB2F0D1A21A3045100D36E38 /* Assets.xcassets */; };
@@ -37,6 +44,13 @@
 		CB084A4521A863FA00F5DF88 /* Assets.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Assets.scnassets; sourceTree = "<group>"; };
 		CB084A4721A8647E00F5DF88 /* ARSimulator.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARSimulator.storyboard; sourceTree = "<group>"; };
 		CB084A4921A864B000F5DF88 /* ARSimulatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSimulatorVC.swift; sourceTree = "<group>"; };
+		CB19C94B21A924F3002DFEE5 /* EnvironmentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentData.swift; sourceTree = "<group>"; };
+		CB19C94D21A9313E002DFEE5 /* EnergyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyData.swift; sourceTree = "<group>"; };
+		CB19C94F21A93191002DFEE5 /* CostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostData.swift; sourceTree = "<group>"; };
+		CB19C95221A939BA002DFEE5 /* EnergyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyService.swift; sourceTree = "<group>"; };
+		CB19C95421A93AC6002DFEE5 /* CostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostService.swift; sourceTree = "<group>"; };
+		CB19C95621A93D85002DFEE5 /* EnvironmentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentService.swift; sourceTree = "<group>"; };
+		CB19C95921A9C0E7002DFEE5 /* CostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostCell.swift; sourceTree = "<group>"; };
 		CB2F0D1021A3045100D36E38 /* PleaseSunshine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PleaseSunshine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB2F0D1321A3045100D36E38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB2F0D1821A3045100D36E38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -81,6 +95,35 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CB19C94A21A924E6002DFEE5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CB19C94B21A924F3002DFEE5 /* EnvironmentData.swift */,
+				CB19C94D21A9313E002DFEE5 /* EnergyData.swift */,
+				CB19C94F21A93191002DFEE5 /* CostData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CB19C95121A9397F002DFEE5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				CB480AAA21A87C8B00BB9C9E /* APIServices.swift */,
+				CB480AA821A87C8B00BB9C9E /* HTTPStatusCode.swift */,
+				CB480AA721A87C8B00BB9C9E /* NetworkResult.swift */,
+				CB480AA921A87C8B00BB9C9E /* RequestService.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		CB19C95821A9C0CC002DFEE5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CB19C95921A9C0E7002DFEE5 /* CostCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		CB2F0D0721A3045100D36E38 = {
 			isa = PBXGroup;
 			children = (
@@ -102,7 +145,9 @@
 		CB2F0D1221A3045100D36E38 /* PleaseSunshine */ = {
 			isa = PBXGroup;
 			children = (
+				CB19C94A21A924E6002DFEE5 /* Models */,
 				CB480AA621A87C5900BB9C9E /* Services */,
+				CB19C95821A9C0CC002DFEE5 /* Views */,
 				CB2F0D2C21A32E2900D36E38 /* ViewControllers */,
 				CB2F0D2B21A32E2500D36E38 /* Utils */,
 				CB2F0D2D21A32E5D00D36E38 /* Storyboards */,
@@ -168,10 +213,10 @@
 		CB480AA621A87C5900BB9C9E /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				CB480AAA21A87C8B00BB9C9E /* APIServices.swift */,
-				CB480AA821A87C8B00BB9C9E /* HTTPStatusCode.swift */,
-				CB480AA721A87C8B00BB9C9E /* NetworkResult.swift */,
-				CB480AA921A87C8B00BB9C9E /* RequestService.swift */,
+				CB19C95121A9397F002DFEE5 /* Base */,
+				CB19C95221A939BA002DFEE5 /* EnergyService.swift */,
+				CB19C95421A93AC6002DFEE5 /* CostService.swift */,
+				CB19C95621A93D85002DFEE5 /* EnvironmentService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -340,16 +385,23 @@
 			files = (
 				CB480AAE21A87C8B00BB9C9E /* APIServices.swift in Sources */,
 				CBB0042A21A7279800DC09B0 /* UIView+applyDesign.swift in Sources */,
+				CB19C95721A93D85002DFEE5 /* EnvironmentService.swift in Sources */,
+				CB19C94E21A9313E002DFEE5 /* EnergyData.swift in Sources */,
 				CB480AAD21A87C8B00BB9C9E /* RequestService.swift in Sources */,
+				CB19C95521A93AC6002DFEE5 /* CostService.swift in Sources */,
 				CB480AAB21A87C8B00BB9C9E /* NetworkResult.swift in Sources */,
 				CBB0042C21A7339700DC09B0 /* ViewController.swift in Sources */,
 				CB2F0D1421A3045100D36E38 /* AppDelegate.swift in Sources */,
 				CB56CDBB21A7E87800632C68 /* SimulationVC.swift in Sources */,
 				CB56CDB521A7E1C200632C68 /* UIViewController+Logo.swift in Sources */,
 				CB084A4A21A864B000F5DF88 /* ARSimulatorVC.swift in Sources */,
+				CB19C94C21A924F3002DFEE5 /* EnvironmentData.swift in Sources */,
 				CBB0043121A7D78400DC09B0 /* TutorialVC.swift in Sources */,
+				CB19C95021A93191002DFEE5 /* CostData.swift in Sources */,
 				CB480AAC21A87C8B00BB9C9E /* HTTPStatusCode.swift in Sources */,
 				CB56CDB721A7E22E00632C68 /* MainChooseVC.swift in Sources */,
+				CB19C95321A939BA002DFEE5 /* EnergyService.swift in Sources */,
+				CB19C95A21A9C0E7002DFEE5 /* CostCell.swift in Sources */,
 				CBCF5E0A21A5F2B70043D2A5 /* MapVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
