@@ -51,10 +51,6 @@ class SimulationVC: UIViewController {
     @IBOutlet weak var yearLbl: UILabel!
     @IBOutlet weak var yearCostLbl: UILabel!
     @IBOutlet weak var infoLbl: UILabel!
-    @IBOutlet weak var costSquareV1: UIView!
-    @IBOutlet weak var costSquareV2: UIView!
-    @IBOutlet weak var costSquareV3: UIView!
-    @IBOutlet weak var costSquareV4: UIView!
     
     // 비용-한눈에 알아보기 outlet
     @IBOutlet weak var lookParentV: UIView!
@@ -107,10 +103,7 @@ class SimulationVC: UIViewController {
         infoLbl.font = infoLbl.font.withSize(adjustFontSize(size: 13))
         parentVs[1].isHidden = true
         lookBtn.applyRadius(radius: 13.5*self.view.frame.width/375)
-        costSquareV1.applyRadius(radius: 10)
-        costSquareV2.applyRadius(radius: 10)
-        costSquareV3.applyRadius(radius: 10)
-        costSquareV4.applyRadius(radius: 10)
+       
         
         // 비용-한눈에 알아보기
         lookV.applyRadius(radius: 10)
