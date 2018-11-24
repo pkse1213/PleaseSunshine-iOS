@@ -56,6 +56,10 @@ class SimulationVC: UIViewController {
     @IBOutlet weak var lookParentV: UIView!
     @IBOutlet weak var lookV: UIView!
     
+    // 환경 outlet
+    let outputCategories = ["이산화탄소 배출량" ,"질소산화물 배출량", "초미세먼지 배출량"]
+    @IBOutlet weak var environmentTbV: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initServiceData()
@@ -110,6 +114,8 @@ class SimulationVC: UIViewController {
         lookParentV.isHidden = true
         
         // 환경
+        environmentTbV.delegate = self
+        environmentTbV.dataSource = self
         parentVs[2].isHidden = true
         
     }
@@ -207,4 +213,26 @@ extension SimulationVC: UICollectionViewDelegate, UICollectionViewDataSource {
         }
         return cell
     }
+}
+
+extension SimulationVC: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return outputCategories.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = environmentTbV.dequeueReusableCell(withIdentifier: "EnvironmentCell") as! EnvironmentCell
+        cell.categoryLbl.text = "\(outputCategories[indexPath.row])"
+        guard let environment = self.environment else {return cell}
+        if indexPath.row == 0 {
+            cell.thermalPoserImgV.frame.size.height = CGFloat(environment.cado.thermalPower)
+        } else if indexPath.row == 1 {
+            
+        } else if indexPath.row == 2 {
+            
+        }
+        return cell
+    }
+    
+    
 }

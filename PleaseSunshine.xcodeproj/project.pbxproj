@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3EF1C1DF1889F0BA86C1D072 /* Pods_PleaseSunshine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B64B625F9749324E200961C0 /* Pods_PleaseSunshine.framework */; };
-		CB084A4621A863FA00F5DF88 /* Assets.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = CB084A4521A863FA00F5DF88 /* Assets.scnassets */; };
 		CB084A4821A8647E00F5DF88 /* ARSimulator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB084A4721A8647E00F5DF88 /* ARSimulator.storyboard */; };
 		CB084A4A21A864B000F5DF88 /* ARSimulatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB084A4921A864B000F5DF88 /* ARSimulatorVC.swift */; };
 		CB19C94C21A924F3002DFEE5 /* EnvironmentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19C94B21A924F3002DFEE5 /* EnvironmentData.swift */; };
@@ -31,6 +30,7 @@
 		CB56CDB721A7E22E00632C68 /* MainChooseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB56CDB621A7E22E00632C68 /* MainChooseVC.swift */; };
 		CB56CDB921A7E77900632C68 /* Address.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB56CDB821A7E77900632C68 /* Address.storyboard */; };
 		CB56CDBB21A7E87800632C68 /* SimulationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB56CDBA21A7E87800632C68 /* SimulationVC.swift */; };
+		CB94708921A9EC020077128B /* EnvironmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB94708821A9EC020077128B /* EnvironmentCell.swift */; };
 		CBB0042A21A7279800DC09B0 /* UIView+applyDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0042921A7279800DC09B0 /* UIView+applyDesign.swift */; };
 		CBB0042C21A7339700DC09B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0042B21A7339700DC09B0 /* ViewController.swift */; };
 		CBB0042F21A7D72A00DC09B0 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBB0042E21A7D72A00DC09B0 /* Tutorial.storyboard */; };
@@ -41,7 +41,6 @@
 /* Begin PBXFileReference section */
 		010797BB6204E927796E0D3C /* Pods-PleaseSunshine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PleaseSunshine.release.xcconfig"; path = "Pods/Target Support Files/Pods-PleaseSunshine/Pods-PleaseSunshine.release.xcconfig"; sourceTree = "<group>"; };
 		B64B625F9749324E200961C0 /* Pods_PleaseSunshine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PleaseSunshine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB084A4521A863FA00F5DF88 /* Assets.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Assets.scnassets; sourceTree = "<group>"; };
 		CB084A4721A8647E00F5DF88 /* ARSimulator.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARSimulator.storyboard; sourceTree = "<group>"; };
 		CB084A4921A864B000F5DF88 /* ARSimulatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSimulatorVC.swift; sourceTree = "<group>"; };
 		CB19C94B21A924F3002DFEE5 /* EnvironmentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentData.swift; sourceTree = "<group>"; };
@@ -66,6 +65,7 @@
 		CB56CDB621A7E22E00632C68 /* MainChooseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChooseVC.swift; sourceTree = "<group>"; };
 		CB56CDB821A7E77900632C68 /* Address.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Address.storyboard; sourceTree = "<group>"; };
 		CB56CDBA21A7E87800632C68 /* SimulationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationVC.swift; sourceTree = "<group>"; };
+		CB94708821A9EC020077128B /* EnvironmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentCell.swift; sourceTree = "<group>"; };
 		CBB0042921A7279800DC09B0 /* UIView+applyDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+applyDesign.swift"; sourceTree = "<group>"; };
 		CBB0042B21A7339700DC09B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CBB0042E21A7D72A00DC09B0 /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
@@ -120,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				CB19C95921A9C0E7002DFEE5 /* CostCell.swift */,
+				CB94708821A9EC020077128B /* EnvironmentCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -197,7 +198,6 @@
 				CB2F0D1321A3045100D36E38 /* AppDelegate.swift */,
 				CB2F0D1A21A3045100D36E38 /* Assets.xcassets */,
 				CB2F0D1F21A3045100D36E38 /* Info.plist */,
-				CB084A4521A863FA00F5DF88 /* Assets.scnassets */,
 			);
 			path = etc;
 			sourceTree = "<group>";
@@ -293,7 +293,6 @@
 				CB084A4821A8647E00F5DF88 /* ARSimulator.storyboard in Resources */,
 				CBB0042F21A7D72A00DC09B0 /* Tutorial.storyboard in Resources */,
 				CB56CDB921A7E77900632C68 /* Address.storyboard in Resources */,
-				CB084A4621A863FA00F5DF88 /* Assets.scnassets in Resources */,
 				CB2F0D1E21A3045100D36E38 /* LaunchScreen.storyboard in Resources */,
 				CB2F0D1B21A3045100D36E38 /* Assets.xcassets in Resources */,
 				CB2F0D1921A3045100D36E38 /* Main.storyboard in Resources */,
@@ -387,6 +386,7 @@
 				CBB0042A21A7279800DC09B0 /* UIView+applyDesign.swift in Sources */,
 				CB19C95721A93D85002DFEE5 /* EnvironmentService.swift in Sources */,
 				CB19C94E21A9313E002DFEE5 /* EnergyData.swift in Sources */,
+				CB94708921A9EC020077128B /* EnvironmentCell.swift in Sources */,
 				CB480AAD21A87C8B00BB9C9E /* RequestService.swift in Sources */,
 				CB19C95521A93AC6002DFEE5 /* CostService.swift in Sources */,
 				CB480AAB21A87C8B00BB9C9E /* NetworkResult.swift in Sources */,
