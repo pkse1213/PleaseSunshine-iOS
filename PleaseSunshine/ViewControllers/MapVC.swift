@@ -9,13 +9,13 @@
 import UIKit
 import GoogleMaps
 import GooglePlaces
-
+import MapKit
 struct MyPlace {
     var name: String
     var lat: Double
     var lon: Double
 }
-class MapVC: UIViewController, UISearchDisplayDelegate {
+class MapVC: UIViewController, UISearchDisplayDelegate, GMSMapViewDelegate {
     let ud = UserDefaults.standard
     
     var choosenPlace: MyPlace?
@@ -35,7 +35,7 @@ class MapVC: UIViewController, UISearchDisplayDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        addressTxF.delegate = self
+//        addressTxF.delegate = self
         
         // Initialize the location manager.
         locationManager = CLLocationManager()
@@ -51,17 +51,27 @@ class MapVC: UIViewController, UISearchDisplayDelegate {
         mapView.isHidden = true
         
         // 주소 검색
+        let center = NotificationCenter.default
+        center.addObserver(self, selector: #selector(addressGetter), name: NSNotification.Name("setAddress") , object: nil)
         
     }
-        
+    @objc func addressGetter(notification:Notification) {
+        if let address = notification.object as? [Double]{
+           
+        }
+    }
+    
     @IBAction func searchAddressClicked(_ sender: UIButton) {
-////
-        let autocompleteController = GMSAutocompleteViewController()
-        autocompleteController.delegate = self
-        let filter = GMSAutocompleteFilter()
-        autocompleteController.autocompleteFilter = filter
         
-        present(autocompleteController, animated: true, completion: nil)
+        let vc = UIStoryboard(name: "Address", bundle: nil).instantiateViewController(withIdentifier: "LocationSearchVC") as! LocationSearchVC
+        self.present(vc, animated: true, completion: nil)
+////
+//        let autocompleteController = GMSAutocompleteViewController()
+//        autocompleteController.delegate = self
+//        let filter = GMSAutocompleteFilter()
+//        autocompleteController.autocompleteFilter = filter
+//
+//        present(autocompleteController, animated: true, completion: nil)
 
     }
     
@@ -104,6 +114,8 @@ extension MapVC: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last {
             
+            
+//            self.choosenPlace = MyPlace(name: location, lat: <#T##Double#>, lon: <#T##Double#>)
             let camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
             
 //            locationManager.stopUpdatingLocation()
@@ -132,60 +144,4 @@ extension MapVC: CLLocationManagerDelegate {
         marker.icon = #imageLiteral(resourceName: "pin")
         marker.map = mapView
     }
-}
-
-extension MapVC: GMSAutocompleteViewControllerDelegate, UITextFieldDelegate, GMSMapViewDelegate {
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        let autoCompleteController = GMSAutocompleteViewController()
-        autoCompleteController.delegate = self
-        
-        let filter = GMSAutocompleteFilter()
-        autoCompleteController.autocompleteFilter = filter
-        
-//        self.locationManager.startUpdatingLocation()
-        self.present(autoCompleteController, animated: true) {
-            
-        }
-        return false
-    }
-    
-    // Handle the user's selection.
-    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
-       
-        let lat = place.coordinate.latitude
-        let lon = place.coordinate.longitude
-        let camera = GMSCameraPosition.camera(withLatitude: lat, longitude: lon, zoom: 15)
-        mapView.camera = camera
-        addressTxF.text = place.formattedAddress
-        
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: lat, longitude: lon)
-        marker.title = "\(place.name)"
-        marker.snippet = "\(place.formattedAddress)"
-        marker.icon = #imageLiteral(resourceName: "pin")
-        marker.map = mapView
-        self.dismiss(animated: true) {
-            self.choosenPlace = MyPlace(name: "\(place.formattedAddress)", lat: lat, lon: lon)
-        }
-    }
-
-    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
-        // TODO: handle the error.
-        print("Error: ", error.localizedDescription)
-    }
-
-    // User canceled the operation.
-    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
-        dismiss(animated: true, completion: nil)
-    }
-
-    // Turn the network activity indicator on and off again.
-    func didRequestAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-    }
-
-    func didUpdateAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = false
-    }
-
 }

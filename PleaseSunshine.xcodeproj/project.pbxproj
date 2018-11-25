@@ -32,6 +32,12 @@
 		CB56CDBB21A7E87800632C68 /* SimulationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB56CDBA21A7E87800632C68 /* SimulationVC.swift */; };
 		CB5DE9D021AA81F9007D33E0 /* LookCostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DE9CF21AA81F9007D33E0 /* LookCostService.swift */; };
 		CB5DE9D221AA8255007D33E0 /* CostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DE9D121AA8255007D33E0 /* CostData.swift */; };
+		CB5DE9D421AADD6F007D33E0 /* KakaoAddressService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DE9D321AADD6F007D33E0 /* KakaoAddressService.swift */; };
+		CB5DE9D621AADDA4007D33E0 /* AddressData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DE9D521AADDA4007D33E0 /* AddressData.swift */; };
+		CB5DE9D821AADE25007D33E0 /* LocationSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DE9D721AADE25007D33E0 /* LocationSearchCell.swift */; };
+		CB5DE9DA21AADE36007D33E0 /* LocationSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DE9D921AADE36007D33E0 /* LocationSearchVC.swift */; };
+		CB5DE9DC21AAE069007D33E0 /* UIViewController+extesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DE9DB21AAE069007D33E0 /* UIViewController+extesion.swift */; };
+		CB5DE9DE21AAE08D007D33E0 /* UIColor+rgb.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DE9DD21AAE08D007D33E0 /* UIColor+rgb.swift */; };
 		CB94708921A9EC020077128B /* EnvironmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB94708821A9EC020077128B /* EnvironmentCell.swift */; };
 		CBB0042A21A7279800DC09B0 /* UIView+applyDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0042921A7279800DC09B0 /* UIView+applyDesign.swift */; };
 		CBB0042C21A7339700DC09B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0042B21A7339700DC09B0 /* ViewController.swift */; };
@@ -69,6 +75,12 @@
 		CB56CDBA21A7E87800632C68 /* SimulationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationVC.swift; sourceTree = "<group>"; };
 		CB5DE9CF21AA81F9007D33E0 /* LookCostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookCostService.swift; sourceTree = "<group>"; };
 		CB5DE9D121AA8255007D33E0 /* CostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostData.swift; sourceTree = "<group>"; };
+		CB5DE9D321AADD6F007D33E0 /* KakaoAddressService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KakaoAddressService.swift; sourceTree = "<group>"; };
+		CB5DE9D521AADDA4007D33E0 /* AddressData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressData.swift; sourceTree = "<group>"; };
+		CB5DE9D721AADE25007D33E0 /* LocationSearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchCell.swift; sourceTree = "<group>"; };
+		CB5DE9D921AADE36007D33E0 /* LocationSearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchVC.swift; sourceTree = "<group>"; };
+		CB5DE9DB21AAE069007D33E0 /* UIViewController+extesion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+extesion.swift"; sourceTree = "<group>"; };
+		CB5DE9DD21AAE08D007D33E0 /* UIColor+rgb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+rgb.swift"; sourceTree = "<group>"; };
 		CB94708821A9EC020077128B /* EnvironmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentCell.swift; sourceTree = "<group>"; };
 		CBB0042921A7279800DC09B0 /* UIView+applyDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+applyDesign.swift"; sourceTree = "<group>"; };
 		CBB0042B21A7339700DC09B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +114,7 @@
 		CB19C94A21A924E6002DFEE5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CB5DE9D521AADDA4007D33E0 /* AddressData.swift */,
 				CB19C94B21A924F3002DFEE5 /* EnvironmentData.swift */,
 				CB19C94D21A9313E002DFEE5 /* EnergyData.swift */,
 				CB19C94F21A93191002DFEE5 /* LookCostData.swift */,
@@ -124,6 +137,7 @@
 		CB19C95821A9C0CC002DFEE5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CB5DE9D721AADE25007D33E0 /* LocationSearchCell.swift */,
 				CB19C95921A9C0E7002DFEE5 /* CostCell.swift */,
 				CB94708821A9EC020077128B /* EnvironmentCell.swift */,
 			);
@@ -166,6 +180,8 @@
 		CB2F0D2B21A32E2500D36E38 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				CB5DE9DD21AAE08D007D33E0 /* UIColor+rgb.swift */,
+				CB5DE9DB21AAE069007D33E0 /* UIViewController+extesion.swift */,
 				CBB0042921A7279800DC09B0 /* UIView+applyDesign.swift */,
 				CB56CDB421A7E1C200632C68 /* UIViewController+Logo.swift */,
 			);
@@ -176,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				CBCF5E0921A5F2B70043D2A5 /* MapVC.swift */,
+				CB5DE9D921AADE36007D33E0 /* LocationSearchVC.swift */,
 				CBB0042B21A7339700DC09B0 /* ViewController.swift */,
 				CBB0043021A7D78400DC09B0 /* TutorialVC.swift */,
 				CB56CDB621A7E22E00632C68 /* MainChooseVC.swift */,
@@ -219,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				CB19C95121A9397F002DFEE5 /* Base */,
+				CB5DE9D321AADD6F007D33E0 /* KakaoAddressService.swift */,
 				CB19C95221A939BA002DFEE5 /* EnergyService.swift */,
 				CB19C95421A93AC6002DFEE5 /* CostService.swift */,
 				CB5DE9CF21AA81F9007D33E0 /* LookCostService.swift */,
@@ -396,12 +414,17 @@
 				CB94708921A9EC020077128B /* EnvironmentCell.swift in Sources */,
 				CB480AAD21A87C8B00BB9C9E /* RequestService.swift in Sources */,
 				CB19C95521A93AC6002DFEE5 /* CostService.swift in Sources */,
+				CB5DE9D821AADE25007D33E0 /* LocationSearchCell.swift in Sources */,
 				CB480AAB21A87C8B00BB9C9E /* NetworkResult.swift in Sources */,
 				CBB0042C21A7339700DC09B0 /* ViewController.swift in Sources */,
+				CB5DE9D421AADD6F007D33E0 /* KakaoAddressService.swift in Sources */,
 				CB2F0D1421A3045100D36E38 /* AppDelegate.swift in Sources */,
+				CB5DE9DC21AAE069007D33E0 /* UIViewController+extesion.swift in Sources */,
 				CB56CDBB21A7E87800632C68 /* SimulationVC.swift in Sources */,
 				CB5DE9D021AA81F9007D33E0 /* LookCostService.swift in Sources */,
+				CB5DE9DA21AADE36007D33E0 /* LocationSearchVC.swift in Sources */,
 				CB56CDB521A7E1C200632C68 /* UIViewController+Logo.swift in Sources */,
+				CB5DE9D621AADDA4007D33E0 /* AddressData.swift in Sources */,
 				CB084A4A21A864B000F5DF88 /* ARSimulatorVC.swift in Sources */,
 				CB19C94C21A924F3002DFEE5 /* EnvironmentData.swift in Sources */,
 				CBB0043121A7D78400DC09B0 /* TutorialVC.swift in Sources */,
@@ -410,6 +433,7 @@
 				CB56CDB721A7E22E00632C68 /* MainChooseVC.swift in Sources */,
 				CB19C95321A939BA002DFEE5 /* EnergyService.swift in Sources */,
 				CB19C95A21A9C0E7002DFEE5 /* CostCell.swift in Sources */,
+				CB5DE9DE21AAE08D007D33E0 /* UIColor+rgb.swift in Sources */,
 				CBCF5E0A21A5F2B70043D2A5 /* MapVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
