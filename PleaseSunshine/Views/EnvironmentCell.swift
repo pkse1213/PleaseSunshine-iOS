@@ -11,9 +11,13 @@ import UIKit
 class EnvironmentCell: UITableViewCell {
 //let cado, nox, udst: OutputAmount
 //    sun, kospo, thermalPower
-    @IBOutlet weak var thermalPoserImgV: UIImageView!
+    @IBOutlet weak var thermalPowerImgV: UIImageView!
     @IBOutlet weak var kospoImgV: UIImageView!
     @IBOutlet weak var sunImgV: UIImageView!
+    
+    @IBOutlet weak var thermalHeight: NSLayoutConstraint!
+    @IBOutlet weak var kospoHeight: NSLayoutConstraint!
+    @IBOutlet weak var sunHeight: UIImageView!
     
     @IBOutlet weak var categoryLbl: UILabel!
     @IBOutlet weak var backgroundImgV: UIView!

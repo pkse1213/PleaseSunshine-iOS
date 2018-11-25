@@ -1,60 +1,55 @@
 
 import UIKit
 import GooglePlaces
-
+import GoogleMaps
 class ViewController: UIViewController {
+    var arrayAddress = [GMSAutocompletePrediction]()
     
-    var resultsViewController: GMSAutocompleteResultsViewController?
-    var searchController: UISearchController?
-    var resultView: UITextView?
+    lazy var filter: GMSAutocompleteFilter = {
+        let filter = GMSAutocompleteFilter()
+        filter.type = .address
+        return filter
+    }()
+    @IBOutlet weak var txtSearch: UITextField!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        resultsViewController = GMSAutocompleteResultsViewController()
-        resultsViewController?.delegate = self
-        
-        searchController = UISearchController(searchResultsController: resultsViewController)
-        searchController?.searchResultsUpdater = resultsViewController
-        
-        // Add the search bar to the right of the nav bar,
-        // use a popover to display the results.
-        // Set an explicit size as we don't want to use the entire nav bar.
-        searchController?.searchBar.frame = (CGRect(x: 0, y: 0, width: 250.0, height: 44.0))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: (searchController?.searchBar)!)
-        
-        // When UISearchController presents the results view, present it in
-        // this view controller, not one further up the chain.
-        definesPresentationContext = true
-        
-        // Keep the navigation bar visible.
-        searchController?.hidesNavigationBarDuringPresentation = false
-        searchController?.modalPresentationStyle = .popover
+//        tableView.delegate = self
+//        tableView.dataSource = self
+        tableView.tableFooterView = UIView()
     }
 }
-// Handle the user's selection.
-extension ViewController: GMSAutocompleteResultsViewControllerDelegate {
-    func resultsController(_ resultsController: GMSAutocompleteResultsViewController,
-                           didAutocompleteWith place: GMSPlace) {
-        searchController?.isActive = false
-        // Do something with the selected place.
-        print("Place name: \(place.name)")
-        print("Place address: \(place.formattedAddress)")
-        print("Place attributions: \(place.attributions)")
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return arrayAddress.count
     }
     
-    func resultsController(_ resultsController: GMSAutocompleteResultsViewController,
-                           didFailAutocompleteWithError error: Error){
-        // TODO: handle the error.
-        print("Error: ", error.localizedDescription)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        if cell == nil {
+            cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+        }
+        cell?.textLabel?.attributedText = arrayAddress[indexPath.row].attributedFullText
+        cell?.textLabel?.font = UIFont.systemFont(ofSize: 14)
+        return cell!
     }
-    
-    // Turn the network activity indicator on and off again.
-    func didRequestAutocompletePredictions(forResultsController resultsController: GMSAutocompleteResultsViewController) {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-    }
-    
-    func didUpdateAutocompletePredictions(forResultsController resultsController: GMSAutocompleteResultsViewController) {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+}
+
+extension ViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let searchStr = (textField.text! as NSString).replacingCharacters(in: range, with: string)
+        if searchStr == "" {
+            self.arrayAddress = [GMSAutocompletePrediction]()
+        }else {
+            GMSPlacesClient.shared().autocompleteQuery(searchStr, bounds: nil, filter: filter) { (result, error) in
+                if error == nil && result != nil {
+                    self.arrayAddress = result!
+                }
+            }
+        }
+        self.tableView.reloadData()
+        return true 
     }
 }

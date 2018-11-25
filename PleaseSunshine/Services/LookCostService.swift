@@ -1,9 +1,8 @@
-
 //
-//  CostService.swift
+//  LookCostService.swift
 //  PleaseSunshine
 //
-//  Created by 박세은 on 2018. 11. 24..
+//  Created by 박세은 on 2018. 11. 25..
 //  Copyright © 2018년 박세은. All rights reserved.
 //
 
@@ -11,16 +10,15 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-struct CostService: APIService, RequestService{
+struct LookCostService: APIService, RequestService{
     
-    static let shareInstance = CostService()
+    static let shareInstance = LookCostService()
     let URL = url("/cost")
-    typealias NetworkData = CostData
+    typealias NetworkData = LookCostData
     
-    func getCostInfo(watt: Int, completion: @escaping ([Cost]) -> Void, error: @escaping (Int) -> Void) {
-        let costURL = URL + "?watt=\(watt)"
-        
-        gettable(costURL, body: nil, header: nil) { res in
+    
+    func getCostLookInfo(completion: @escaping ([LookCost]) -> Void, error: @escaping (Int) -> Void) {
+        gettable(URL, body: nil, header: nil) { res in
             switch res {
             case .success(let CostData):
                 let data = CostData.data
@@ -32,6 +30,5 @@ struct CostService: APIService, RequestService{
             }
         }
     }
-    
     
 }

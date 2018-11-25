@@ -16,8 +16,8 @@ struct EnergyService: APIService, RequestService{
     let URL = url("/energy")
     typealias NetworkData = EnergyData
     
-    func getEnergyInfo(lat: Double, lon: Double, angle: Int,completion: @escaping (Energy) -> Void, error: @escaping (Int) -> Void) {
-        let energyURL = URL + "/\(lat)/\(lon)/\(angle)"
+    func getEnergyInfo(lat: Double, lon: Double, angle: Double,completion: @escaping (Energy) -> Void, error: @escaping (Int) -> Void) {
+        let energyURL = URL + "?lat=\(lat)&lon=\(lon)&angle=\(angle)"
         
         gettable(energyURL, body: nil, header: nil) { res in
             switch res {

@@ -10,8 +10,15 @@ import UIKit
 import GoogleMaps
 import GooglePlaces
 
+struct MyPlace {
+    var name: String
+    var lat: Double
+    var lon: Double
+}
 class MapVC: UIViewController, UISearchDisplayDelegate {
     let ud = UserDefaults.standard
+    
+    var choosenPlace: MyPlace?
     
     var locationManager = CLLocationManager()
     var currentLocation: CLLocation?
@@ -28,6 +35,7 @@ class MapVC: UIViewController, UISearchDisplayDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        addressTxF.delegate = self
         
         // Initialize the location manager.
         locationManager = CLLocationManager()
@@ -47,9 +55,12 @@ class MapVC: UIViewController, UISearchDisplayDelegate {
     }
         
     @IBAction func searchAddressClicked(_ sender: UIButton) {
-//
+////
         let autocompleteController = GMSAutocompleteViewController()
         autocompleteController.delegate = self
+        let filter = GMSAutocompleteFilter()
+        autocompleteController.autocompleteFilter = filter
+        
         present(autocompleteController, animated: true, completion: nil)
 
     }
@@ -123,14 +134,39 @@ extension MapVC: CLLocationManagerDelegate {
     }
 }
 
-extension MapVC: GMSAutocompleteViewControllerDelegate {
-
+extension MapVC: GMSAutocompleteViewControllerDelegate, UITextFieldDelegate, GMSMapViewDelegate {
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        let autoCompleteController = GMSAutocompleteViewController()
+        autoCompleteController.delegate = self
+        
+        let filter = GMSAutocompleteFilter()
+        autoCompleteController.autocompleteFilter = filter
+        
+//        self.locationManager.startUpdatingLocation()
+        self.present(autoCompleteController, animated: true) {
+            
+        }
+        return false
+    }
+    
     // Handle the user's selection.
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
-        print("Place name: \(place.name)")
-        print("Place address: \(place.formattedAddress)")
-        print("Place attributions: \(place.attributions)")
-        dismiss(animated: true, completion: nil)
+       
+        let lat = place.coordinate.latitude
+        let lon = place.coordinate.longitude
+        let camera = GMSCameraPosition.camera(withLatitude: lat, longitude: lon, zoom: 15)
+        mapView.camera = camera
+        addressTxF.text = place.formattedAddress
+        
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+        marker.title = "\(place.name)"
+        marker.snippet = "\(place.formattedAddress)"
+        marker.icon = #imageLiteral(resourceName: "pin")
+        marker.map = mapView
+        self.dismiss(animated: true) {
+            self.choosenPlace = MyPlace(name: "\(place.formattedAddress)", lat: lat, lon: lon)
+        }
     }
 
     func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {

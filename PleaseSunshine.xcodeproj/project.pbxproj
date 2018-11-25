@@ -12,7 +12,7 @@
 		CB084A4A21A864B000F5DF88 /* ARSimulatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB084A4921A864B000F5DF88 /* ARSimulatorVC.swift */; };
 		CB19C94C21A924F3002DFEE5 /* EnvironmentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19C94B21A924F3002DFEE5 /* EnvironmentData.swift */; };
 		CB19C94E21A9313E002DFEE5 /* EnergyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19C94D21A9313E002DFEE5 /* EnergyData.swift */; };
-		CB19C95021A93191002DFEE5 /* CostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19C94F21A93191002DFEE5 /* CostData.swift */; };
+		CB19C95021A93191002DFEE5 /* LookCostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19C94F21A93191002DFEE5 /* LookCostData.swift */; };
 		CB19C95321A939BA002DFEE5 /* EnergyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19C95221A939BA002DFEE5 /* EnergyService.swift */; };
 		CB19C95521A93AC6002DFEE5 /* CostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19C95421A93AC6002DFEE5 /* CostService.swift */; };
 		CB19C95721A93D85002DFEE5 /* EnvironmentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19C95621A93D85002DFEE5 /* EnvironmentService.swift */; };
@@ -30,6 +30,8 @@
 		CB56CDB721A7E22E00632C68 /* MainChooseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB56CDB621A7E22E00632C68 /* MainChooseVC.swift */; };
 		CB56CDB921A7E77900632C68 /* Address.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB56CDB821A7E77900632C68 /* Address.storyboard */; };
 		CB56CDBB21A7E87800632C68 /* SimulationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB56CDBA21A7E87800632C68 /* SimulationVC.swift */; };
+		CB5DE9D021AA81F9007D33E0 /* LookCostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DE9CF21AA81F9007D33E0 /* LookCostService.swift */; };
+		CB5DE9D221AA8255007D33E0 /* CostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DE9D121AA8255007D33E0 /* CostData.swift */; };
 		CB94708921A9EC020077128B /* EnvironmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB94708821A9EC020077128B /* EnvironmentCell.swift */; };
 		CBB0042A21A7279800DC09B0 /* UIView+applyDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0042921A7279800DC09B0 /* UIView+applyDesign.swift */; };
 		CBB0042C21A7339700DC09B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0042B21A7339700DC09B0 /* ViewController.swift */; };
@@ -45,7 +47,7 @@
 		CB084A4921A864B000F5DF88 /* ARSimulatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSimulatorVC.swift; sourceTree = "<group>"; };
 		CB19C94B21A924F3002DFEE5 /* EnvironmentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentData.swift; sourceTree = "<group>"; };
 		CB19C94D21A9313E002DFEE5 /* EnergyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyData.swift; sourceTree = "<group>"; };
-		CB19C94F21A93191002DFEE5 /* CostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostData.swift; sourceTree = "<group>"; };
+		CB19C94F21A93191002DFEE5 /* LookCostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookCostData.swift; sourceTree = "<group>"; };
 		CB19C95221A939BA002DFEE5 /* EnergyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyService.swift; sourceTree = "<group>"; };
 		CB19C95421A93AC6002DFEE5 /* CostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostService.swift; sourceTree = "<group>"; };
 		CB19C95621A93D85002DFEE5 /* EnvironmentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentService.swift; sourceTree = "<group>"; };
@@ -65,6 +67,8 @@
 		CB56CDB621A7E22E00632C68 /* MainChooseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChooseVC.swift; sourceTree = "<group>"; };
 		CB56CDB821A7E77900632C68 /* Address.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Address.storyboard; sourceTree = "<group>"; };
 		CB56CDBA21A7E87800632C68 /* SimulationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationVC.swift; sourceTree = "<group>"; };
+		CB5DE9CF21AA81F9007D33E0 /* LookCostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookCostService.swift; sourceTree = "<group>"; };
+		CB5DE9D121AA8255007D33E0 /* CostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostData.swift; sourceTree = "<group>"; };
 		CB94708821A9EC020077128B /* EnvironmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentCell.swift; sourceTree = "<group>"; };
 		CBB0042921A7279800DC09B0 /* UIView+applyDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+applyDesign.swift"; sourceTree = "<group>"; };
 		CBB0042B21A7339700DC09B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,7 +104,8 @@
 			children = (
 				CB19C94B21A924F3002DFEE5 /* EnvironmentData.swift */,
 				CB19C94D21A9313E002DFEE5 /* EnergyData.swift */,
-				CB19C94F21A93191002DFEE5 /* CostData.swift */,
+				CB19C94F21A93191002DFEE5 /* LookCostData.swift */,
+				CB5DE9D121AA8255007D33E0 /* CostData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 				CB19C95121A9397F002DFEE5 /* Base */,
 				CB19C95221A939BA002DFEE5 /* EnergyService.swift */,
 				CB19C95421A93AC6002DFEE5 /* CostService.swift */,
+				CB5DE9CF21AA81F9007D33E0 /* LookCostService.swift */,
 				CB19C95621A93D85002DFEE5 /* EnvironmentService.swift */,
 			);
 			path = Services;
@@ -384,6 +390,7 @@
 			files = (
 				CB480AAE21A87C8B00BB9C9E /* APIServices.swift in Sources */,
 				CBB0042A21A7279800DC09B0 /* UIView+applyDesign.swift in Sources */,
+				CB5DE9D221AA8255007D33E0 /* CostData.swift in Sources */,
 				CB19C95721A93D85002DFEE5 /* EnvironmentService.swift in Sources */,
 				CB19C94E21A9313E002DFEE5 /* EnergyData.swift in Sources */,
 				CB94708921A9EC020077128B /* EnvironmentCell.swift in Sources */,
@@ -393,11 +400,12 @@
 				CBB0042C21A7339700DC09B0 /* ViewController.swift in Sources */,
 				CB2F0D1421A3045100D36E38 /* AppDelegate.swift in Sources */,
 				CB56CDBB21A7E87800632C68 /* SimulationVC.swift in Sources */,
+				CB5DE9D021AA81F9007D33E0 /* LookCostService.swift in Sources */,
 				CB56CDB521A7E1C200632C68 /* UIViewController+Logo.swift in Sources */,
 				CB084A4A21A864B000F5DF88 /* ARSimulatorVC.swift in Sources */,
 				CB19C94C21A924F3002DFEE5 /* EnvironmentData.swift in Sources */,
 				CBB0043121A7D78400DC09B0 /* TutorialVC.swift in Sources */,
-				CB19C95021A93191002DFEE5 /* CostData.swift in Sources */,
+				CB19C95021A93191002DFEE5 /* LookCostData.swift in Sources */,
 				CB480AAC21A87C8B00BB9C9E /* HTTPStatusCode.swift in Sources */,
 				CB56CDB721A7E22E00632C68 /* MainChooseVC.swift in Sources */,
 				CB19C95321A939BA002DFEE5 /* EnergyService.swift in Sources */,

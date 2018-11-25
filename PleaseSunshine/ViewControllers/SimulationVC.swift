@@ -20,6 +20,11 @@ class SimulationVC: UIViewController {
             costCV.reloadData()
         }
     }
+    var lookCost: [LookCost]? {
+        didSet{
+            setCostLookData()
+        }
+    }
     var environment: OutputClass?{
         didSet{
             setEnvironmentData()
@@ -37,6 +42,8 @@ class SimulationVC: UIViewController {
     @IBOutlet var parentVs: [UIView]!
     
     // 에너지 outlet
+    let energyBgImgs = [#imageLiteral(resourceName: "energyVeryGoodImage"),#imageLiteral(resourceName: "energyGoodImage"),#imageLiteral(resourceName: "energyNormalImage"),#imageLiteral(resourceName: "energyBadImage")]
+    @IBOutlet weak var energyBgImgV: UIImageView!
     @IBOutlet weak var simulationBtn: UIButton!
     @IBOutlet weak var percentLbl: UILabel!
     @IBOutlet weak var kWhLbl: UILabel!
@@ -56,6 +63,10 @@ class SimulationVC: UIViewController {
     @IBOutlet weak var lookParentV: UIView!
     @IBOutlet weak var lookV: UIView!
     
+    @IBOutlet var saveMoneyLbls: [UILabel]!
+    @IBOutlet var installCostLbls: [UILabel]!
+    @IBOutlet var bePointLbls: [UILabel]!
+   
     // 환경 outlet
     let outputCategories = ["이산화탄소 배출량" ,"질소산화물 배출량", "초미세먼지 배출량"]
     @IBOutlet weak var environmentTbV: UITableView!
@@ -135,6 +146,16 @@ class SimulationVC: UIViewController {
         
     }
     
+    private func setCostLookData(){
+        guard let cost = self.lookCost else {return}
+        
+        for i in 0...3{
+            saveMoneyLbls[i].text = "\(cost[i].savedMoney)만원"
+            installCostLbls[i].text = "\(cost[i].installCostAvg)만원"
+            bePointLbls[i].text = "\(cost[i].bePoint)개월"
+        }
+    }
+    
     private func initServiceData(){
         EnergyService.shareInstance.getEnergyInfo(lat: self.latitude, lon: self.longitude, angle: 30, completion: { (Energy) in
             self.energy = Energy
@@ -142,7 +163,7 @@ class SimulationVC: UIViewController {
             print("energy init 실패")
         }
         CostService.shareInstance.getCostInfo(watt: 250, completion: { (Cost) in
-            self.cost = Cost
+            self.cost = Cost[0]
         }) { (err) in
             print("cost init 실패")
         }
@@ -150,6 +171,11 @@ class SimulationVC: UIViewController {
             self.environment = OutputClass
         }) { (err) in
             print("environment init 실패")
+        }
+        LookCostService.shareInstance.getCostLookInfo(completion: { (LookCost) in
+            self.lookCost = LookCost
+        }) { (err) in
+             print("look init 실패")
         }
     }
     
@@ -180,7 +206,7 @@ class SimulationVC: UIViewController {
     
     @IBAction func selectSegment(_ sender: UISegmentedControl) {
         CostService.shareInstance.getCostInfo(watt: watts[sender.selectedSegmentIndex], completion: { (Cost) in
-            self.cost = Cost
+            self.cost = Cost[0]
         }) { (err) in
             print("cost init 실패")
         }
@@ -225,7 +251,7 @@ extension SimulationVC: UITableViewDelegate, UITableViewDataSource {
         cell.categoryLbl.text = "\(outputCategories[indexPath.row])"
         guard let environment = self.environment else {return cell}
         if indexPath.row == 0 {
-            cell.thermalPoserImgV.frame.size.height = CGFloat(environment.cado.thermalPower)
+            cell.thermalPowerImgV.frame = CGRect(x: 0, y: 0, width: 50, height: 302)
         } else if indexPath.row == 1 {
             
         } else if indexPath.row == 2 {
@@ -233,6 +259,16 @@ extension SimulationVC: UITableViewDelegate, UITableViewDataSource {
         }
         return cell
     }
+//    func resize(image: UIImage, scale: CGFloat) -> UIImage? {
+//        let transform = CGAffineTransform(scaleX: scale, y: scale)
+//        let size = image.size.applying(transform)
+//        UIGraphicsBeginImageContext(size)
+//        image.draw(in: CGRect(origin: .zero, size: size))
+//        let resultImage = UIGraphicsGetImageFromCurrentImageContext()
+//        UIGraphicsEndImageContext()
+//        
+//        return resultImage
+//    }
     
     
 }
