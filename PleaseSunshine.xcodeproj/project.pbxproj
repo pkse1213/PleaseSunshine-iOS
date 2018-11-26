@@ -38,6 +38,13 @@
 		CB5DE9DA21AADE36007D33E0 /* LocationSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DE9D921AADE36007D33E0 /* LocationSearchVC.swift */; };
 		CB5DE9DC21AAE069007D33E0 /* UIViewController+extesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DE9DB21AAE069007D33E0 /* UIViewController+extesion.swift */; };
 		CB5DE9DE21AAE08D007D33E0 /* UIColor+rgb.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DE9DD21AAE08D007D33E0 /* UIColor+rgb.swift */; };
+		CB5DEACF21AC5EE8007D33E0 /* CompanyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DEACE21AC5EE8007D33E0 /* CompanyListViewController.swift */; };
+		CB5DEAD121AC5EEF007D33E0 /* CompanyListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DEAD021AC5EEF007D33E0 /* CompanyListCollectionViewCell.swift */; };
+		CB5DEAD421AC5EF6007D33E0 /* ComapnyDetailInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DEAD221AC5EF6007D33E0 /* ComapnyDetailInfoTableViewCell.swift */; };
+		CB5DEAD521AC5EF6007D33E0 /* CompanyInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DEAD321AC5EF6007D33E0 /* CompanyInfoTableViewCell.swift */; };
+		CB5DEAD821AC5F0A007D33E0 /* CompanyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DEAD621AC5F09007D33E0 /* CompanyList.swift */; };
+		CB5DEAD921AC5F0A007D33E0 /* CompanyDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DEAD721AC5F0A007D33E0 /* CompanyDetail.swift */; };
+		CB5DEADB21AC5F1A007D33E0 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DEADA21AC5F1A007D33E0 /* Server.swift */; };
 		CB94708921A9EC020077128B /* EnvironmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB94708821A9EC020077128B /* EnvironmentCell.swift */; };
 		CBB0042A21A7279800DC09B0 /* UIView+applyDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0042921A7279800DC09B0 /* UIView+applyDesign.swift */; };
 		CBB0042C21A7339700DC09B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0042B21A7339700DC09B0 /* ViewController.swift */; };
@@ -81,6 +88,13 @@
 		CB5DE9D921AADE36007D33E0 /* LocationSearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchVC.swift; sourceTree = "<group>"; };
 		CB5DE9DB21AAE069007D33E0 /* UIViewController+extesion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+extesion.swift"; sourceTree = "<group>"; };
 		CB5DE9DD21AAE08D007D33E0 /* UIColor+rgb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+rgb.swift"; sourceTree = "<group>"; };
+		CB5DEACE21AC5EE8007D33E0 /* CompanyListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyListViewController.swift; sourceTree = "<group>"; };
+		CB5DEAD021AC5EEF007D33E0 /* CompanyListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyListCollectionViewCell.swift; sourceTree = "<group>"; };
+		CB5DEAD221AC5EF6007D33E0 /* ComapnyDetailInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComapnyDetailInfoTableViewCell.swift; sourceTree = "<group>"; };
+		CB5DEAD321AC5EF6007D33E0 /* CompanyInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyInfoTableViewCell.swift; sourceTree = "<group>"; };
+		CB5DEAD621AC5F09007D33E0 /* CompanyList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyList.swift; sourceTree = "<group>"; };
+		CB5DEAD721AC5F0A007D33E0 /* CompanyDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyDetail.swift; sourceTree = "<group>"; };
+		CB5DEADA21AC5F1A007D33E0 /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		CB94708821A9EC020077128B /* EnvironmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentCell.swift; sourceTree = "<group>"; };
 		CBB0042921A7279800DC09B0 /* UIView+applyDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+applyDesign.swift"; sourceTree = "<group>"; };
 		CBB0042B21A7339700DC09B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +133,8 @@
 				CB19C94D21A9313E002DFEE5 /* EnergyData.swift */,
 				CB19C94F21A93191002DFEE5 /* LookCostData.swift */,
 				CB5DE9D121AA8255007D33E0 /* CostData.swift */,
+				CB5DEAD621AC5F09007D33E0 /* CompanyList.swift */,
+				CB5DEAD721AC5F0A007D33E0 /* CompanyDetail.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -140,6 +156,9 @@
 				CB5DE9D721AADE25007D33E0 /* LocationSearchCell.swift */,
 				CB19C95921A9C0E7002DFEE5 /* CostCell.swift */,
 				CB94708821A9EC020077128B /* EnvironmentCell.swift */,
+				CB5DEAD021AC5EEF007D33E0 /* CompanyListCollectionViewCell.swift */,
+				CB5DEAD221AC5EF6007D33E0 /* ComapnyDetailInfoTableViewCell.swift */,
+				CB5DEAD321AC5EF6007D33E0 /* CompanyInfoTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -198,6 +217,7 @@
 				CB56CDB621A7E22E00632C68 /* MainChooseVC.swift */,
 				CB56CDBA21A7E87800632C68 /* SimulationVC.swift */,
 				CB084A4921A864B000F5DF88 /* ARSimulatorVC.swift */,
+				CB5DEACE21AC5EE8007D33E0 /* CompanyListViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -241,6 +261,7 @@
 				CB19C95421A93AC6002DFEE5 /* CostService.swift */,
 				CB5DE9CF21AA81F9007D33E0 /* LookCostService.swift */,
 				CB19C95621A93D85002DFEE5 /* EnvironmentService.swift */,
+				CB5DEADA21AC5F1A007D33E0 /* Server.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -408,14 +429,18 @@
 			files = (
 				CB480AAE21A87C8B00BB9C9E /* APIServices.swift in Sources */,
 				CBB0042A21A7279800DC09B0 /* UIView+applyDesign.swift in Sources */,
+				CB5DEACF21AC5EE8007D33E0 /* CompanyListViewController.swift in Sources */,
 				CB5DE9D221AA8255007D33E0 /* CostData.swift in Sources */,
 				CB19C95721A93D85002DFEE5 /* EnvironmentService.swift in Sources */,
 				CB19C94E21A9313E002DFEE5 /* EnergyData.swift in Sources */,
+				CB5DEAD521AC5EF6007D33E0 /* CompanyInfoTableViewCell.swift in Sources */,
 				CB94708921A9EC020077128B /* EnvironmentCell.swift in Sources */,
 				CB480AAD21A87C8B00BB9C9E /* RequestService.swift in Sources */,
+				CB5DEAD821AC5F0A007D33E0 /* CompanyList.swift in Sources */,
 				CB19C95521A93AC6002DFEE5 /* CostService.swift in Sources */,
 				CB5DE9D821AADE25007D33E0 /* LocationSearchCell.swift in Sources */,
 				CB480AAB21A87C8B00BB9C9E /* NetworkResult.swift in Sources */,
+				CB5DEAD921AC5F0A007D33E0 /* CompanyDetail.swift in Sources */,
 				CBB0042C21A7339700DC09B0 /* ViewController.swift in Sources */,
 				CB5DE9D421AADD6F007D33E0 /* KakaoAddressService.swift in Sources */,
 				CB2F0D1421A3045100D36E38 /* AppDelegate.swift in Sources */,
@@ -429,11 +454,14 @@
 				CB19C94C21A924F3002DFEE5 /* EnvironmentData.swift in Sources */,
 				CBB0043121A7D78400DC09B0 /* TutorialVC.swift in Sources */,
 				CB19C95021A93191002DFEE5 /* LookCostData.swift in Sources */,
+				CB5DEAD421AC5EF6007D33E0 /* ComapnyDetailInfoTableViewCell.swift in Sources */,
 				CB480AAC21A87C8B00BB9C9E /* HTTPStatusCode.swift in Sources */,
 				CB56CDB721A7E22E00632C68 /* MainChooseVC.swift in Sources */,
+				CB5DEAD121AC5EEF007D33E0 /* CompanyListCollectionViewCell.swift in Sources */,
 				CB19C95321A939BA002DFEE5 /* EnergyService.swift in Sources */,
 				CB19C95A21A9C0E7002DFEE5 /* CostCell.swift in Sources */,
 				CB5DE9DE21AAE08D007D33E0 /* UIColor+rgb.swift in Sources */,
+				CB5DEADB21AC5F1A007D33E0 /* Server.swift in Sources */,
 				CBCF5E0A21A5F2B70043D2A5 /* MapVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
