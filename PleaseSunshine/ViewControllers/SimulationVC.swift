@@ -25,11 +25,6 @@ class SimulationVC: UIViewController {
             setCostLookData()
         }
     }
-    var environment: OutputClass?{
-        didSet{
-            setEnvironmentData()
-        }
-    }
     
     let userdefault = UserDefaults.standard
     var unit:CGFloat = 0.0
@@ -167,11 +162,6 @@ class SimulationVC: UIViewController {
         }) { (err) in
             print("cost init 실패")
         }
-        EnvironmentService.shareInstance.getEnvironmentInfo(completion: { (OutputClass) in
-            self.environment = OutputClass
-        }) { (err) in
-            print("environment init 실패")
-        }
         LookCostService.shareInstance.getCostLookInfo(completion: { (LookCost) in
             self.lookCost = LookCost
         }) { (err) in
@@ -249,14 +239,7 @@ extension SimulationVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = environmentTbV.dequeueReusableCell(withIdentifier: "EnvironmentCell") as! EnvironmentCell
         cell.categoryLbl.text = "\(outputCategories[indexPath.row])"
-        guard let environment = self.environment else {return cell}
-        if indexPath.row == 0 {
-            cell.thermalPowerImgV.frame = CGRect(x: 0, y: 0, width: 50, height: 302)
-        } else if indexPath.row == 1 {
-            
-        } else if indexPath.row == 2 {
-            
-        }
+        
         return cell
     }
 //    func resize(image: UIImage, scale: CGFloat) -> UIImage? {

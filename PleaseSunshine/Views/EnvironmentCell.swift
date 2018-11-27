@@ -15,7 +15,6 @@ class EnvironmentCell: UITableViewCell {
     @IBOutlet weak var kospoImgV: UIImageView!
     @IBOutlet weak var sunImgV: UIImageView!
     
-    @IBOutlet weak var thermalHeight: NSLayoutConstraint!
     @IBOutlet weak var kospoHeight: NSLayoutConstraint!
     @IBOutlet weak var sunHeight: UIImageView!
     

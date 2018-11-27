@@ -14,8 +14,7 @@ struct CostData: Codable {
 }
 
 struct Cost: Codable {
-    let watt: String
-    let savedMoney, installCostAvg: Int
+    let watt, savedMoney, installCostAvg: Int
     let bePoint: Double
     let volunteer, coffee: Int
 }
