@@ -45,6 +45,11 @@
 		CB5DEAD821AC5F0A007D33E0 /* CompanyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DEAD621AC5F09007D33E0 /* CompanyList.swift */; };
 		CB5DEAD921AC5F0A007D33E0 /* CompanyDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DEAD721AC5F0A007D33E0 /* CompanyDetail.swift */; };
 		CB5DEADB21AC5F1A007D33E0 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DEADA21AC5F1A007D33E0 /* Server.swift */; };
+		CB5DEB2F21AD38DF007D33E0 /* ApiGatewayMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB5DEB2E21AD38DF007D33E0 /* ApiGatewayMac.framework */; };
+		CB5DEB3021AD38DF007D33E0 /* ApiGatewayMac.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB5DEB2E21AD38DF007D33E0 /* ApiGatewayMac.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CB5DEB3421AD390C007D33E0 /* NMapViewerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB5DEB3221AD38EB007D33E0 /* NMapViewerSDK.framework */; };
+		CB5DEB3821AD456B007D33E0 /* LocationMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DEB3721AD456B007D33E0 /* LocationMapVC.swift */; };
+		CB5DEB3B21AD4606007D33E0 /* NMapViewResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DEB3A21AD4606007D33E0 /* NMapViewResources.swift */; };
 		CB94708921A9EC020077128B /* EnvironmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB94708821A9EC020077128B /* EnvironmentCell.swift */; };
 		CBB0042A21A7279800DC09B0 /* UIView+applyDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0042921A7279800DC09B0 /* UIView+applyDesign.swift */; };
 		CBB0042C21A7339700DC09B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0042B21A7339700DC09B0 /* ViewController.swift */; };
@@ -52,6 +57,20 @@
 		CBB0043121A7D78400DC09B0 /* TutorialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0043021A7D78400DC09B0 /* TutorialVC.swift */; };
 		CBCF5E0A21A5F2B70043D2A5 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCF5E0921A5F2B70043D2A5 /* MapVC.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CB5DEB3121AD38DF007D33E0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CB5DEB3021AD38DF007D33E0 /* ApiGatewayMac.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		010797BB6204E927796E0D3C /* Pods-PleaseSunshine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PleaseSunshine.release.xcconfig"; path = "Pods/Target Support Files/Pods-PleaseSunshine/Pods-PleaseSunshine.release.xcconfig"; sourceTree = "<group>"; };
@@ -95,6 +114,11 @@
 		CB5DEAD621AC5F09007D33E0 /* CompanyList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyList.swift; sourceTree = "<group>"; };
 		CB5DEAD721AC5F0A007D33E0 /* CompanyDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyDetail.swift; sourceTree = "<group>"; };
 		CB5DEADA21AC5F1A007D33E0 /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		CB5DEB2E21AD38DF007D33E0 /* ApiGatewayMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ApiGatewayMac.framework; sourceTree = "<group>"; };
+		CB5DEB3221AD38EB007D33E0 /* NMapViewerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMapViewerSDK.framework; path = "../Desktop/maps.ios-master/Frameworks/NMapViewerSDK.framework"; sourceTree = "<group>"; };
+		CB5DEB3621AD39C1007D33E0 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		CB5DEB3721AD456B007D33E0 /* LocationMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapVC.swift; sourceTree = "<group>"; };
+		CB5DEB3A21AD4606007D33E0 /* NMapViewResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMapViewResources.swift; sourceTree = "<group>"; };
 		CB94708821A9EC020077128B /* EnvironmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentCell.swift; sourceTree = "<group>"; };
 		CBB0042921A7279800DC09B0 /* UIView+applyDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+applyDesign.swift"; sourceTree = "<group>"; };
 		CBB0042B21A7339700DC09B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +133,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB5DEB3421AD390C007D33E0 /* NMapViewerSDK.framework in Frameworks */,
+				CB5DEB2F21AD38DF007D33E0 /* ApiGatewayMac.framework in Frameworks */,
 				3EF1C1DF1889F0BA86C1D072 /* Pods_PleaseSunshine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,6 +192,7 @@
 		CB2F0D0721A3045100D36E38 = {
 			isa = PBXGroup;
 			children = (
+				CB5DEB2E21AD38DF007D33E0 /* ApiGatewayMac.framework */,
 				CB2F0D1221A3045100D36E38 /* PleaseSunshine */,
 				CB2F0D1121A3045100D36E38 /* Products */,
 				925655DB378E2E63008808B6 /* Pods */,
@@ -186,12 +213,14 @@
 			children = (
 				CB19C94A21A924E6002DFEE5 /* Models */,
 				CB480AA621A87C5900BB9C9E /* Services */,
+				CB5DEB3921AD45EF007D33E0 /* NaverMap */,
 				CB19C95821A9C0CC002DFEE5 /* Views */,
 				CB2F0D2C21A32E2900D36E38 /* ViewControllers */,
 				CB2F0D2B21A32E2500D36E38 /* Utils */,
 				CB2F0D2D21A32E5D00D36E38 /* Storyboards */,
 				CB2F0D2F21A32EB200D36E38 /* Fonts */,
 				CB2F0D2E21A32E7E00D36E38 /* etc */,
+				CB5DEB3621AD39C1007D33E0 /* Header.h */,
 			);
 			path = PleaseSunshine;
 			sourceTree = "<group>";
@@ -210,6 +239,7 @@
 		CB2F0D2C21A32E2900D36E38 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CB5DEB3721AD456B007D33E0 /* LocationMapVC.swift */,
 				CBCF5E0921A5F2B70043D2A5 /* MapVC.swift */,
 				CB5DE9D921AADE36007D33E0 /* LocationSearchVC.swift */,
 				CBB0042B21A7339700DC09B0 /* ViewController.swift */,
@@ -266,9 +296,18 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		CB5DEB3921AD45EF007D33E0 /* NaverMap */ = {
+			isa = PBXGroup;
+			children = (
+				CB5DEB3A21AD4606007D33E0 /* NMapViewResources.swift */,
+			);
+			path = NaverMap;
+			sourceTree = "<group>";
+		};
 		E1E679164FD6BC03D0EA9B8E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CB5DEB3221AD38EB007D33E0 /* NMapViewerSDK.framework */,
 				B64B625F9749324E200961C0 /* Pods_PleaseSunshine.framework */,
 			);
 			name = Frameworks;
@@ -287,6 +326,8 @@
 				CB2F0D0E21A3045100D36E38 /* Resources */,
 				061B2691DDA0364B85D73D77 /* [CP] Embed Pods Frameworks */,
 				F4858899E2E286F6A1AB1F5B /* [CP] Copy Pods Resources */,
+				CB5DEB3121AD38DF007D33E0 /* Embed Frameworks */,
+				CB5DEB3521AD3980007D33E0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -374,6 +415,23 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PleaseSunshine/Pods-PleaseSunshine-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		CB5DEB3521AD3980007D33E0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/Users/parkseeun/Desktop/maps.ios-master/Scripts/strip-frameworks.sh\n";
+		};
 		CFA93627B0AAF1337D29C2D8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -447,6 +505,7 @@
 				CB5DE9DC21AAE069007D33E0 /* UIViewController+extesion.swift in Sources */,
 				CB56CDBB21A7E87800632C68 /* SimulationVC.swift in Sources */,
 				CB5DE9D021AA81F9007D33E0 /* LookCostService.swift in Sources */,
+				CB5DEB3B21AD4606007D33E0 /* NMapViewResources.swift in Sources */,
 				CB5DE9DA21AADE36007D33E0 /* LocationSearchVC.swift in Sources */,
 				CB56CDB521A7E1C200632C68 /* UIViewController+Logo.swift in Sources */,
 				CB5DE9D621AADDA4007D33E0 /* AddressData.swift in Sources */,
@@ -461,6 +520,7 @@
 				CB19C95321A939BA002DFEE5 /* EnergyService.swift in Sources */,
 				CB19C95A21A9C0E7002DFEE5 /* CostCell.swift in Sources */,
 				CB5DE9DE21AAE08D007D33E0 /* UIColor+rgb.swift in Sources */,
+				CB5DEB3821AD456B007D33E0 /* LocationMapVC.swift in Sources */,
 				CB5DEADB21AC5F1A007D33E0 /* Server.swift in Sources */,
 				CBCF5E0A21A5F2B70043D2A5 /* MapVC.swift in Sources */,
 			);
@@ -611,13 +671,66 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N6JH7RBUA4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"/Users/parkseeun/Desktop/maps.ios-master/Frameworks",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/PleaseSunshine/etc/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-lxml2",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreImage\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"GLKit\"",
+					"-framework",
+					"\"GoogleMaps\"",
+					"-framework",
+					"\"GoogleMapsBase\"",
+					"-framework",
+					"\"GoogleMapsCore\"",
+					"-framework",
+					"\"GooglePlaces\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = pkse1213.PleaseSunshine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/parkseeun/PleaseSunshine-iOS/PleaseSunshine/Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -630,13 +743,66 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N6JH7RBUA4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"/Users/parkseeun/Desktop/maps.ios-master/Frameworks",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/PleaseSunshine/etc/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-lxml2",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreImage\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"GLKit\"",
+					"-framework",
+					"\"GoogleMaps\"",
+					"-framework",
+					"\"GoogleMapsBase\"",
+					"-framework",
+					"\"GoogleMapsCore\"",
+					"-framework",
+					"\"GooglePlaces\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = pkse1213.PleaseSunshine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/parkseeun/PleaseSunshine-iOS/PleaseSunshine/Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

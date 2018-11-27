@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LKk-dh-3Yo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Aot-39-jmB">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -297,6 +297,76 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JfJ-Sn-iYu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1914" y="206"/>
+        </scene>
+        <!--Location MapVC-->
+        <scene sceneID="D7k-u7-h3H">
+            <objects>
+                <viewController id="Aot-39-jmB" customClass="LocationMapVC" customModule="PleaseSunshine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bnY-rv-eeN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WAM-kc-cSs">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CA0-Et-V1x">
+                                <rect key="frame" x="8" y="74" width="359" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchAddressClicked:" destination="LKk-dh-3Yo" eventType="touchUpInside" id="9Tb-VV-B0k"/>
+                                </connections>
+                            </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="searchGlyph" translatesAutoresizingMaskIntoConstraints="NO" id="qQg-ES-Vb5">
+                                <rect key="frame" x="23" y="91.5" width="15" height="15"/>
+                            </imageView>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="주소로 검색" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VkP-e6-cdX">
+                                <rect key="frame" x="48" y="89" width="82.5" height="20"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WSN-QK-h7O">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem id="aBZ-uL-m29">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" id="UCW-Sr-4Mc"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CA0-Et-V1x" firstAttribute="width" secondItem="CA0-Et-V1x" secondAttribute="height" multiplier="36:5" id="1Ow-L2-Q46"/>
+                            <constraint firstItem="CA0-Et-V1x" firstAttribute="leading" secondItem="bnY-rv-eeN" secondAttribute="leading" constant="8" id="2f3-lM-Eg2"/>
+                            <constraint firstItem="WAM-kc-cSs" firstAttribute="trailing" secondItem="9Wu-hB-sex" secondAttribute="trailing" id="4xq-YF-QL1"/>
+                            <constraint firstItem="WSN-QK-h7O" firstAttribute="top" secondItem="9Wu-hB-sex" secondAttribute="top" id="95y-Rv-yez"/>
+                            <constraint firstItem="VkP-e6-cdX" firstAttribute="centerY" secondItem="qQg-ES-Vb5" secondAttribute="centerY" id="Blg-5v-RdZ"/>
+                            <constraint firstItem="9Wu-hB-sex" firstAttribute="trailing" secondItem="WSN-QK-h7O" secondAttribute="trailing" id="DP0-uN-K1M"/>
+                            <constraint firstItem="VkP-e6-cdX" firstAttribute="leading" secondItem="qQg-ES-Vb5" secondAttribute="trailing" constant="10" id="Fom-UQ-JcP"/>
+                            <constraint firstItem="CA0-Et-V1x" firstAttribute="top" secondItem="WSN-QK-h7O" secondAttribute="bottom" constant="10" id="Iuz-Dz-xk1"/>
+                            <constraint firstItem="WAM-kc-cSs" firstAttribute="leading" secondItem="9Wu-hB-sex" secondAttribute="leading" id="Pid-sf-KDP"/>
+                            <constraint firstItem="WSN-QK-h7O" firstAttribute="leading" secondItem="bnY-rv-eeN" secondAttribute="leading" id="Wih-wD-xSl"/>
+                            <constraint firstItem="9Wu-hB-sex" firstAttribute="trailing" secondItem="CA0-Et-V1x" secondAttribute="trailing" constant="8" id="Z6s-vm-68L"/>
+                            <constraint firstItem="CA0-Et-V1x" firstAttribute="top" secondItem="WSN-QK-h7O" secondAttribute="bottom" constant="10" id="ciN-p3-ArZ"/>
+                            <constraint firstItem="WAM-kc-cSs" firstAttribute="top" secondItem="WSN-QK-h7O" secondAttribute="bottom" id="nly-Hr-15t"/>
+                            <constraint firstItem="WAM-kc-cSs" firstAttribute="bottom" secondItem="9Wu-hB-sex" secondAttribute="bottom" id="nwq-jx-5Ew"/>
+                            <constraint firstItem="qQg-ES-Vb5" firstAttribute="centerY" secondItem="CA0-Et-V1x" secondAttribute="centerY" id="wU7-zr-3sm"/>
+                            <constraint firstItem="qQg-ES-Vb5" firstAttribute="leading" secondItem="CA0-Et-V1x" secondAttribute="leading" constant="15" id="wp1-nx-CHb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9Wu-hB-sex"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapParentView" destination="WAM-kc-cSs" id="2YX-gN-UBg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fYo-rl-PNS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2656.8000000000002" y="205.54722638680661"/>
         </scene>
     </scenes>
     <resources>
