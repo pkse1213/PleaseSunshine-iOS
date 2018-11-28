@@ -38,6 +38,7 @@ class CompanyListViewController: UIViewController , UICollectionViewDelegate , U
         set()
         setDelegate()
         setTarget()
+        setLogoInNaviBar()
     }
     
     override func viewDidAppear(_ animated: Bool) {

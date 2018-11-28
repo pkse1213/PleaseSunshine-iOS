@@ -333,7 +333,11 @@
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <navigationItem id="aBZ-uL-m29">
-                                        <barButtonItem key="rightBarButtonItem" title="Item" id="UCW-Sr-4Mc"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" id="UCW-Sr-4Mc">
+                                            <connections>
+                                                <action selector="clickedClose:" destination="Aot-39-jmB" id="Rkd-3u-KVw"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>

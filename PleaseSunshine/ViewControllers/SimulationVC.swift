@@ -34,6 +34,8 @@ class SimulationVC: UIViewController {
     var unit:CGFloat = 0.0
     var longitude = 0.0
     var latitude = 0.0
+    let numberFormatter = NumberFormatter()
+    
     
     // 카테고리 탭 outlet
     @IBOutlet var tabBtns: [UIButton]!
@@ -72,6 +74,7 @@ class SimulationVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        numberFormatter.numberStyle = .decimal
         initServiceData()
         setLogoInNaviBar()
         setView()
@@ -142,7 +145,9 @@ class SimulationVC: UIViewController {
     
     private func setCostData() {
         guard let cost = self.cost else {return}
-        self.yearCostLbl.text = "\(cost.savedMoney)원"
+       let result = numberFormatter.string(from: NSNumber(value:cost.savedMoney))!
+        
+        self.yearCostLbl.text = "\(result)원"
     }
     
     private func setEnvironmentData() {
@@ -154,8 +159,12 @@ class SimulationVC: UIViewController {
         guard let cost = self.lookCost else {return}
         
         for i in 0...3{
-            saveMoneyLbls[i].text = "\(cost[i].savedMoney)만원"
-            installCostLbls[i].text = "\(cost[i].installCostAvg)만원"
+            
+            let result1 = numberFormatter.string(from: NSNumber(value:cost[i].savedMoney))!
+            let result2 = numberFormatter.string(from: NSNumber(value:cost[i].installCostAvg))!
+            
+            saveMoneyLbls[i].text = "\(result1)원"
+            installCostLbls[i].text = "\(result2)원"
             bePointLbls[i].text = "\(cost[i].bePoint)개월"
         }
     }
@@ -236,7 +245,8 @@ extension SimulationVC: UICollectionViewDelegate, UICollectionViewDataSource {
         cell.imgV.image = images[indexPath.item]
         guard let cost = self.cost else {return cell}
         if indexPath.item == 0 {
-            cell.dataLbl.text = "\(cost.installCostAvg)원"
+            let result = numberFormatter.string(from: NSNumber(value:cost.installCostAvg))!
+            cell.dataLbl.text = "\(result)원"
         } else if indexPath.item == 1 {
             cell.dataLbl.text = "\(cost.bePoint)개월"
         } else if indexPath.item == 2 {

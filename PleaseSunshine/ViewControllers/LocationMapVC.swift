@@ -103,6 +103,9 @@ class LocationMapVC: UIViewController, NMapViewDelegate, NMapPOIdataOverlayDeleg
         }
     }
     
+    @IBAction func clickedClose(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
     private func changeStep(){
         if step == 1 {
             rotateView.isHidden = true
