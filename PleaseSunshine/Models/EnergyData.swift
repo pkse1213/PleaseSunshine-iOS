@@ -16,5 +16,5 @@ struct EnergyData: Codable {
 
 struct Energy: Codable {
     let sunshine: Double
-    let persent: Int
+    let persent: Double
 }

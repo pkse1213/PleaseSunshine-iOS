@@ -1018,7 +1018,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fTq-Fc-cmK"/>
                     </view>
-                    <navigationItem key="navigationItem" id="NL7-C4-7DL"/>
+                    <navigationItem key="navigationItem" id="NL7-C4-7DL">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="Dbo-Ui-DMj">
+                            <connections>
+                                <action selector="changeAddress:" destination="tIN-xf-xCN" id="D2g-wi-Jix"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="costCV" destination="IQc-Xz-LIv" id="S7V-Ld-1Bh"/>
                         <outlet property="energyBgImgV" destination="NMs-z8-F8l" id="wr0-b3-DdV"/>

@@ -10,11 +10,7 @@ import UIKit
 import GoogleMaps
 import GooglePlaces
 import MapKit
-struct MyPlace {
-    var name: String
-    var lat: Double
-    var lon: Double
-}
+
 class MapVC: UIViewController, UISearchDisplayDelegate, GMSMapViewDelegate {
     let ud = UserDefaults.standard
     

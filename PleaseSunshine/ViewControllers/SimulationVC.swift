@@ -25,7 +25,11 @@ class SimulationVC: UIViewController {
             setCostLookData()
         }
     }
-    
+    var choosenPlace: MyPlace? {
+        didSet {
+            energyDataInit()
+        }
+    }
     let userdefault = UserDefaults.standard
     var unit:CGFloat = 0.0
     var longitude = 0.0
@@ -77,22 +81,27 @@ class SimulationVC: UIViewController {
         center.addObserver(self, selector: #selector(addressGetter), name: NSNotification.Name("setAddress") , object: nil)
     }
     
+    @IBAction func changeAddress(_ sender: UIBarButtonItem) {
+        let vc = UIStoryboard(name: "Address", bundle: nil).instantiateViewController(withIdentifier: "LocationMapVC") as! LocationMapVC
+        self.present(vc, animated: true, completion: nil)
+    }
     private func checkSetAddress() {
-        guard let lat = userdefault.string(forKey: "latitude"), let long = userdefault.string(forKey: "longitude") else {
-            let vc = UIStoryboard(name: "Address", bundle: nil).instantiateViewController(withIdentifier: "MapVC") as! MapVC
+       
+        guard let lat = userdefault.double(forKey: "latitude") as? Double, let lon = userdefault.double(forKey: "longitude") as? Double, let name = userdefault.string(forKey: "name") else {
+            let vc = UIStoryboard(name: "Address", bundle: nil).instantiateViewController(withIdentifier: "LocationMapVC") as! LocationMapVC
             self.present(vc, animated: true, completion: nil)
             return
         }
-        self.latitude = Double(lat)!
-        self.longitude = Double(long)!
-        print(self.latitude)
-        print(self.longitude)
+        
+        let place = MyPlace(name: name , lat:lat, lon: lon)
+        choosenPlace = place
     }
     
     @objc func addressGetter(notification:Notification) {
-        if let address = notification.object as? [Double]{
-            self.latitude = address[0]
-            self.longitude = address[1]
+        if let p = notification.object as? MyPlace{
+            let place = MyPlace(name: p.name , lat:p.lat, lon: p.lon)
+            choosenPlace = place
+            
         }
     }
     
@@ -127,7 +136,7 @@ class SimulationVC: UIViewController {
     }
     private func setEnergyData() {
         guard let energy = self.energy else {return}
-        self.percentLbl.text = "\(energy.persent)"
+        self.percentLbl.text = "\(Int(energy.persent))"
         self.kWhLbl.text = "\(energy.sunshine)"
     }
     
@@ -150,13 +159,21 @@ class SimulationVC: UIViewController {
             bePointLbls[i].text = "\(cost[i].bePoint)개월"
         }
     }
-    
-    private func initServiceData(){
-        EnergyService.shareInstance.getEnergyInfo(lat: self.latitude, lon: self.longitude, angle: 30, completion: { (Energy) in
+    private func energyDataInit() {
+        guard let place = choosenPlace else {
+            return
+        }
+        EnergyService.shareInstance.getEnergyInfo(lat: place.lat, lon: place.lon, angle: 30, completion: { (Energy) in
             self.energy = Energy
+            print("energy init 성공")
+            print(place)
+            
         }) { (err) in
             print("energy init 실패")
         }
+    }
+    private func initServiceData(){
+        
         CostService.shareInstance.getCostInfo(watt: 250, completion: { (Cost) in
             self.cost = Cost[0]
         }) { (err) in

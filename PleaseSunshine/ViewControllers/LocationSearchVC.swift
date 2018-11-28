@@ -34,11 +34,15 @@ class LocationSearchVC: UIViewController {
     private func setupView() {
         searchTableView.delegate = self
         searchTableView.dataSource = self
-        searchBarView.applyRadius(radius: 17.5)
+        searchBarView.applyRadius(radius: 20)
         searchTableView.tableFooterView = UIView(frame: .zero)
         searchTableView.separatorStyle = .none
         searchBarTxtFd.addTarget(self, action: #selector(search(_:)), for: .editingChanged)
         searchBarTxtFd.addTarget(self, action: #selector(changeResultTitle(_:)), for: .editingChanged)
+    }
+    
+    @IBAction func closeClicked(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true)
     }
     
     @objc func search(_ sender: UITextField) {
@@ -79,7 +83,7 @@ extension LocationSearchVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = searchTableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! LocationSearchCell
         
-        cell.addressLabel.text = searchAddress[indexPath.row].placeName
+        cell.addressLabel.text = searchAddress[indexPath.row].addressName
         cell.roadAddressLabel.text = searchAddress[indexPath.row].roadAddressName
         cell.deleteButton.isHidden = true
         
@@ -90,8 +94,13 @@ extension LocationSearchVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         let address = searchAddress[indexPath.row]
-        let place = MyPlace.init(name: address.addressName, lat: Double(address.x)!, lon: Double(address.y)!)
         
+        let place = MyPlace.init(name: address.addressName,
+                                 lat: Double(address.y)!,
+                                 lon: Double(address.x)!)
+        print("dddfsfewrwerserewr")
+        print(Double(round(10*Double(address.y)!/10)))
+        print(Double(round(10*Double(address.x)!/10)))
             NotificationCenter.default.post(name: Notification.Name("setAddress"), object: place)
             self.dismiss(animated: true)
         

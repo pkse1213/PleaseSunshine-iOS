@@ -14,6 +14,6 @@ struct LookCostData: Codable {
 }
 
 struct LookCost: Codable {
-    let watt, savedMoney, installCostAvg: Int
-    let bePoint: Double
+    let watt, savedMoney: Int
+    let installCostAvg, bePoint: Double
 }

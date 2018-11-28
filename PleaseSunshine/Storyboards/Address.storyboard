@@ -139,11 +139,6 @@
                             <constraint firstItem="vV7-4g-zjQ" firstAttribute="leading" secondItem="Xhh-YJ-LZB" secondAttribute="leading" id="uV3-pT-ogF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xhh-YJ-LZB"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="2AQ-Hg-6eH"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="dQl-lz-nS5"/>
                     <connections>
@@ -169,22 +164,26 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
-                                    <navigationItem id="E3b-ZG-ygr">
-                                        <barButtonItem key="rightBarButtonItem" title="Item" id="jya-AY-61G"/>
+                                    <navigationItem title="주소 검색" id="E3b-ZG-ygr">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" id="jya-AY-61G">
+                                            <connections>
+                                                <action selector="closeClicked:" destination="dhy-fs-wLw" id="Ipf-Ln-eo1"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lTo-lW-VCE">
-                                <rect key="frame" x="20" y="74" width="335" height="35"/>
+                                <rect key="frame" x="20" y="74" width="335" height="40"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="searchGlyph" translatesAutoresizingMaskIntoConstraints="NO" id="WZU-RS-HoE">
-                                        <rect key="frame" x="17" y="10" width="15" height="15"/>
+                                        <rect key="frame" x="17" y="12.5" width="15" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="WZU-RS-HoE" secondAttribute="height" multiplier="1:1" id="1KZ-wS-zzk"/>
                                         </constraints>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="위치를 검색해주세요" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WPk-by-u9b">
-                                        <rect key="frame" x="40" y="1" width="295" height="33"/>
+                                        <rect key="frame" x="40" y="1" width="295" height="38"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -193,7 +192,7 @@
                                 <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="WPk-by-u9b" firstAttribute="top" secondItem="lTo-lW-VCE" secondAttribute="top" constant="1" id="7Tg-Tv-TF7"/>
-                                    <constraint firstAttribute="height" constant="35" id="E5b-KR-Uv2"/>
+                                    <constraint firstAttribute="height" constant="40" id="E5b-KR-Uv2"/>
                                     <constraint firstAttribute="trailing" secondItem="WPk-by-u9b" secondAttribute="trailing" id="FFg-fp-Dvn"/>
                                     <constraint firstItem="WPk-by-u9b" firstAttribute="leading" secondItem="WZU-RS-HoE" secondAttribute="trailing" constant="8" id="Ot9-Fn-UzH"/>
                                     <constraint firstAttribute="bottom" secondItem="WPk-by-u9b" secondAttribute="bottom" constant="1" id="TcN-sS-hCs"/>
@@ -202,7 +201,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최근 주소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nof-tP-3fi">
-                                <rect key="frame" x="20" y="129" width="280" height="18"/>
+                                <rect key="frame" x="20" y="134" width="280" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="h6F-FR-YFC"/>
                                 </constraints>
@@ -211,7 +210,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wsh-b8-Eo1">
-                                <rect key="frame" x="0.0" y="159" width="375" height="508"/>
+                                <rect key="frame" x="0.0" y="164" width="375" height="503"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="LocationSearchCell" rowHeight="65" id="SBz-Bc-chF" customClass="LocationSearchCell" customModule="PleaseSunshine" customModuleProvider="target">
@@ -296,12 +295,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JfJ-Sn-iYu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1914" y="206"/>
+            <point key="canvasLocation" x="3337" y="206"/>
         </scene>
         <!--Location MapVC-->
         <scene sceneID="D7k-u7-h3H">
             <objects>
-                <viewController id="Aot-39-jmB" customClass="LocationMapVC" customModule="PleaseSunshine" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LocationMapVC" id="Aot-39-jmB" customClass="LocationMapVC" customModule="PleaseSunshine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bnY-rv-eeN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -317,7 +316,7 @@
                                     <color key="titleColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="searchAddressClicked:" destination="LKk-dh-3Yo" eventType="touchUpInside" id="9Tb-VV-B0k"/>
+                                    <action selector="searchAddressClicked:" destination="Aot-39-jmB" eventType="touchUpInside" id="3J5-O7-oKw"/>
                                 </connections>
                             </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="searchGlyph" translatesAutoresizingMaskIntoConstraints="NO" id="qQg-ES-Vb5">
@@ -338,30 +337,93 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V0A-Fz-Lgg">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQ4-fE-bmO">
+                                        <rect key="frame" x="10" y="276.5" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="aEY-20-2aV"/>
+                                            <constraint firstAttribute="height" constant="50" id="eHA-Sy-aGs"/>
+                                        </constraints>
+                                        <state key="normal" image="ic_undo_36pt"/>
+                                        <connections>
+                                            <action selector="leftButtonClicked:" destination="Aot-39-jmB" eventType="touchUpInside" id="mJI-FB-e8k"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYk-Pd-JDO">
+                                        <rect key="frame" x="315" y="276.5" width="50" height="50"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="XBx-M9-8rd"/>
+                                            <constraint firstAttribute="width" constant="50" id="f2P-VI-cnq"/>
+                                        </constraints>
+                                        <state key="normal" image="ic_redo_36pt"/>
+                                        <connections>
+                                            <action selector="rightButtonClicked:" destination="Aot-39-jmB" eventType="touchUpInside" id="lCM-PR-V9u"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="tQ4-fE-bmO" firstAttribute="centerY" secondItem="V0A-Fz-Lgg" secondAttribute="centerY" id="D4X-1j-R6b"/>
+                                    <constraint firstAttribute="trailing" secondItem="kYk-Pd-JDO" secondAttribute="trailing" constant="10" id="aIW-cg-yXk"/>
+                                    <constraint firstItem="tQ4-fE-bmO" firstAttribute="leading" secondItem="V0A-Fz-Lgg" secondAttribute="leading" constant="10" id="hxU-29-lyW"/>
+                                    <constraint firstItem="kYk-Pd-JDO" firstAttribute="centerY" secondItem="V0A-Fz-Lgg" secondAttribute="centerY" id="vun-1m-leQ"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNU-nY-77q">
+                                <rect key="frame" x="8" y="597" width="359" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.63921568630000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="17"/>
+                                <state key="normal" title="이 위치로 주소 설정하기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="setAddressAction:" destination="LKk-dh-3Yo" eventType="touchUpInside" id="fMn-KD-Nf0"/>
+                                    <action selector="setAddressAction:" destination="Aot-39-jmB" eventType="touchUpInside" id="snz-SE-Xgi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="bNU-nY-77q" firstAttribute="leading" secondItem="9Wu-hB-sex" secondAttribute="leading" constant="8" id="0lv-eL-Yuo"/>
                             <constraint firstItem="CA0-Et-V1x" firstAttribute="width" secondItem="CA0-Et-V1x" secondAttribute="height" multiplier="36:5" id="1Ow-L2-Q46"/>
                             <constraint firstItem="CA0-Et-V1x" firstAttribute="leading" secondItem="bnY-rv-eeN" secondAttribute="leading" constant="8" id="2f3-lM-Eg2"/>
                             <constraint firstItem="WAM-kc-cSs" firstAttribute="trailing" secondItem="9Wu-hB-sex" secondAttribute="trailing" id="4xq-YF-QL1"/>
                             <constraint firstItem="WSN-QK-h7O" firstAttribute="top" secondItem="9Wu-hB-sex" secondAttribute="top" id="95y-Rv-yez"/>
                             <constraint firstItem="VkP-e6-cdX" firstAttribute="centerY" secondItem="qQg-ES-Vb5" secondAttribute="centerY" id="Blg-5v-RdZ"/>
                             <constraint firstItem="9Wu-hB-sex" firstAttribute="trailing" secondItem="WSN-QK-h7O" secondAttribute="trailing" id="DP0-uN-K1M"/>
+                            <constraint firstItem="9Wu-hB-sex" firstAttribute="bottom" secondItem="bNU-nY-77q" secondAttribute="bottom" constant="20" id="FRD-lS-a2i"/>
                             <constraint firstItem="VkP-e6-cdX" firstAttribute="leading" secondItem="qQg-ES-Vb5" secondAttribute="trailing" constant="10" id="Fom-UQ-JcP"/>
                             <constraint firstItem="CA0-Et-V1x" firstAttribute="top" secondItem="WSN-QK-h7O" secondAttribute="bottom" constant="10" id="Iuz-Dz-xk1"/>
                             <constraint firstItem="WAM-kc-cSs" firstAttribute="leading" secondItem="9Wu-hB-sex" secondAttribute="leading" id="Pid-sf-KDP"/>
                             <constraint firstItem="WSN-QK-h7O" firstAttribute="leading" secondItem="bnY-rv-eeN" secondAttribute="leading" id="Wih-wD-xSl"/>
                             <constraint firstItem="9Wu-hB-sex" firstAttribute="trailing" secondItem="CA0-Et-V1x" secondAttribute="trailing" constant="8" id="Z6s-vm-68L"/>
+                            <constraint firstItem="V0A-Fz-Lgg" firstAttribute="trailing" secondItem="9Wu-hB-sex" secondAttribute="trailing" id="by5-jG-BJO"/>
                             <constraint firstItem="CA0-Et-V1x" firstAttribute="top" secondItem="WSN-QK-h7O" secondAttribute="bottom" constant="10" id="ciN-p3-ArZ"/>
+                            <constraint firstItem="V0A-Fz-Lgg" firstAttribute="top" secondItem="WSN-QK-h7O" secondAttribute="bottom" id="iKV-IO-isw"/>
+                            <constraint firstItem="V0A-Fz-Lgg" firstAttribute="bottom" secondItem="9Wu-hB-sex" secondAttribute="bottom" id="iMZ-LS-s1T"/>
+                            <constraint firstItem="9Wu-hB-sex" firstAttribute="trailing" secondItem="bNU-nY-77q" secondAttribute="trailing" constant="8" id="isn-RJ-Co5"/>
                             <constraint firstItem="WAM-kc-cSs" firstAttribute="top" secondItem="WSN-QK-h7O" secondAttribute="bottom" id="nly-Hr-15t"/>
                             <constraint firstItem="WAM-kc-cSs" firstAttribute="bottom" secondItem="9Wu-hB-sex" secondAttribute="bottom" id="nwq-jx-5Ew"/>
+                            <constraint firstItem="V0A-Fz-Lgg" firstAttribute="leading" secondItem="9Wu-hB-sex" secondAttribute="leading" id="vjc-b4-7N3"/>
                             <constraint firstItem="qQg-ES-Vb5" firstAttribute="centerY" secondItem="CA0-Et-V1x" secondAttribute="centerY" id="wU7-zr-3sm"/>
                             <constraint firstItem="qQg-ES-Vb5" firstAttribute="leading" secondItem="CA0-Et-V1x" secondAttribute="leading" constant="15" id="wp1-nx-CHb"/>
+                            <constraint firstItem="bNU-nY-77q" firstAttribute="width" secondItem="bNU-nY-77q" secondAttribute="height" multiplier="359:50" id="yby-0a-mL0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9Wu-hB-sex"/>
                     </view>
                     <connections>
+                        <outlet property="addressTxF" destination="VkP-e6-cdX" id="Uat-a0-Su5"/>
+                        <outlet property="leftBtn" destination="tQ4-fE-bmO" id="HqA-n1-D19"/>
                         <outlet property="mapParentView" destination="WAM-kc-cSs" id="2YX-gN-UBg"/>
+                        <outlet property="naviItem" destination="aBZ-uL-m29" id="joK-jR-aYI"/>
+                        <outlet property="rightBtn" destination="kYk-Pd-JDO" id="Ru6-vW-gOr"/>
+                        <outlet property="rotateView" destination="V0A-Fz-Lgg" id="e6h-kP-v7H"/>
+                        <outlet property="searchAddressBtn" destination="CA0-Et-V1x" id="7eZ-Vi-NbY"/>
+                        <outlet property="setAddressBtn" destination="bNU-nY-77q" id="J1V-4m-4vq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fYo-rl-PNS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -371,6 +433,8 @@
     </scenes>
     <resources>
         <image name="icCloseOrange28" width="16" height="16"/>
+        <image name="ic_redo_36pt" width="36" height="36"/>
+        <image name="ic_undo_36pt" width="36" height="36"/>
         <image name="locationIcon" width="11" height="16"/>
         <image name="mapDirectionSun" width="164" height="272"/>
         <image name="searchGlyph" width="15" height="15"/>
