@@ -10,11 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="NanumOTFRegular.otf">
+            <string>NanumSquareOTFR</string>
+        </array>
         <array key="NanumSquareOTFBold.otf">
             <string>NanumSquareOTFB</string>
-        </array>
-        <array key="NanumSquareOTFRegular.otf">
-            <string>NanumSquareOTFR</string>
         </array>
     </customFonts>
     <scenes>
@@ -88,7 +88,7 @@
                                         <rect key="frame" x="0.0" y="439" width="375" height="46"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="원하는 방향으로 기기를 움직여주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOi-Tc-agv">
-                                                <rect key="frame" x="65" y="14" width="245" height="18"/>
+                                                <rect key="frame" x="70" y="13.5" width="235" height="19"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -165,7 +165,8 @@
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <navigationItem title="주소 검색" id="E3b-ZG-ygr">
-                                        <barButtonItem key="rightBarButtonItem" title="Item" id="jya-AY-61G">
+                                        <barButtonItem key="rightBarButtonItem" image="icCloseOrange28" id="jya-AY-61G">
+                                            <color key="tintColor" red="1" green="0.63921568630000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="closeClicked:" destination="dhy-fs-wLw" id="Ipf-Ln-eo1"/>
                                             </connections>
@@ -185,7 +186,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="위치를 검색해주세요" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WPk-by-u9b">
                                         <rect key="frame" x="40" y="1" width="295" height="38"/>
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
@@ -201,16 +202,16 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최근 주소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nof-tP-3fi">
-                                <rect key="frame" x="20" y="134" width="280" height="18"/>
+                                <rect key="frame" x="20" y="134" width="280" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="h6F-FR-YFC"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="15"/>
                                 <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wsh-b8-Eo1">
-                                <rect key="frame" x="0.0" y="164" width="375" height="503"/>
+                                <rect key="frame" x="0.0" y="163" width="375" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="LocationSearchCell" rowHeight="65" id="SBz-Bc-chF" customClass="LocationSearchCell" customModule="PleaseSunshine" customModuleProvider="target">
@@ -221,17 +222,17 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="xHI-Kd-NfG">
-                                                    <rect key="frame" x="52" y="11.5" width="120.5" height="42.5"/>
+                                                    <rect key="frame" x="52" y="13" width="131" height="39.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마포구 상수동 72-1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsc-Ew-buJ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="120.5" height="19.5"/>
-                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="131" height="18"/>
+                                                            <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="16"/>
                                                             <color key="textColor" red="0.10980392160000001" green="0.13725490200000001" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[도로명] 와우산로 94" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0RX-lF-OPn">
-                                                            <rect key="frame" x="0.0" y="26.5" width="120.5" height="16"/>
-                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="13"/>
+                                                            <rect key="frame" x="0.0" y="25" width="131" height="14.5"/>
+                                                            <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="13"/>
                                                             <color key="textColor" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -323,7 +324,7 @@
                                 <rect key="frame" x="23" y="91.5" width="15" height="15"/>
                             </imageView>
                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="주소로 검색" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VkP-e6-cdX">
-                                <rect key="frame" x="48" y="89" width="82.5" height="20"/>
+                                <rect key="frame" x="48" y="89.5" width="86" height="19"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -333,7 +334,8 @@
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <navigationItem id="aBZ-uL-m29">
-                                        <barButtonItem key="rightBarButtonItem" title="Item" id="UCW-Sr-4Mc">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="icCloseOrange28" id="UCW-Sr-4Mc">
+                                            <color key="tintColor" red="1" green="0.63921568630000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="clickedClose:" destination="Aot-39-jmB" id="Rkd-3u-KVw"/>
                                             </connections>
@@ -368,9 +370,14 @@
                                             <action selector="rightButtonClicked:" destination="Aot-39-jmB" eventType="touchUpInside" id="lCM-PR-V9u"/>
                                         </connections>
                                     </button>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="locationDirection" translatesAutoresizingMaskIntoConstraints="NO" id="gHe-8i-toR">
+                                        <rect key="frame" x="146.5" y="260.5" width="82" height="82"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="gHe-8i-toR" firstAttribute="centerY" secondItem="V0A-Fz-Lgg" secondAttribute="centerY" id="0vO-Db-Ecy"/>
+                                    <constraint firstItem="gHe-8i-toR" firstAttribute="centerX" secondItem="V0A-Fz-Lgg" secondAttribute="centerX" id="CBd-29-OTD"/>
                                     <constraint firstItem="tQ4-fE-bmO" firstAttribute="centerY" secondItem="V0A-Fz-Lgg" secondAttribute="centerY" id="D4X-1j-R6b"/>
                                     <constraint firstAttribute="trailing" secondItem="kYk-Pd-JDO" secondAttribute="trailing" constant="10" id="aIW-cg-yXk"/>
                                     <constraint firstItem="tQ4-fE-bmO" firstAttribute="leading" secondItem="V0A-Fz-Lgg" secondAttribute="leading" constant="10" id="hxU-29-lyW"/>
@@ -436,9 +443,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icCloseOrange28" width="16" height="16"/>
+        <image name="icCloseOrange28" width="28" height="28"/>
         <image name="ic_redo_36pt" width="36" height="36"/>
         <image name="ic_undo_36pt" width="36" height="36"/>
+        <image name="locationDirection" width="82" height="82"/>
         <image name="locationIcon" width="11" height="16"/>
         <image name="mapDirectionSun" width="164" height="272"/>
         <image name="searchGlyph" width="15" height="15"/>

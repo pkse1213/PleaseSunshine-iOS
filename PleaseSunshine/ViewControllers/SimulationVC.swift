@@ -38,21 +38,26 @@ class SimulationVC: UIViewController {
     
     
     // 카테고리 탭 outlet
+    @IBOutlet weak var addressChangeBtn: UIBarButtonItem!
     @IBOutlet var tabBtns: [UIButton]!
     @IBOutlet var tabUnderVars: [UIView]!
     @IBOutlet var parentVs: [UIView]!
     
     // 에너지 outlet
+    let energyMessages = ["매우 효율적입니다:)", "효율적입니다:)","보통입니다:]","비효율적이에요:("]
+    let energyColors = [ #colorLiteral(red: 0.0862745098, green: 0.6980392157, blue: 0.4941176471, alpha: 1), #colorLiteral(red: 0.0862745098, green: 0.6980392157, blue: 0.4941176471, alpha: 1), #colorLiteral(red: 1, green: 0.7647058824, blue: 0, alpha: 1), #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)]
     let energyBgImgs = [#imageLiteral(resourceName: "energyVeryGoodImage"),#imageLiteral(resourceName: "energyGoodImage"),#imageLiteral(resourceName: "energyNormalImage"),#imageLiteral(resourceName: "energyBadImage")]
     @IBOutlet weak var energyBgImgV: UIImageView!
+    @IBOutlet weak var messageLbl: UILabel!
     @IBOutlet weak var simulationBtn: UIButton!
     @IBOutlet weak var percentLbl: UILabel!
     @IBOutlet weak var kWhLbl: UILabel!
     
     // 비용 outlet
-    let categories = ["설치비용", "손익분기점", "봉사", "커피"]
-    let images = [#imageLiteral(resourceName: "costSetting"), #imageLiteral(resourceName: "costClock"), #imageLiteral(resourceName: "costBaby"), #imageLiteral(resourceName: "costCoffee")]
-    let energyImages = [#imageLiteral(resourceName: "energyVeryGoodImage"), #imageLiteral(resourceName: "energyGoodImage"), #imageLiteral(resourceName: "energyNormalImage"), #imageLiteral(resourceName: "energyBadImage")]
+    let categories = ["설치비용", "손익분기", "생산전력", "절감효과"]
+    let texts = ["실부담금이 예상됩니다.","설치비용을 회수할 수 있습니다.","냉장고를 가동할 수 있습니다.","마실 수 있습니다." ]
+    let detailTexts = ["[250W 최저설치비용 기준]","","[에너지효율 1등급/840L 기준]","[스타벅스 아메리카노 Tall 기준]" ]
+    let images = [#imageLiteral(resourceName: "costSetting"), #imageLiteral(resourceName: "costClock"), #imageLiteral(resourceName: "costRefrigerator"), #imageLiteral(resourceName: "costCoffee")]
     let watts = [250,260,270,300]
     @IBOutlet weak var costCV: UICollectionView!
     @IBOutlet weak var lookBtn: UIButton!
@@ -84,6 +89,11 @@ class SimulationVC: UIViewController {
         center.addObserver(self, selector: #selector(addressGetter), name: NSNotification.Name("setAddress") , object: nil)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        checkSetAddress()
+    }
+    
     @IBAction func changeAddress(_ sender: UIBarButtonItem) {
         let vc = UIStoryboard(name: "Address", bundle: nil).instantiateViewController(withIdentifier: "LocationMapVC") as! LocationMapVC
         self.present(vc, animated: true, completion: nil)
@@ -104,6 +114,8 @@ class SimulationVC: UIViewController {
         if let p = notification.object as? MyPlace{
             let place = MyPlace(name: p.name , lat:p.lat, lon: p.lon)
             choosenPlace = place
+            print("change")
+            print(place)
             
         }
     }
@@ -141,6 +153,26 @@ class SimulationVC: UIViewController {
         guard let energy = self.energy else {return}
         self.percentLbl.text = "\(Int(energy.persent))"
         self.kWhLbl.text = "\(energy.sunshine)"
+        if energy.persent > 75 {
+            self.messageLbl.text = energyMessages[0]
+            self.energyBgImgV.image = energyBgImgs[0]
+            self.percentLbl.textColor = energyColors[0]
+        } else if energy.persent > 50 {
+            self.messageLbl.text = energyMessages[1]
+            self.energyBgImgV.image = energyBgImgs[1]
+            self.percentLbl.textColor = energyColors[1]
+
+        } else if energy.persent > 25 {
+            self.messageLbl.text = energyMessages[2]
+            self.energyBgImgV.image = energyBgImgs[2]
+            self.percentLbl.textColor = energyColors[2]
+
+        } else {
+            self.messageLbl.text = energyMessages[3]
+            self.energyBgImgV.image = energyBgImgs[3]
+            self.percentLbl.textColor = energyColors[3]
+            
+        }
     }
     
     private func setCostData() {
@@ -150,10 +182,6 @@ class SimulationVC: UIViewController {
         self.yearCostLbl.text = "\(result)원"
     }
     
-    private func setEnvironmentData() {
-//        guard let environment = self.environment else {return}
-        
-    }
     
     private func setCostLookData(){
         guard let cost = self.lookCost else {return}
@@ -243,6 +271,8 @@ extension SimulationVC: UICollectionViewDelegate, UICollectionViewDataSource {
         let cell = costCV.dequeueReusableCell(withReuseIdentifier: "CostCell", for: indexPath) as! CostCell
         cell.categoryLbl.text = categories[indexPath.item]
         cell.imgV.image = images[indexPath.item]
+        cell.detailLabel.text = detailTexts[indexPath.item]
+        cell.commentLbl.text = texts[indexPath.row]
         guard let cost = self.cost else {return cell}
         if indexPath.item == 0 {
             let result = numberFormatter.string(from: NSNumber(value:cost.installCostAvg))!
@@ -250,7 +280,7 @@ extension SimulationVC: UICollectionViewDelegate, UICollectionViewDataSource {
         } else if indexPath.item == 1 {
             cell.dataLbl.text = "\(cost.bePoint)개월"
         } else if indexPath.item == 2 {
-            cell.dataLbl.text = "\(cost.volunteer)명의 아이들"
+            cell.dataLbl.text = "\(cost.volunteer)일"
         } else {
             cell.dataLbl.text = "\(cost.coffee)잔의 커피"
         }

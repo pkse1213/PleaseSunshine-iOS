@@ -13,6 +13,7 @@ class CostCell: UICollectionViewCell {
     @IBOutlet weak var categoryLbl: UILabel!
     @IBOutlet weak var imgV: UIImageView!
     @IBOutlet weak var dataLbl: UILabel!
+    @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var commentLbl: UILabel!
     
     override func awakeFromNib() {

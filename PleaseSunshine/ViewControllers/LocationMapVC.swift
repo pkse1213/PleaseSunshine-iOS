@@ -34,6 +34,7 @@ class LocationMapVC: UIViewController, NMapViewDelegate, NMapPOIdataOverlayDeleg
             self.addressTxF.text = choosenPlace?.name
         }
     }
+    var first = false
     var step = 1 {
         didSet {
             changeStep()
@@ -106,6 +107,7 @@ class LocationMapVC: UIViewController, NMapViewDelegate, NMapPOIdataOverlayDeleg
     @IBAction func clickedClose(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
+    
     private func changeStep(){
         if step == 1 {
             rotateView.isHidden = true
@@ -113,6 +115,14 @@ class LocationMapVC: UIViewController, NMapViewDelegate, NMapPOIdataOverlayDeleg
         } else if step == 2 {
             rotateView.isHidden = false
             setAddressBtn.setTitle("이 방향으로 방향 설정", for: .normal)
+            if let place = choosenPlace {
+                print("dfsdfsdeerwerwefds")
+                print(place)
+                mapView?.setMapCenter(NGeoPoint(longitude: place.lon, latitude: place.lat), atLevel: 20)
+                clearOverlay()
+                
+            }
+            
         } else {
             setAddressBtn.setTitle("여기서 계산하기", for: .normal)
             leftBtn.isHidden = true
@@ -169,8 +179,6 @@ class LocationMapVC: UIViewController, NMapViewDelegate, NMapPOIdataOverlayDeleg
             
         }
         step = step + 1
-        
-        
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -199,8 +207,6 @@ class LocationMapVC: UIViewController, NMapViewDelegate, NMapPOIdataOverlayDeleg
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-//        mapView?.viewWillAppear()
-//        requestAddressByCoordination(NGeoPoint(longitude: 126.978371, latitude: 37.5666091))
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -274,6 +280,7 @@ class LocationMapVC: UIViewController, NMapViewDelegate, NMapPOIdataOverlayDeleg
     // MARK: - MMapReverseGeocoderDelegate Methods // 이동 가능한 마커
     
     open func location(_ location: NGeoPoint, didFind placemark: NMapPlacemark!) {
+        print("didFind ")
         let address = placemark.address
         
         addressTxF.text = address
@@ -325,7 +332,10 @@ class LocationMapVC: UIViewController, NMapViewDelegate, NMapPOIdataOverlayDeleg
     // MARK: - NMapLocationManagerDelegate Methods
     
     open func locationManager(_ locationManager: NMapLocationManager!, didUpdateTo location: CLLocation!) {
-        
+        if !first {
+            updateState(.disabled)
+             stopLocationUpdating()
+        }
         let coordinate = location.coordinate
         let myLocation = NGeoPoint(longitude: coordinate.longitude, latitude: coordinate.latitude)
 //        let locationAccuracy = Float(location.horizontalAccuracy)
@@ -336,8 +346,13 @@ class LocationMapVC: UIViewController, NMapViewDelegate, NMapPOIdataOverlayDeleg
         mapView?.setMapCenter(myLocation, atLevel: 20)
         setMarker(myLocation)
     }
+    
     open func locationManager(_ locationManager: NMapLocationManager!, didFailWithError errorType: NMapLocationManagerErrorType) {
-        
+        if !first {
+            updateState(.disabled)
+            stopLocationUpdating()
+        }
+        print("didFailWithE")
         var message: String = ""
         
         switch errorType {
@@ -365,6 +380,11 @@ class LocationMapVC: UIViewController, NMapViewDelegate, NMapPOIdataOverlayDeleg
     }
     
     func locationManager(_ locationManager: NMapLocationManager!, didUpdate heading: CLHeading!) {
+        print("didupdate")
+        if !first {
+            updateState(.disabled)
+            stopLocationUpdating()
+        }
         let headingValue = heading.trueHeading < 0.0 ? heading.magneticHeading : heading.trueHeading
         setCompassHeadingValue(headingValue)
     }
@@ -374,7 +394,12 @@ class LocationMapVC: UIViewController, NMapViewDelegate, NMapPOIdataOverlayDeleg
     }
     
     func findCurrentLocation() {
+        if !first {
+            updateState(.disabled)
+            stopLocationUpdating()
+        } else {
         enableLocationUpdate()
+        }
     }
     
     func setCompassHeadingValue(_ headingValue: Double) {
@@ -475,8 +500,8 @@ class LocationMapVC: UIViewController, NMapViewDelegate, NMapPOIdataOverlayDeleg
     
     @objc func buttonClicked(_ sender: UIButton!) {
         
-        if let lm = NMapLocationManager.getSharedInstance() {
-            
+//        if let lm = NMapLocationManager.getSharedInstance() {
+        
             switch currentState {
             case .disabled:
                 enableLocationUpdate()
@@ -499,7 +524,7 @@ class LocationMapVC: UIViewController, NMapViewDelegate, NMapPOIdataOverlayDeleg
                 stopLocationUpdating()
                 updateState(.disabled)
             }
-        }
+//        }
     }
     
     func updateState(_ newState: state) {

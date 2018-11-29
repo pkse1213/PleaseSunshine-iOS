@@ -26,7 +26,8 @@ class NMapViewResources: NSObject {
         case UserPOIflagTypeDefault:
             return #imageLiteral(resourceName: "pubtrans_exact_default")
         case UserPOIflagTypeInvisible:
-            return #imageLiteral(resourceName: "1px_dot")
+            return #imageLiteral(resourceName: "tutorial2Image")
+            return #imageLiteral(resourceName: "tutorial2Image")
         default:
             return nil
         }

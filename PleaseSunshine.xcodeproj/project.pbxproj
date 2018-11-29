@@ -23,7 +23,6 @@
 		CB20AA9F21AE6B030027E08A /* ComapnyDetailInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB20AA9C21AE6B030027E08A /* ComapnyDetailInfoTableViewCell.swift */; };
 		CB20AAA121AE6B0F0027E08A /* CompanyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB20AAA021AE6B0F0027E08A /* CompanyListViewController.swift */; };
 		CB2F0D1421A3045100D36E38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2F0D1321A3045100D36E38 /* AppDelegate.swift */; };
-		CB2F0D1921A3045100D36E38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB2F0D1721A3045100D36E38 /* Main.storyboard */; };
 		CB2F0D1B21A3045100D36E38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB2F0D1A21A3045100D36E38 /* Assets.xcassets */; };
 		CB2F0D1E21A3045100D36E38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB2F0D1C21A3045100D36E38 /* LaunchScreen.storyboard */; };
 		CB2F0D3921A32F6100D36E38 /* NanumSquareOTFBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB2F0D3721A32F5E00D36E38 /* NanumSquareOTFBold.otf */; };
@@ -33,7 +32,6 @@
 		CB480AAE21A87C8B00BB9C9E /* APIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB480AAA21A87C8B00BB9C9E /* APIServices.swift */; };
 		CB56CDB521A7E1C200632C68 /* UIViewController+Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB56CDB421A7E1C200632C68 /* UIViewController+Logo.swift */; };
 		CB56CDB721A7E22E00632C68 /* MainChooseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB56CDB621A7E22E00632C68 /* MainChooseVC.swift */; };
-		CB56CDB921A7E77900632C68 /* Address.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB56CDB821A7E77900632C68 /* Address.storyboard */; };
 		CB56CDBB21A7E87800632C68 /* SimulationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB56CDBA21A7E87800632C68 /* SimulationVC.swift */; };
 		CB5DE9D021AA81F9007D33E0 /* LookCostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DE9CF21AA81F9007D33E0 /* LookCostService.swift */; };
 		CB5DE9D221AA8255007D33E0 /* CostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DE9D121AA8255007D33E0 /* CostData.swift */; };
@@ -55,6 +53,9 @@
 		CBB0042C21A7339700DC09B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0042B21A7339700DC09B0 /* ViewController.swift */; };
 		CBB0042F21A7D72A00DC09B0 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBB0042E21A7D72A00DC09B0 /* Tutorial.storyboard */; };
 		CBB0043121A7D78400DC09B0 /* TutorialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0043021A7D78400DC09B0 /* TutorialVC.swift */; };
+		CBCBE0A621B092FF00FB0E9E /* NanumOTFRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CBCBE0A521B092FF00FB0E9E /* NanumOTFRegular.otf */; };
+		CBCBE0A921B0931400FB0E9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBCBE0A721B0931400FB0E9E /* Main.storyboard */; };
+		CBCBE0AA21B0931400FB0E9E /* Address.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBCBE0A821B0931400FB0E9E /* Address.storyboard */; };
 		CBCF5E0A21A5F2B70043D2A5 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCF5E0921A5F2B70043D2A5 /* MapVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -91,7 +92,6 @@
 		CB20AAA021AE6B0F0027E08A /* CompanyListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyListViewController.swift; sourceTree = "<group>"; };
 		CB2F0D1021A3045100D36E38 /* PleaseSunshine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PleaseSunshine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB2F0D1321A3045100D36E38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CB2F0D1821A3045100D36E38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB2F0D1A21A3045100D36E38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB2F0D1D21A3045100D36E38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB2F0D1F21A3045100D36E38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,7 +102,6 @@
 		CB480AAA21A87C8B00BB9C9E /* APIServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIServices.swift; sourceTree = "<group>"; };
 		CB56CDB421A7E1C200632C68 /* UIViewController+Logo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Logo.swift"; sourceTree = "<group>"; };
 		CB56CDB621A7E22E00632C68 /* MainChooseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChooseVC.swift; sourceTree = "<group>"; };
-		CB56CDB821A7E77900632C68 /* Address.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Address.storyboard; sourceTree = "<group>"; };
 		CB56CDBA21A7E87800632C68 /* SimulationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationVC.swift; sourceTree = "<group>"; };
 		CB5DE9CF21AA81F9007D33E0 /* LookCostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookCostService.swift; sourceTree = "<group>"; };
 		CB5DE9D121AA8255007D33E0 /* CostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostData.swift; sourceTree = "<group>"; };
@@ -124,6 +123,9 @@
 		CBB0042B21A7339700DC09B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CBB0042E21A7D72A00DC09B0 /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
 		CBB0043021A7D78400DC09B0 /* TutorialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialVC.swift; sourceTree = "<group>"; };
+		CBCBE0A521B092FF00FB0E9E /* NanumOTFRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumOTFRegular.otf; sourceTree = "<group>"; };
+		CBCBE0A721B0931400FB0E9E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		CBCBE0A821B0931400FB0E9E /* Address.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Address.storyboard; sourceTree = "<group>"; };
 		CBCF5E0921A5F2B70043D2A5 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		D96AD31B17FC60EEDDCE0636 /* Pods-PleaseSunshine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PleaseSunshine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PleaseSunshine/Pods-PleaseSunshine.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -256,9 +258,9 @@
 			isa = PBXGroup;
 			children = (
 				CB2F0D1C21A3045100D36E38 /* LaunchScreen.storyboard */,
+				CBCBE0A821B0931400FB0E9E /* Address.storyboard */,
+				CBCBE0A721B0931400FB0E9E /* Main.storyboard */,
 				CBB0042E21A7D72A00DC09B0 /* Tutorial.storyboard */,
-				CB2F0D1721A3045100D36E38 /* Main.storyboard */,
-				CB56CDB821A7E77900632C68 /* Address.storyboard */,
 				CB084A4721A8647E00F5DF88 /* ARSimulator.storyboard */,
 			);
 			path = Storyboards;
@@ -277,6 +279,7 @@
 		CB2F0D2F21A32EB200D36E38 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				CBCBE0A521B092FF00FB0E9E /* NanumOTFRegular.otf */,
 				CB2F0D3721A32F5E00D36E38 /* NanumSquareOTFBold.otf */,
 			);
 			path = Fonts;
@@ -376,13 +379,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBCBE0A921B0931400FB0E9E /* Main.storyboard in Resources */,
 				CB084A4821A8647E00F5DF88 /* ARSimulator.storyboard in Resources */,
 				CBB0042F21A7D72A00DC09B0 /* Tutorial.storyboard in Resources */,
-				CB56CDB921A7E77900632C68 /* Address.storyboard in Resources */,
 				CB2F0D1E21A3045100D36E38 /* LaunchScreen.storyboard in Resources */,
+				CBCBE0A621B092FF00FB0E9E /* NanumOTFRegular.otf in Resources */,
 				CB2F0D1B21A3045100D36E38 /* Assets.xcassets in Resources */,
-				CB2F0D1921A3045100D36E38 /* Main.storyboard in Resources */,
 				CB2F0D3921A32F6100D36E38 /* NanumSquareOTFBold.otf in Resources */,
+				CBCBE0AA21B0931400FB0E9E /* Address.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,14 +533,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CB2F0D1721A3045100D36E38 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CB2F0D1821A3045100D36E38 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CB2F0D1C21A3045100D36E38 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
