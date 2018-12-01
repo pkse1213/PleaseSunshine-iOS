@@ -17,11 +17,11 @@ struct EnvironmentService: APIService, RequestService{
     let URL = url("/environment")
     typealias NetworkData = EnvironmentData
     
-    func getEnvironmentInfo(completion: @escaping (OutputClass) -> Void, error: @escaping (Int) -> Void) {
+    func getEnvironmentInfo(completion: @escaping (Int) -> Void, error: @escaping (Int) -> Void) {
         gettable(URL, body: nil, header: nil) { res in
             switch res {
             case .success(let CostData):
-                let data = CostData.data
+                let data = CostData.data.busansox
                 completion(data)
             case .successWithNil(_):
                 break

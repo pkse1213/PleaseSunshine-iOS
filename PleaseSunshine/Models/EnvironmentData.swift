@@ -10,15 +10,17 @@ import Foundation
 
 struct EnvironmentData: Codable {
     let message: String
-    let data: OutputClass
+    let data: DataClass
 }
 
-struct OutputClass: Codable {
-    let cado, nox, udst: OutputAmount
+struct DataClass: Codable {
+    let nox, sox, udst: Nox
+    let busansox: Int
 }
 
-struct OutputAmount: Codable {
-    let sun, kospo, thermalPower: Int
+struct Nox: Codable {
+    let sun: Int
+    let kospo, thermalPower: Double
     
     enum CodingKeys: String, CodingKey {
         case sun, kospo

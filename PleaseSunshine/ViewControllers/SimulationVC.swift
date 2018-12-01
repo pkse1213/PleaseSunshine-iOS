@@ -9,6 +9,9 @@
 import UIKit
 
 class SimulationVC: UIViewController {
+    
+    @IBOutlet weak var busanSoxBtn: UIButton!
+    var busansox = 0
     var energy: Energy? {
         didSet{
             setEnergyData()
@@ -35,7 +38,6 @@ class SimulationVC: UIViewController {
     var longitude = 0.0
     var latitude = 0.0
     let numberFormatter = NumberFormatter()
-    
     
     // 카테고리 탭 outlet
     @IBOutlet weak var addressChangeBtn: UIBarButtonItem!
@@ -84,9 +86,40 @@ class SimulationVC: UIViewController {
         setLogoInNaviBar()
         setView()
         checkSetAddress()
+        setTarget()
         
         let center = NotificationCenter.default
         center.addObserver(self, selector: #selector(addressGetter), name: NSNotification.Name("setAddress") , object: nil)
+    }
+    
+    func setBusansox() {
+        EnvironmentService.shareInstance.getEnvironmentInfo(completion: { (busansox) in
+            self.busansox = busansox
+        }) { (err) in
+            
+        }
+    }
+    @IBAction func simulator(_ sender: Any) {
+        simpleAlertWithCompletionOnlyOk(title: "알림", message: "기능 준비 중 입니다.", okCompletion: nil)
+    }
+    func setTarget() {
+        
+        busanSoxBtn.layer.cornerRadius = 10 * self.view.frame.width / 375
+        busanSoxBtn.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner , .layerMinXMinYCorner , .layerMaxXMinYCorner ]
+        
+        busanSoxBtn.addTarget(self, action: #selector(self.pressedBusanSoxBtn(_:)), for: UIControl.Event.touchUpInside)
+    }
+    
+    @objc func pressedBusanSoxBtn( _ sender : UIButton ) {
+        
+        guard let airPollutantsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AirPollutantsViewController") as? AirPollutantsViewController else { return }
+        
+        airPollutantsVC.busansox = self.busansox
+        
+        self.addChild( airPollutantsVC )
+        airPollutantsVC.view.frame = self.view.frame
+        self.view.addSubview( airPollutantsVC.view )
+        airPollutantsVC.didMove(toParent: self )
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -295,7 +328,7 @@ extension SimulationVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = environmentTbV.dequeueReusableCell(withIdentifier: "EnvironmentCell") as! EnvironmentCell
-        cell.categoryLbl.text = "\(outputCategories[indexPath.row])"
+        cell.imageview.image = UIImage(named: "environmentImage\(indexPath.row+1)")
         
         return cell
     }
