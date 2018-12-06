@@ -61,7 +61,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="주소로 검색" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y1b-bu-JaT">
-                                <rect key="frame" x="48" y="89" width="82.5" height="20"/>
+                                <rect key="frame" x="48" y="89.5" width="86" height="19"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -88,7 +88,7 @@
                                         <rect key="frame" x="0.0" y="439" width="375" height="46"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="원하는 방향으로 기기를 움직여주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOi-Tc-agv">
-                                                <rect key="frame" x="70" y="13.5" width="235" height="19"/>
+                                                <rect key="frame" x="65" y="14" width="245" height="18"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -201,7 +201,7 @@
                                     <constraint firstItem="WZU-RS-HoE" firstAttribute="centerY" secondItem="lTo-lW-VCE" secondAttribute="centerY" id="j7n-5k-OK1"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최근 주소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nof-tP-3fi">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="검색 결과" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nof-tP-3fi">
                                 <rect key="frame" x="20" y="134" width="280" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="h6F-FR-YFC"/>

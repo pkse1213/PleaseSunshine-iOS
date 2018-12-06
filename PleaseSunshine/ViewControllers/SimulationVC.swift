@@ -87,7 +87,7 @@ class SimulationVC: UIViewController {
         setView()
         checkSetAddress()
         setTarget()
-        
+        setBusansox()
         let center = NotificationCenter.default
         center.addObserver(self, selector: #selector(addressGetter), name: NSNotification.Name("setAddress") , object: nil)
     }
@@ -95,27 +95,26 @@ class SimulationVC: UIViewController {
     func setBusansox() {
         EnvironmentService.shareInstance.getEnvironmentInfo(completion: { (busansox) in
             self.busansox = busansox
+            print("busansox 성공")
         }) { (err) in
-            
+            print("busansox 실패")
         }
     }
+    
     @IBAction func simulator(_ sender: Any) {
         simpleAlertWithCompletionOnlyOk(title: "알림", message: "기능 준비 중 입니다.", okCompletion: nil)
     }
+    
     func setTarget() {
-        
         busanSoxBtn.layer.cornerRadius = 10 * self.view.frame.width / 375
         busanSoxBtn.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner , .layerMinXMinYCorner , .layerMaxXMinYCorner ]
-        
         busanSoxBtn.addTarget(self, action: #selector(self.pressedBusanSoxBtn(_:)), for: UIControl.Event.touchUpInside)
     }
     
     @objc func pressedBusanSoxBtn( _ sender : UIButton ) {
-        
         guard let airPollutantsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AirPollutantsViewController") as? AirPollutantsViewController else { return }
         
         airPollutantsVC.busansox = self.busansox
-        
         self.addChild( airPollutantsVC )
         airPollutantsVC.view.frame = self.view.frame
         self.view.addSubview( airPollutantsVC.view )
@@ -131,14 +130,13 @@ class SimulationVC: UIViewController {
         let vc = UIStoryboard(name: "Address", bundle: nil).instantiateViewController(withIdentifier: "LocationMapVC") as! LocationMapVC
         self.present(vc, animated: true, completion: nil)
     }
+    
     private func checkSetAddress() {
-       
         guard let lat = userdefault.double(forKey: "latitude") as? Double, let lon = userdefault.double(forKey: "longitude") as? Double, let name = userdefault.string(forKey: "name") else {
             let vc = UIStoryboard(name: "Address", bundle: nil).instantiateViewController(withIdentifier: "LocationMapVC") as! LocationMapVC
             self.present(vc, animated: true, completion: nil)
             return
         }
-        
         let place = MyPlace(name: name , lat:lat, lon: lon)
         choosenPlace = place
     }
@@ -149,7 +147,6 @@ class SimulationVC: UIViewController {
             choosenPlace = place
             print("change")
             print(place)
-            
         }
     }
     
@@ -171,7 +168,6 @@ class SimulationVC: UIViewController {
         parentVs[1].isHidden = true
         lookBtn.applyRadius(radius: 13.5*self.view.frame.width/375)
        
-        
         // 비용-한눈에 알아보기
         lookV.applyRadius(radius: 10)
         lookParentV.isHidden = true
@@ -180,12 +176,14 @@ class SimulationVC: UIViewController {
         environmentTbV.delegate = self
         environmentTbV.dataSource = self
         parentVs[2].isHidden = true
-        
     }
+    
     private func setEnergyData() {
+        print("에너지 퍼센트 변경")
         guard let energy = self.energy else {return}
         self.percentLbl.text = "\(Int(energy.persent))"
         self.kWhLbl.text = "\(energy.sunshine)"
+        
         if energy.persent > 75 {
             self.messageLbl.text = energyMessages[0]
             self.energyBgImgV.image = energyBgImgs[0]
@@ -194,33 +192,26 @@ class SimulationVC: UIViewController {
             self.messageLbl.text = energyMessages[1]
             self.energyBgImgV.image = energyBgImgs[1]
             self.percentLbl.textColor = energyColors[1]
-
         } else if energy.persent > 25 {
             self.messageLbl.text = energyMessages[2]
             self.energyBgImgV.image = energyBgImgs[2]
             self.percentLbl.textColor = energyColors[2]
-
         } else {
             self.messageLbl.text = energyMessages[3]
             self.energyBgImgV.image = energyBgImgs[3]
             self.percentLbl.textColor = energyColors[3]
-            
         }
     }
     
     private func setCostData() {
         guard let cost = self.cost else {return}
-       let result = numberFormatter.string(from: NSNumber(value:cost.savedMoney))!
-        
+        let result = numberFormatter.string(from: NSNumber(value:cost.savedMoney))!
         self.yearCostLbl.text = "\(result)원"
     }
     
-    
     private func setCostLookData(){
         guard let cost = self.lookCost else {return}
-        
         for i in 0...3{
-            
             let result1 = numberFormatter.string(from: NSNumber(value:cost[i].savedMoney))!
             let result2 = numberFormatter.string(from: NSNumber(value:cost[i].installCostAvg))!
             
@@ -229,6 +220,7 @@ class SimulationVC: UIViewController {
             bePointLbls[i].text = "\(cost[i].bePoint)개월"
         }
     }
+    
     private func energyDataInit() {
         guard let place = choosenPlace else {
             return
@@ -242,8 +234,8 @@ class SimulationVC: UIViewController {
             print("energy init 실패")
         }
     }
+    
     private func initServiceData(){
-        
         CostService.shareInstance.getCostInfo(watt: 250, completion: { (Cost) in
             self.cost = Cost[0]
         }) { (err) in
@@ -332,16 +324,4 @@ extension SimulationVC: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
-//    func resize(image: UIImage, scale: CGFloat) -> UIImage? {
-//        let transform = CGAffineTransform(scaleX: scale, y: scale)
-//        let size = image.size.applying(transform)
-//        UIGraphicsBeginImageContext(size)
-//        image.draw(in: CGRect(origin: .zero, size: size))
-//        let resultImage = UIGraphicsGetImageFromCurrentImageContext()
-//        UIGraphicsEndImageContext()
-//        
-//        return resultImage
-//    }
-    
-    
 }

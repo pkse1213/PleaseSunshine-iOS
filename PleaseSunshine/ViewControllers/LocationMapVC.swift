@@ -280,7 +280,7 @@ class LocationMapVC: UIViewController, NMapViewDelegate, NMapPOIdataOverlayDeleg
     // MARK: - MMapReverseGeocoderDelegate Methods // 이동 가능한 마커
     
     open func location(_ location: NGeoPoint, didFind placemark: NMapPlacemark!) {
-        print("didFind ")
+        print("didFind")
         let address = placemark.address
         
         addressTxF.text = address
