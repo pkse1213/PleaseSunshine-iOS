@@ -9,11 +9,15 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NanumOTFRegular.otf">
+            <string>NanumSquareOTFR</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--SimulatorVC-->
         <scene sceneID="Cs0-LU-o5L">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="efT-Lj-gOr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="ARSimulatorVC" id="etV-0J-Gn5" customClass="ARSimulatorVC" customModule="PleaseSunshine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fDB-UM-IHh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -24,15 +28,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </arscnView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TM8-iw-ur1">
-                                <rect key="frame" x="156.5" y="40" width="62" height="31"/>
+                                <rect key="frame" x="49" y="40" width="277" height="54.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEQ-Gd-ikr">
-                                        <rect key="frame" x="10" y="5" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="태양광 발전기를 설치하고 싶은 벽면을 천천히 스캔해주세요." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEQ-Gd-ikr">
+                                        <rect key="frame" x="10" y="5" width="257" height="44.5"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="20"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.67000000000000004" alpha="0.54732983732876717" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="1" green="0.58431372549019611" blue="0.0" alpha="0.4043503852739726" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="BEQ-Gd-ikr" firstAttribute="centerX" secondItem="TM8-iw-ur1" secondAttribute="centerX" id="I33-co-bOU"/>
                                     <constraint firstAttribute="trailing" secondItem="BEQ-Gd-ikr" secondAttribute="trailing" constant="10" id="LBz-Cp-S7G"/>
@@ -42,11 +46,26 @@
                                     <constraint firstItem="BEQ-Gd-ikr" firstAttribute="top" secondItem="TM8-iw-ur1" secondAttribute="top" constant="5" id="zgK-xt-gPF"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0Q-2q-Pan">
+                                <rect key="frame" x="334" y="33" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="80C-F8-GfB"/>
+                                    <constraint firstAttribute="height" constant="28" id="RT3-Ko-6rB"/>
+                                </constraints>
+                                <state key="normal" image="icCloseOrange28"/>
+                                <connections>
+                                    <action selector="clickedClose:" destination="etV-0J-Gn5" eventType="touchUpInside" id="bgy-yg-Tgv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="TM8-iw-ur1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xn2-kd-5g1" secondAttribute="leading" constant="15" id="2Qw-Ye-XK3"/>
+                            <constraint firstItem="S0Q-2q-Pan" firstAttribute="top" secondItem="xn2-kd-5g1" secondAttribute="top" constant="13" id="FDf-rR-WzZ"/>
                             <constraint firstItem="TM8-iw-ur1" firstAttribute="centerX" secondItem="fDB-UM-IHh" secondAttribute="centerX" id="FZp-lE-DPm"/>
+                            <constraint firstItem="S0Q-2q-Pan" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="BEQ-Gd-ikr" secondAttribute="trailing" constant="15" id="GVP-FL-zW2"/>
                             <constraint firstItem="TM8-iw-ur1" firstAttribute="top" secondItem="xn2-kd-5g1" secondAttribute="top" constant="20" id="JcS-ci-CCF"/>
+                            <constraint firstItem="xn2-kd-5g1" firstAttribute="trailing" secondItem="S0Q-2q-Pan" secondAttribute="trailing" constant="13" id="zbY-hw-eXr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xn2-kd-5g1"/>
                     </view>
@@ -56,8 +75,12 @@
                         <outlet property="textLabel" destination="BEQ-Gd-ikr" id="5my-yU-Dfw"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="efT-Lj-gOr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-108" y="-282"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icCloseOrange28" width="28" height="28"/>
+    </resources>
 </document>

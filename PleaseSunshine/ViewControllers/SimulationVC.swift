@@ -9,9 +9,6 @@
 import UIKit
 
 class SimulationVC: UIViewController {
-    
-    @IBOutlet weak var busanSoxBtn: UIButton!
-    var busansox = 0
     var energy: Energy? {
         didSet{
             setEnergyData()
@@ -33,6 +30,7 @@ class SimulationVC: UIViewController {
             energyDataInit()
         }
     }
+    
     let userdefault = UserDefaults.standard
     var unit:CGFloat = 0.0
     var longitude = 0.0
@@ -78,6 +76,8 @@ class SimulationVC: UIViewController {
     // 환경 outlet
     let outputCategories = ["이산화탄소 배출량" ,"질소산화물 배출량", "초미세먼지 배출량"]
     @IBOutlet weak var environmentTbV: UITableView!
+    @IBOutlet weak var busanSoxBtn: UIButton!
+    var busansox = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,11 +102,14 @@ class SimulationVC: UIViewController {
     }
     
     @IBAction func simulator(_ sender: Any) {
-        simpleAlertWithCompletionOnlyOk(title: "알림", message: "기능 준비 중 입니다.", okCompletion: nil)
+//        simpleAlertWithCompletionOnlyOk(title: "알림", message: "기능 준비 중 입니다.", okCompletion: nil)
+//        ARSimulatorVC
+        let vc = UIStoryboard(name: "ARSimulator", bundle: nil).instantiateViewController(withIdentifier: "ARSimulatorVC") as! ARSimulatorVC
+        self.present(vc, animated: true, completion: nil)
     }
     
     func setTarget() {
-        busanSoxBtn.layer.cornerRadius = 10 * self.view.frame.width / 375
+        busanSoxBtn.layer.cornerRadius = 25/2
         busanSoxBtn.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner , .layerMinXMinYCorner , .layerMaxXMinYCorner ]
         busanSoxBtn.addTarget(self, action: #selector(self.pressedBusanSoxBtn(_:)), for: UIControl.Event.touchUpInside)
     }
@@ -181,7 +184,7 @@ class SimulationVC: UIViewController {
     private func setEnergyData() {
         print("에너지 퍼센트 변경")
         guard let energy = self.energy else {return}
-        self.percentLbl.text = "\(Int(energy.persent))"
+        self.percentLbl.text = "\(energy.persent)"
         self.kWhLbl.text = "\(energy.sunshine)"
         
         if energy.persent > 75 {

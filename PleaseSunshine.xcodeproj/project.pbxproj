@@ -48,13 +48,13 @@
 		CB5DEB3821AD456B007D33E0 /* LocationMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DEB3721AD456B007D33E0 /* LocationMapVC.swift */; };
 		CB5DEB3B21AD4606007D33E0 /* NMapViewResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DEB3A21AD4606007D33E0 /* NMapViewResources.swift */; };
 		CB94708921A9EC020077128B /* EnvironmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB94708821A9EC020077128B /* EnvironmentCell.swift */; };
+		CBA0E3D821BA62EC00CC6898 /* solar.dae in Resources */ = {isa = PBXBuildFile; fileRef = CBA0E3D721BA62EC00CC6898 /* solar.dae */; };
 		CBB0042A21A7279800DC09B0 /* UIView+applyDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0042921A7279800DC09B0 /* UIView+applyDesign.swift */; };
 		CBB0042C21A7339700DC09B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0042B21A7339700DC09B0 /* ViewController.swift */; };
 		CBB0042F21A7D72A00DC09B0 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBB0042E21A7D72A00DC09B0 /* Tutorial.storyboard */; };
 		CBB0043121A7D78400DC09B0 /* TutorialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0043021A7D78400DC09B0 /* TutorialVC.swift */; };
 		CBCBE0A621B092FF00FB0E9E /* NanumOTFRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CBCBE0A521B092FF00FB0E9E /* NanumOTFRegular.otf */; };
 		CBCBE0AA21B0931400FB0E9E /* Address.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBCBE0A821B0931400FB0E9E /* Address.storyboard */; };
-		CBCBE0D421B1755D00FB0E9E /* SolarPanel.dae in Resources */ = {isa = PBXBuildFile; fileRef = CBCBE0D321B1755C00FB0E9E /* SolarPanel.dae */; };
 		CBCBE0D821B1796100FB0E9E /* AirPollutantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCBE0D721B1796100FB0E9E /* AirPollutantsViewController.swift */; };
 		CBCBE0DA21B17B1C00FB0E9E /* SimulationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCBE0D921B17B1C00FB0E9E /* SimulationVC.swift */; };
 		CBCBE0E321B1809900FB0E9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBCBE0E221B1809900FB0E9E /* Main.storyboard */; };
@@ -120,13 +120,13 @@
 		CB5DEB3721AD456B007D33E0 /* LocationMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapVC.swift; sourceTree = "<group>"; };
 		CB5DEB3A21AD4606007D33E0 /* NMapViewResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMapViewResources.swift; sourceTree = "<group>"; };
 		CB94708821A9EC020077128B /* EnvironmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentCell.swift; sourceTree = "<group>"; };
+		CBA0E3D721BA62EC00CC6898 /* solar.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = solar.dae; sourceTree = "<group>"; };
 		CBB0042921A7279800DC09B0 /* UIView+applyDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+applyDesign.swift"; sourceTree = "<group>"; };
 		CBB0042B21A7339700DC09B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CBB0042E21A7D72A00DC09B0 /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
 		CBB0043021A7D78400DC09B0 /* TutorialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialVC.swift; sourceTree = "<group>"; };
 		CBCBE0A521B092FF00FB0E9E /* NanumOTFRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumOTFRegular.otf; sourceTree = "<group>"; };
 		CBCBE0A821B0931400FB0E9E /* Address.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Address.storyboard; sourceTree = "<group>"; };
-		CBCBE0D321B1755C00FB0E9E /* SolarPanel.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = SolarPanel.dae; sourceTree = "<group>"; };
 		CBCBE0D721B1796100FB0E9E /* AirPollutantsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirPollutantsViewController.swift; sourceTree = "<group>"; };
 		CBCBE0D921B17B1C00FB0E9E /* SimulationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimulationVC.swift; sourceTree = "<group>"; };
 		CBCBE0E221B1809900FB0E9E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -274,7 +274,7 @@
 		CB2F0D2E21A32E7E00D36E38 /* etc */ = {
 			isa = PBXGroup;
 			children = (
-				CBCBE0D321B1755C00FB0E9E /* SolarPanel.dae */,
+				CBA0E3D721BA62EC00CC6898 /* solar.dae */,
 				CB2F0D1321A3045100D36E38 /* AppDelegate.swift */,
 				CB2F0D1A21A3045100D36E38 /* Assets.xcassets */,
 				CB2F0D1F21A3045100D36E38 /* Info.plist */,
@@ -388,12 +388,12 @@
 				CB084A4821A8647E00F5DF88 /* ARSimulator.storyboard in Resources */,
 				CBB0042F21A7D72A00DC09B0 /* Tutorial.storyboard in Resources */,
 				CB2F0D1E21A3045100D36E38 /* LaunchScreen.storyboard in Resources */,
-				CBCBE0D421B1755D00FB0E9E /* SolarPanel.dae in Resources */,
 				CBCBE0A621B092FF00FB0E9E /* NanumOTFRegular.otf in Resources */,
 				CB2F0D1B21A3045100D36E38 /* Assets.xcassets in Resources */,
 				CBCBE0E321B1809900FB0E9E /* Main.storyboard in Resources */,
 				CB2F0D3921A32F6100D36E38 /* NanumSquareOTFBold.otf in Resources */,
 				CBCBE0AA21B0931400FB0E9E /* Address.storyboard in Resources */,
+				CBA0E3D821BA62EC00CC6898 /* solar.dae in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

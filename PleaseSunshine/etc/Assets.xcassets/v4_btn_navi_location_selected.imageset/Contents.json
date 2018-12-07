@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "gpsButton.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "v4_btn_navi_location_selected@2x.png",
+      "filename" : "gpsButton@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "gpsButton@3x.png",
       "scale" : "3x"
     }
   ],
