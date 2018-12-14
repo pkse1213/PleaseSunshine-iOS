@@ -23,7 +23,7 @@ class ARSimulatorVC: UIViewController,ARSCNViewDelegate {
         super.viewDidLoad()
         labelView.applyRadius(radius: 5)
         self.sceneView.autoenablesDefaultLighting = true
-        textLabel.text = "태양광 발전기를 설치하고 싶은 벽면을 천천히 스캔해주세요."
+        textLabel.text = "태양광 발전기를 설치하고 싶은 벽면을 천천히 스캔한 후 원하는 위치에 터치해주세요."
         sceneView.delegate = self
         sceneView.showsStatistics = true
         let scene = SCNScene()
@@ -97,12 +97,13 @@ class ARSimulatorVC: UIViewController,ARSCNViewDelegate {
             let hitTestResults = self.sceneView.hitTest(touch, options: nil)
             
             if let hitTest = hitTestResults.first {
-                let chairNode = hitTest.node
-                let pinchScaleX = Float(recognizer.scale) * chairNode.scale.x
-                let pinchScaleY = Float(recognizer.scale) * chairNode.scale.y
-                let pinchScaleZ = Float(recognizer.scale) * chairNode.scale.z
-                chairNode.scale = SCNVector3(pinchScaleX,pinchScaleY,pinchScaleZ)
-                recognizer.scale = 1
+                if let chairNode = hitTest.node.parent{
+                    let pinchScaleX = Float(recognizer.scale) * chairNode.scale.x
+                    let pinchScaleY = Float(recognizer.scale) * chairNode.scale.y
+                    let pinchScaleZ = Float(recognizer.scale) * chairNode.scale.z
+                    chairNode.scale = SCNVector3(pinchScaleX,pinchScaleY,pinchScaleZ)
+                    recognizer.scale = 1
+                }
             }
         }
     }
@@ -110,10 +111,11 @@ class ARSimulatorVC: UIViewController,ARSCNViewDelegate {
     @objc func tapped(recognizer :UITapGestureRecognizer) {
         print("df")
         guard let sceneView = recognizer.view as? ARSCNView else {
+            print("없음")
             return
         }
         let touch = recognizer.location(in: sceneView)
-        let hitTestResults = sceneView.hitTest(touch, types: .existingPlane)
+        let hitTestResults = sceneView.hitTest(touch, types: .featurePoint)
         if let hitTest = hitTestResults.first {
             let chairScene = SCNScene(named: "solar")!
             guard let chairNode = chairScene.rootNode.childNode(withName: "parentNode", recursively: true) else {
@@ -122,13 +124,14 @@ class ARSimulatorVC: UIViewController,ARSCNViewDelegate {
             }
             chairNode.position = SCNVector3(hitTest.worldTransform.columns.3.x,hitTest.worldTransform.columns.3.y,hitTest.worldTransform.columns.3.z)
             self.sceneView.scene.rootNode.addChildNode(chairNode)
+            textLabel.text = "확대 / 축소 / 드레그 / 회전이 가능합니다."
         }
     }
     
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         if anchor is ARPlaneAnchor {
             DispatchQueue.main.async {
-                self.textLabel.text = "원하는 위치에 터치해주세요."
+//                self.textLabel.text = "원하는 위치에 터치해주세요."
             }
         }
     }

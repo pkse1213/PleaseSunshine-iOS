@@ -20,11 +20,11 @@ class SimulationVC: UIViewController {
             costCV.reloadData()
         }
     }
-    var lookCost: [LookCost]? {
-        didSet{
-            setCostLookData()
-        }
-    }
+    var lookCost: [LookCost]? //{
+//        didSet{
+//            setCostLookData()
+//        }
+//    }
     var choosenPlace: MyPlace? {
         didSet {
             energyDataInit()
@@ -208,7 +208,7 @@ class SimulationVC: UIViewController {
     
     private func setCostData() {
         guard let cost = self.cost else {return}
-        let result = numberFormatter.string(from: NSNumber(value:cost.savedMoney))!
+        let result = numberFormatter.string(from: NSNumber(value:cost.savedMoney*12))!
         self.yearCostLbl.text = "\(result)원"
     }
     
