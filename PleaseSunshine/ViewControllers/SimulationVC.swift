@@ -20,11 +20,7 @@ class SimulationVC: UIViewController {
             costCV.reloadData()
         }
     }
-    var lookCost: [LookCost]? //{
-//        didSet{
-//            setCostLookData()
-//        }
-//    }
+    var lookCost: [LookCost]? 
     var choosenPlace: MyPlace? {
         didSet {
             energyDataInit()

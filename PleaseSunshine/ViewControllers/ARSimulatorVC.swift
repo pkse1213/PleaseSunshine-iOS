@@ -109,9 +109,7 @@ class ARSimulatorVC: UIViewController,ARSCNViewDelegate {
     }
     
     @objc func tapped(recognizer :UITapGestureRecognizer) {
-        print("df")
         guard let sceneView = recognizer.view as? ARSCNView else {
-            print("없음")
             return
         }
         let touch = recognizer.location(in: sceneView)
@@ -119,7 +117,6 @@ class ARSimulatorVC: UIViewController,ARSCNViewDelegate {
         if let hitTest = hitTestResults.first {
             let chairScene = SCNScene(named: "solar")!
             guard let chairNode = chairScene.rootNode.childNode(withName: "parentNode", recursively: true) else {
-                print("없ㅇ므")
                 return
             }
             chairNode.position = SCNVector3(hitTest.worldTransform.columns.3.x,hitTest.worldTransform.columns.3.y,hitTest.worldTransform.columns.3.z)
