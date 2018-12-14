@@ -11,12 +11,13 @@ struct MyPlace {
     var name: String
     var lat: Double
     var lon: Double
+    var angle: Int
 }
 class LocationMapVC: UIViewController, NMapViewDelegate, NMapPOIdataOverlayDelegate, NMapLocationManagerDelegate, MMapReverseGeocoderDelegate{
     
     @IBOutlet weak var naviItem: UINavigationItem!
-    
-    let rotateAnglePerClick:CGFloat = 45
+    var angel = 0
+    let rotateAnglePerClick:CGFloat = 30
     var previousAngle:CGFloat = 0
     var hasInit = false
     @IBOutlet weak var mapParentView: UIView!
@@ -146,6 +147,16 @@ class LocationMapVC: UIViewController, NMapViewDelegate, NMapPOIdataOverlayDeleg
             }
             
             let newAngle = mapView.rotateAngle - rotateAnglePerClick// + (mapView.rotateAngle < rotateAnglePerClick ? 360 : 0)
+            if let angle = choosenPlace?.angle {
+                let changedAngle = angle - Int(rotateAnglePerClick)
+                if changedAngle < 0 {
+                    choosenPlace?.angle = changedAngle + 360
+                } else {
+                    choosenPlace?.angle = changedAngle
+                }
+                print(choosenPlace?.angle)
+            }
+            
             mapView.setRotateAngle(Float(newAngle), animate: true)
         }
     }
@@ -158,6 +169,15 @@ class LocationMapVC: UIViewController, NMapViewDelegate, NMapPOIdataOverlayDeleg
             }
             
             let newAngle = mapView.rotateAngle + rotateAnglePerClick// - (mapView.rotateAngle > 360 - rotateAnglePerClick ? 360 : 0)
+            if let angle = choosenPlace?.angle {
+                let changedAngle = angle + Int(rotateAnglePerClick)
+                if changedAngle >= 360 {
+                    choosenPlace?.angle = changedAngle - 360
+                } else {
+                    choosenPlace?.angle = changedAngle
+                }
+                print(choosenPlace?.angle)
+            }
             mapView.setRotateAngle(Float(newAngle), animate: true)
         }
     }
@@ -174,6 +194,7 @@ class LocationMapVC: UIViewController, NMapViewDelegate, NMapPOIdataOverlayDeleg
                 ud.set(place.lat, forKey: "latitude")
                 ud.set(place.lon, forKey: "longitude")
                 ud.set(place.name, forKey: "name")
+                ud.set(place.angle, forKey: "angle")
                 self.dismiss(animated: true)
             }
             
@@ -284,7 +305,7 @@ class LocationMapVC: UIViewController, NMapViewDelegate, NMapPOIdataOverlayDeleg
         let address = placemark.address
         
         addressTxF.text = address
-        let place = MyPlace(name: address!, lat:location.latitude, lon: location.longitude)
+        let place = MyPlace(name: address!, lat:location.latitude, lon: location.longitude, angle: 0)
         choosenPlace = place
 //        let alert = UIAlertController(title: "ReverseGeocoder", message: address, preferredStyle: .alert)
 //        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -340,7 +361,7 @@ class LocationMapVC: UIViewController, NMapViewDelegate, NMapPOIdataOverlayDeleg
         let myLocation = NGeoPoint(longitude: coordinate.longitude, latitude: coordinate.latitude)
 //        let locationAccuracy = Float(location.horizontalAccuracy)
         addressTxF.text = ""
-        let place = MyPlace(name: "", lat:coordinate.latitude, lon: coordinate.longitude)
+        let place = MyPlace(name: "", lat:coordinate.latitude, lon: coordinate.longitude, angle: 0)
         choosenPlace = place
         mapView?.mapOverlayManager.setMyLocation(myLocation, locationAccuracy: 0)
         mapView?.setMapCenter(myLocation, atLevel: 20)

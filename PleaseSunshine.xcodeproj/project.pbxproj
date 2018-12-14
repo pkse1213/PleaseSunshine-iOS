@@ -246,8 +246,8 @@
 			isa = PBXGroup;
 			children = (
 				CB5DEB3721AD456B007D33E0 /* LocationMapVC.swift */,
-				CBCF5E0921A5F2B70043D2A5 /* MapVC.swift */,
 				CB5DE9D921AADE36007D33E0 /* LocationSearchVC.swift */,
+				CBCF5E0921A5F2B70043D2A5 /* MapVC.swift */,
 				CBB0042B21A7339700DC09B0 /* ViewController.swift */,
 				CBB0043021A7D78400DC09B0 /* TutorialVC.swift */,
 				CB56CDB621A7E22E00632C68 /* MainChooseVC.swift */,

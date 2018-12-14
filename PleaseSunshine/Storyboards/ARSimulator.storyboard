@@ -28,11 +28,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </arscnView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TM8-iw-ur1">
-                                <rect key="frame" x="49" y="40" width="277" height="54.5"/>
+                                <rect key="frame" x="44" y="40" width="287" height="66.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="태양광 발전기를 설치하고 싶은 벽면을 천천히 스캔해주세요." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEQ-Gd-ikr">
-                                        <rect key="frame" x="10" y="5" width="257" height="44.5"/>
-                                        <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="태양광 발전기를 설치하고 싶은 벽면을 천천히 스캔한 후 원하는 위치에 터치해주세요." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEQ-Gd-ikr">
+                                        <rect key="frame" x="10" y="5" width="267" height="56.5"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -60,10 +60,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="TM8-iw-ur1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xn2-kd-5g1" secondAttribute="leading" constant="15" id="2Qw-Ye-XK3"/>
+                            <constraint firstItem="TM8-iw-ur1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xn2-kd-5g1" secondAttribute="leading" constant="13" id="2Qw-Ye-XK3"/>
                             <constraint firstItem="S0Q-2q-Pan" firstAttribute="top" secondItem="xn2-kd-5g1" secondAttribute="top" constant="13" id="FDf-rR-WzZ"/>
                             <constraint firstItem="TM8-iw-ur1" firstAttribute="centerX" secondItem="fDB-UM-IHh" secondAttribute="centerX" id="FZp-lE-DPm"/>
-                            <constraint firstItem="S0Q-2q-Pan" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="BEQ-Gd-ikr" secondAttribute="trailing" constant="15" id="GVP-FL-zW2"/>
+                            <constraint firstItem="S0Q-2q-Pan" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="BEQ-Gd-ikr" secondAttribute="trailing" constant="13" id="GVP-FL-zW2"/>
                             <constraint firstItem="TM8-iw-ur1" firstAttribute="top" secondItem="xn2-kd-5g1" secondAttribute="top" constant="20" id="JcS-ci-CCF"/>
                             <constraint firstItem="xn2-kd-5g1" firstAttribute="trailing" secondItem="S0Q-2q-Pan" secondAttribute="trailing" constant="13" id="zbY-hw-eXr"/>
                         </constraints>

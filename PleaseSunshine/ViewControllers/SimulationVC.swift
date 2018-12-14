@@ -135,18 +135,18 @@ class SimulationVC: UIViewController {
     }
     
     private func checkSetAddress() {
-        guard let lat = userdefault.double(forKey: "latitude") as? Double, let lon = userdefault.double(forKey: "longitude") as? Double, let name = userdefault.string(forKey: "name") else {
+        guard let lat = userdefault.double(forKey: "latitude") as? Double, let lon = userdefault.double(forKey: "longitude") as? Double, let name = userdefault.string(forKey: "name"), let angle = userdefault.integer(forKey: "angle") as? Int else {
             let vc = UIStoryboard(name: "Address", bundle: nil).instantiateViewController(withIdentifier: "LocationMapVC") as! LocationMapVC
             self.present(vc, animated: true, completion: nil)
             return
         }
-        let place = MyPlace(name: name , lat:lat, lon: lon)
+        let place = MyPlace(name: name , lat:lat, lon: lon, angle: angle)
         choosenPlace = place
     }
     
     @objc func addressGetter(notification:Notification) {
         if let p = notification.object as? MyPlace{
-            let place = MyPlace(name: p.name , lat:p.lat, lon: p.lon)
+            let place = MyPlace(name: p.name , lat:p.lat, lon: p.lon, angle: p.angle)
             choosenPlace = place
             print("change")
             print(place)
@@ -228,7 +228,7 @@ class SimulationVC: UIViewController {
         guard let place = choosenPlace else {
             return
         }
-        EnergyService.shareInstance.getEnergyInfo(lat: place.lat, lon: place.lon, angle: 30, completion: { (Energy) in
+        EnergyService.shareInstance.getEnergyInfo(lat: place.lat, lon: place.lon, angle: Double(place.angle), completion: { (Energy) in
             self.energy = Energy
             print("energy init 성공")
             print(place)

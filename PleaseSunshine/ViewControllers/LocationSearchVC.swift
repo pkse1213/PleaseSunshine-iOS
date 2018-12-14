@@ -97,7 +97,7 @@ extension LocationSearchVC: UITableViewDelegate, UITableViewDataSource {
         
         let place = MyPlace.init(name: address.addressName,
                                  lat: Double(address.y)!,
-                                 lon: Double(address.x)!)
+                                 lon: Double(address.x)!, angle: 0)
         print("dddfsfewrwerserewr")
         print(Double(round(10*Double(address.y)!/10)))
         print(Double(round(10*Double(address.x)!/10)))
