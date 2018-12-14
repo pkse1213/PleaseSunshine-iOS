@@ -204,7 +204,7 @@
                                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="environmentCircleKospo" translatesAutoresizingMaskIntoConstraints="NO" id="DeU-BG-nfe">
                                                                 <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="남부화력발전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GE5-Ig-KYO">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="한국남부발전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GE5-Ig-KYO">
                                                                 <rect key="frame" x="23" y="0.0" width="66" height="16"/>
                                                                 <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="12"/>
                                                                 <nil key="textColor"/>
@@ -978,6 +978,13 @@
                             <constraint firstItem="4OJ-0S-LQz" firstAttribute="leading" secondItem="fTq-Fc-cmK" secondAttribute="leading" id="yC8-4p-SQH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fTq-Fc-cmK"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="8iC-oZ-YlM"/>
+                                <exclude reference="go7-Fg-Oap"/>
+                                <exclude reference="4OJ-0S-LQz"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="NL7-C4-7DL">
                         <barButtonItem key="rightBarButtonItem" image="editAddress" id="Dbo-Ui-DMj">
