@@ -978,13 +978,6 @@
                             <constraint firstItem="4OJ-0S-LQz" firstAttribute="leading" secondItem="fTq-Fc-cmK" secondAttribute="leading" id="yC8-4p-SQH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fTq-Fc-cmK"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="8iC-oZ-YlM"/>
-                                <exclude reference="go7-Fg-Oap"/>
-                                <exclude reference="4OJ-0S-LQz"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="NL7-C4-7DL">
                         <barButtonItem key="rightBarButtonItem" image="editAddress" id="Dbo-Ui-DMj">
