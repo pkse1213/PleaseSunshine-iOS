@@ -105,7 +105,7 @@ class SimulationVC: UIViewController {
     }
     
     func setTarget() {
-        busanSoxBtn.layer.cornerRadius = 25/2
+        busanSoxBtn.layer.cornerRadius = 28/2
         busanSoxBtn.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner , .layerMinXMinYCorner , .layerMaxXMinYCorner ]
         busanSoxBtn.addTarget(self, action: #selector(self.pressedBusanSoxBtn(_:)), for: UIControl.Event.touchUpInside)
     }
