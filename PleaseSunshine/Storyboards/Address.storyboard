@@ -354,7 +354,7 @@
                                         </constraints>
                                         <state key="normal" image="leftButton"/>
                                         <connections>
-                                            <action selector="leftButtonClicked:" destination="Aot-39-jmB" eventType="touchUpInside" id="mJI-FB-e8k"/>
+                                            <action selector="leftButtonClicked:" destination="Aot-39-jmB" eventType="touchUpInside" id="4Ao-BT-JJG"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYk-Pd-JDO">
@@ -365,7 +365,7 @@
                                         </constraints>
                                         <state key="normal" image="rightButton"/>
                                         <connections>
-                                            <action selector="rightButtonClicked:" destination="Aot-39-jmB" eventType="touchUpInside" id="lCM-PR-V9u"/>
+                                            <action selector="rightButtonClicked:" destination="Aot-39-jmB" eventType="touchUpInside" id="81K-05-yzt"/>
                                         </connections>
                                     </button>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="locationDirection" translatesAutoresizingMaskIntoConstraints="NO" id="gHe-8i-toR">

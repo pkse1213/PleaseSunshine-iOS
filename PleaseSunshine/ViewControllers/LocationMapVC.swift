@@ -139,7 +139,7 @@ class LocationMapVC: UIViewController, NMapViewDelegate, NMapPOIdataOverlayDeleg
         setAddressBtn.applyRadius(radius: 10)
         
     }
-    @IBAction func rightButtonClicked(_ sender: UIButton) {
+    @IBAction func leftButtonClicked(_ sender: UIButton) {
         if let mapView = mapView {
             
             if mapView.isAutoRotateEnabled == false {
@@ -161,7 +161,7 @@ class LocationMapVC: UIViewController, NMapViewDelegate, NMapPOIdataOverlayDeleg
         }
     }
     
-    @IBAction func leftButtonClicked(_ sender: UIButton) {
+    @IBAction func rightButtonClicked(_ sender: UIButton) {
         if let mapView = mapView {
             
             if mapView.isAutoRotateEnabled == false {
