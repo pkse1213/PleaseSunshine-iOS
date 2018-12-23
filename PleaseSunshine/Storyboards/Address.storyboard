@@ -369,7 +369,7 @@
                                         </connections>
                                     </button>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="locationDirection" translatesAutoresizingMaskIntoConstraints="NO" id="gHe-8i-toR">
-                                        <rect key="frame" x="146.5" y="260.5" width="82" height="82"/>
+                                        <rect key="frame" x="132.5" y="247" width="110" height="109"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -385,7 +385,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNU-nY-77q">
                                 <rect key="frame" x="8" y="597" width="359" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.63921568630000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="19"/>
                                 <state key="normal" title="이 위치로 주소 설정하기">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -393,6 +393,17 @@
                                     <action selector="setAddressAction:" destination="LKk-dh-3Yo" eventType="touchUpInside" id="fMn-KD-Nf0"/>
                                     <action selector="setAddressAction:" destination="Aot-39-jmB" eventType="touchUpInside" id="snz-SE-Xgi"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LfO-2c-Ub0">
+                                <rect key="frame" x="8" y="536" width="359" height="50"/>
+                                <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="LfO-2c-Ub0" secondAttribute="height" multiplier="359:50" id="NAc-g8-1lJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="19"/>
+                                <state key="normal" title="다시 설정하기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -410,11 +421,14 @@
                             <constraint firstItem="WAM-kc-cSs" firstAttribute="leading" secondItem="9Wu-hB-sex" secondAttribute="leading" id="Pid-sf-KDP"/>
                             <constraint firstItem="WSN-QK-h7O" firstAttribute="leading" secondItem="bnY-rv-eeN" secondAttribute="leading" id="Wih-wD-xSl"/>
                             <constraint firstItem="9Wu-hB-sex" firstAttribute="trailing" secondItem="CA0-Et-V1x" secondAttribute="trailing" constant="8" id="Z6s-vm-68L"/>
+                            <constraint firstItem="9Wu-hB-sex" firstAttribute="trailing" secondItem="LfO-2c-Ub0" secondAttribute="trailing" constant="8" id="avz-1s-2PR"/>
                             <constraint firstItem="V0A-Fz-Lgg" firstAttribute="trailing" secondItem="9Wu-hB-sex" secondAttribute="trailing" id="by5-jG-BJO"/>
                             <constraint firstItem="CA0-Et-V1x" firstAttribute="top" secondItem="WSN-QK-h7O" secondAttribute="bottom" constant="10" id="ciN-p3-ArZ"/>
+                            <constraint firstItem="LfO-2c-Ub0" firstAttribute="leading" secondItem="9Wu-hB-sex" secondAttribute="leading" constant="8" id="dkD-NV-Num"/>
                             <constraint firstItem="V0A-Fz-Lgg" firstAttribute="top" secondItem="WSN-QK-h7O" secondAttribute="bottom" id="iKV-IO-isw"/>
                             <constraint firstItem="V0A-Fz-Lgg" firstAttribute="bottom" secondItem="9Wu-hB-sex" secondAttribute="bottom" id="iMZ-LS-s1T"/>
                             <constraint firstItem="9Wu-hB-sex" firstAttribute="trailing" secondItem="bNU-nY-77q" secondAttribute="trailing" constant="8" id="isn-RJ-Co5"/>
+                            <constraint firstItem="bNU-nY-77q" firstAttribute="top" secondItem="LfO-2c-Ub0" secondAttribute="bottom" constant="11" id="mdG-bA-hcW"/>
                             <constraint firstItem="WAM-kc-cSs" firstAttribute="top" secondItem="WSN-QK-h7O" secondAttribute="bottom" id="nly-Hr-15t"/>
                             <constraint firstItem="WAM-kc-cSs" firstAttribute="bottom" secondItem="9Wu-hB-sex" secondAttribute="bottom" id="nwq-jx-5Ew"/>
                             <constraint firstItem="V0A-Fz-Lgg" firstAttribute="leading" secondItem="9Wu-hB-sex" secondAttribute="leading" id="vjc-b4-7N3"/>
@@ -423,6 +437,11 @@
                             <constraint firstItem="bNU-nY-77q" firstAttribute="width" secondItem="bNU-nY-77q" secondAttribute="height" multiplier="359:50" id="yby-0a-mL0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9Wu-hB-sex"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="LfO-2c-Ub0"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="addressTxF" destination="VkP-e6-cdX" id="Uat-a0-Su5"/>
@@ -443,7 +462,7 @@
     <resources>
         <image name="icCloseOrange28" width="28" height="28"/>
         <image name="leftButton" width="83" height="78"/>
-        <image name="locationDirection" width="82" height="82"/>
+        <image name="locationDirection" width="110" height="109"/>
         <image name="locationIcon" width="11" height="16"/>
         <image name="mapDirectionSun" width="164" height="272"/>
         <image name="rightButton" width="80" height="78"/>

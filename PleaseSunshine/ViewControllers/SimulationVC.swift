@@ -133,6 +133,7 @@ class SimulationVC: UIViewController {
     private func checkSetAddress() {
         guard let lat = userdefault.double(forKey: "latitude") as? Double, let lon = userdefault.double(forKey: "longitude") as? Double, let name = userdefault.string(forKey: "name"), let angle = userdefault.integer(forKey: "angle") as? Int else {
             let vc = UIStoryboard(name: "Address", bundle: nil).instantiateViewController(withIdentifier: "LocationMapVC") as! LocationMapVC
+            vc.setAddress = false
             self.present(vc, animated: true, completion: nil)
             return
         }

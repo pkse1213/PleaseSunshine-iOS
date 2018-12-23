@@ -7,14 +7,16 @@
 //
 
 import UIKit
+
 struct MyPlace {
     var name: String
     var lat: Double
     var lon: Double
     var angle: Int
 }
+
 class LocationMapVC: UIViewController, NMapViewDelegate, NMapPOIdataOverlayDelegate, NMapLocationManagerDelegate, MMapReverseGeocoderDelegate{
-    
+    var setAddress = true
     @IBOutlet weak var naviItem: UINavigationItem!
     var angel = 0
     let rotateAnglePerClick:CGFloat = 30
@@ -23,10 +25,12 @@ class LocationMapVC: UIViewController, NMapViewDelegate, NMapPOIdataOverlayDeleg
     @IBOutlet weak var mapParentView: UIView!
     @IBOutlet weak var searchAddressBtn: UIButton!
     @IBOutlet weak var setAddressBtn: UIButton!
+//    @IBOutlet weak var resetBtn: UIButton!
     @IBOutlet weak var addressTxF: UITextField!
     @IBOutlet weak var rotateView: UIView!
     @IBOutlet weak var leftBtn: UIButton!
     @IBOutlet weak var rightBtn: UIButton!
+    
     var mapView: NMapView?
     var changeStateButton: UIButton?
     let ud = UserDefaults.standard
@@ -53,7 +57,7 @@ class LocationMapVC: UIViewController, NMapViewDelegate, NMapPOIdataOverlayDeleg
         super.viewDidLoad()
         setupView()
         rotateView.isHidden = true
-//        buttonClicked(UIButton())
+//        resetBtn.isHidden = true
         self.navigationController?.navigationBar.isTranslucent = false
         
         mapView = NMapView(frame: self.mapParentView.frame)
@@ -92,7 +96,6 @@ class LocationMapVC: UIViewController, NMapViewDelegate, NMapPOIdataOverlayDeleg
         // 주소 검색
         let center = NotificationCenter.default
         center.addObserver(self, selector: #selector(addressGetter), name: NSNotification.Name("setAddress") , object: nil)
-        
     }
     
     @objc func addressGetter(notification:Notification) {
@@ -106,29 +109,35 @@ class LocationMapVC: UIViewController, NMapViewDelegate, NMapPOIdataOverlayDeleg
     }
     
     @IBAction func clickedClose(_ sender: UIBarButtonItem) {
-        self.dismiss(animated: true, completion: nil)
+        if setAddress == false {
+            let alert = UIAlertController(title: "알림", message: "주소 설정이 필요합니다.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+        } else {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     private func changeStep(){
         if step == 1 {
             rotateView.isHidden = true
             setAddressBtn.setTitle("이 위치로 주소 설정", for: .normal)
+//            resetBtn.isHidden = true
         } else if step == 2 {
             rotateView.isHidden = false
+            leftBtn.isHidden = false
+            rightBtn.isHidden = false
             setAddressBtn.setTitle("이 방향으로 방향 설정", for: .normal)
             if let place = choosenPlace {
-                print("dfsdfsdeerwerwefds")
                 print(place)
                 mapView?.setMapCenter(NGeoPoint(longitude: place.lon, latitude: place.lat), atLevel: 20)
                 clearOverlay()
-                
             }
-            
         } else {
             setAddressBtn.setTitle("여기서 계산하기", for: .normal)
             leftBtn.isHidden = true
             rightBtn.isHidden = true
-            
+//            resetBtn.isHidden = false
         }
     }
     
@@ -139,6 +148,14 @@ class LocationMapVC: UIViewController, NMapViewDelegate, NMapPOIdataOverlayDeleg
         setAddressBtn.applyRadius(radius: 10)
         
     }
+    // 다시설정하기 액션
+//    @IBAction func resetButtonClicked(_ sender: UIButton) {
+//        step = 1
+//        if let place = choosenPlace {
+//            setMarker(NGeoPoint(longitude: place.lon, latitude: place.lat))
+//        }
+//    }
+    
     @IBAction func leftButtonClicked(_ sender: UIButton) {
         if let mapView = mapView {
             
@@ -156,7 +173,6 @@ class LocationMapVC: UIViewController, NMapViewDelegate, NMapPOIdataOverlayDeleg
                 }
                 print(choosenPlace?.angle)
             }
-            
             mapView.setRotateAngle(Float(newAngle), animate: true)
         }
     }
@@ -181,6 +197,7 @@ class LocationMapVC: UIViewController, NMapViewDelegate, NMapPOIdataOverlayDeleg
             mapView.setRotateAngle(Float(newAngle), animate: true)
         }
     }
+    
     @IBAction func searchAddressClicked(_ sender: UIButton) {
         
         let vc = UIStoryboard(name: "Address", bundle: nil).instantiateViewController(withIdentifier: "LocationSearchVC") as! LocationSearchVC
@@ -197,7 +214,6 @@ class LocationMapVC: UIViewController, NMapViewDelegate, NMapPOIdataOverlayDeleg
                 ud.set(place.angle, forKey: "angle")
                 self.dismiss(animated: true)
             }
-            
         }
         step = step + 1
     }
@@ -227,13 +243,10 @@ class LocationMapVC: UIViewController, NMapViewDelegate, NMapPOIdataOverlayDeleg
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        
-//        mapView?.viewDidDisappear()
     }
     
     // MARK: - NMapViewDelegate Methods
@@ -245,7 +258,6 @@ class LocationMapVC: UIViewController, NMapViewDelegate, NMapPOIdataOverlayDeleg
 //            mapView.setMapCenter(NGeoPoint(longitude:126.978371, latitude:37.5666091), atLevel:11)
             // set for retina display
             mapView.setMapEnlarged(true, mapHD: true)
-            // set map mode : vector/satelite/hybrid
             mapView.mapViewMode = .vector
             hasInit = true
         } else { // fail
@@ -274,9 +286,7 @@ class LocationMapVC: UIViewController, NMapViewDelegate, NMapPOIdataOverlayDeleg
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
         mapView?.viewWillDisappear()
-        
         stopLocationUpdating()
     }
     
