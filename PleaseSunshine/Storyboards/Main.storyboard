@@ -252,7 +252,7 @@
                                         </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gk0-Vq-b92">
-                                        <rect key="frame" x="12" y="81.5" width="351" height="428.5"/>
+                                        <rect key="frame" x="12" y="80.5" width="351" height="429.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EnvironmentCell" rowHeight="143" id="LrI-fG-O69" customClass="EnvironmentCell" customModule="PleaseSunshine" customModuleProvider="target">
@@ -285,12 +285,12 @@
                                         </prototypes>
                                     </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPx-xy-b9a">
-                                        <rect key="frame" x="143" y="45.5" width="220" height="28"/>
+                                        <rect key="frame" x="143" y="45.5" width="220" height="27"/>
                                         <color key="backgroundColor" red="1" green="0.63921568630000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="220" id="8rg-nq-pmH"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="13"/>
                                         <state key="normal" title="부산시 발전소 대기오염물질 보기">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>

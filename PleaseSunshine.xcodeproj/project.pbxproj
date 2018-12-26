@@ -47,6 +47,8 @@
 		CB5DEB3421AD390C007D33E0 /* NMapViewerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB5DEB3221AD38EB007D33E0 /* NMapViewerSDK.framework */; };
 		CB5DEB3821AD456B007D33E0 /* LocationMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DEB3721AD456B007D33E0 /* LocationMapVC.swift */; };
 		CB5DEB3B21AD4606007D33E0 /* NMapViewResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DEB3A21AD4606007D33E0 /* NMapViewResources.swift */; };
+		CB8DDB7221D34B9D001D8191 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8DDB7121D34B9D001D8191 /* Splash.storyboard */; };
+		CB8DDB7421D34BD2001D8191 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8DDB7321D34BD2001D8191 /* SplashVC.swift */; };
 		CB94708921A9EC020077128B /* EnvironmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB94708821A9EC020077128B /* EnvironmentCell.swift */; };
 		CBA0E3D821BA62EC00CC6898 /* solar.dae in Resources */ = {isa = PBXBuildFile; fileRef = CBA0E3D721BA62EC00CC6898 /* solar.dae */; };
 		CBB0042A21A7279800DC09B0 /* UIView+applyDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0042921A7279800DC09B0 /* UIView+applyDesign.swift */; };
@@ -119,6 +121,8 @@
 		CB5DEB3621AD39C1007D33E0 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		CB5DEB3721AD456B007D33E0 /* LocationMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapVC.swift; sourceTree = "<group>"; };
 		CB5DEB3A21AD4606007D33E0 /* NMapViewResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMapViewResources.swift; sourceTree = "<group>"; };
+		CB8DDB7121D34B9D001D8191 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
+		CB8DDB7321D34BD2001D8191 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		CB94708821A9EC020077128B /* EnvironmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentCell.swift; sourceTree = "<group>"; };
 		CBA0E3D721BA62EC00CC6898 /* solar.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = solar.dae; sourceTree = "<group>"; };
 		CBB0042921A7279800DC09B0 /* UIView+applyDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+applyDesign.swift"; sourceTree = "<group>"; };
@@ -255,6 +259,7 @@
 				CB084A4921A864B000F5DF88 /* ARSimulatorVC.swift */,
 				CBCBE0D721B1796100FB0E9E /* AirPollutantsViewController.swift */,
 				CB20AAA021AE6B0F0027E08A /* CompanyListViewController.swift */,
+				CB8DDB7321D34BD2001D8191 /* SplashVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 				CBB0042E21A7D72A00DC09B0 /* Tutorial.storyboard */,
 				CBCBE0E221B1809900FB0E9E /* Main.storyboard */,
 				CB084A4721A8647E00F5DF88 /* ARSimulator.storyboard */,
+				CB8DDB7121D34B9D001D8191 /* Splash.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -388,6 +394,7 @@
 				CB084A4821A8647E00F5DF88 /* ARSimulator.storyboard in Resources */,
 				CBB0042F21A7D72A00DC09B0 /* Tutorial.storyboard in Resources */,
 				CB2F0D1E21A3045100D36E38 /* LaunchScreen.storyboard in Resources */,
+				CB8DDB7221D34B9D001D8191 /* Splash.storyboard in Resources */,
 				CBCBE0A621B092FF00FB0E9E /* NanumOTFRegular.otf in Resources */,
 				CB2F0D1B21A3045100D36E38 /* Assets.xcassets in Resources */,
 				CBCBE0E321B1809900FB0E9E /* Main.storyboard in Resources */,
@@ -517,6 +524,7 @@
 				CB5DE9DC21AAE069007D33E0 /* UIViewController+extesion.swift in Sources */,
 				CB5DE9D021AA81F9007D33E0 /* LookCostService.swift in Sources */,
 				CB5DEB3B21AD4606007D33E0 /* NMapViewResources.swift in Sources */,
+				CB8DDB7421D34BD2001D8191 /* SplashVC.swift in Sources */,
 				CB5DE9DA21AADE36007D33E0 /* LocationSearchVC.swift in Sources */,
 				CB56CDB521A7E1C200632C68 /* UIViewController+Logo.swift in Sources */,
 				CBCBE0D821B1796100FB0E9E /* AirPollutantsViewController.swift in Sources */,

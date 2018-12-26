@@ -84,7 +84,7 @@
         <!--Navigation Controller-->
         <scene sceneID="xP1-SR-6gO">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="D4L-xa-deN" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="TutorialNaviController" automaticallyAdjustsScrollViewInsets="NO" id="D4L-xa-deN" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7k7-4a-RHu">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
